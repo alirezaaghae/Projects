@@ -51,19 +51,40 @@
     </style>
 </head>
 <body>
-<div class="wrapper shadow index-page" id="main-page">
-    <header class="site-header header-index">
-
-    </header>
-    <main class="site-main main-index">
-
-    </main>
-    <footer class="site-footer footer-index" role="contentinfo">
-        
-    </footer>
+<div class="wrapper index-page" id="main-page">
+    <div class="container">
+        <header class="site-header header-index">
+            <div class="navbar">
+                <div id="dropdown" class="dropdown actions-item">
+                    <div id="dropdown-select" class="dropdown-select" type="text" role="button" aria-haspopup="true" aria-controls="dropdown-options-list" aria-expanded="true">
+                        <span id="dropdown-title">
+                            <span class="dropdown-check"></span> 
+                            <span class="dropdown-copy">EN</span>
+                        </span>
+                        <div class="dropdown-scrim"></div>
+                    </div>
+                    <div id="dropdown-options" class="dropdown-options">
+                        <ul id="dropdown-options-list" class="dropdown-options-list" role="menu" aria-labelledby="dropdown-select">
+                            <li role="menuitem" id="dropdown-option-1" class="dropdown-option" data-selected="true" tabindex="0" data-href="https://www.apple.com/kr/">
+                                <span class="dropdown-check"></span> 
+                                <span class="dropdown-copy">EN</span>
+                            </li>
+                            <li role="menuitem" id="dropdown-option-country-region" class="dropdown-option" data-href="https://www.apple.com/choose-country-region/" tabindex="0">
+                                <span class="dropdown-check"></span> 
+                                <span class="dropdown-copy">FA</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>  
+            </div>
+        </header>
+        <main class="site-main main-index">
     
-    
-    
+        </main>
+        <footer class="site-footer footer-index" role="contentinfo">
+            
+        </footer>
+    </div>
 </div>
 <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>-->
 <script src="assets/js/jquery-3.6.4.min.js"></script>
