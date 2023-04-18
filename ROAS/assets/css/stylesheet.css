@@ -10,14 +10,513 @@ a{transition:all .3s;text-decoration: none;}
 
 body{}
 .wrapper{}
-
-
-
-
-
-
+.wrapper>.container{}
+.wrapper>.container>header{}
+.wrapper>.container>header>.navbar{}
+.wrapper>.container>header>.navbar>.logo{}
+.wrapper>.container>header>.navbar>.logo>img{}
+.wrapper>.container>header>.navbar>.nav{}
+.wrapper>.container>header>.navbar>.nav>nav{}
+.wrapper>.container>header>.navbar>.nav>nav>ul{}
+.wrapper>.container>header>.navbar>.nav>nav>ul>li{}
+.wrapper>.container>header>.navbar>.nav>nav>ul>li>a{}
+.wrapper>.container>header>.navbar>.nav>nav>ul>li>a span{}
+.wrapper>.container>header>.navbar>.nav>nav>ul>li>a:hover span{}
+.wrapper>.container>header>.navbar>.dropdown{}
+.wrapper>.container>header>.navbar>.dropdown .dropdown-select{}
+.wrapper>.container>header>.navbar>.dropdown .dropdown-select #dropdown-title{}
+.wrapper>.container>header>.navbar>.dropdown .dropdown-select #dropdown-title .dropdown-check{}
+.wrapper>.container>header>.navbar>.dropdown .dropdown-select #dropdown-title .dropdown-copy{}
+.wrapper>.container>header>.navbar>.dropdown .dropdown-select .dropdown-scrim{}
+.wrapper>.container>header>.navbar>.dropdown .dropdown-options{}
+.wrapper>.container>header>.navbar>.dropdown .dropdown-options .dropdown-options-list{}
+.wrapper>.container>header>.navbar>.dropdown .dropdown-options .dropdown-options-list .dropdown-option{}
+.wrapper>.container>header>.navbar>.dropdown .dropdown-options .dropdown-options-list .dropdown-option .dropdown-check{}
+.wrapper>.container>header>.navbar>.dropdown .dropdown-options .dropdown-options-list .dropdown-option .dropdown-copy{}
+.wrapper>.container>header>.content{}
+.wrapper>.container>header>.content>.title{}
+.wrapper>.container>header>.content>.title h1{}
+.wrapper>.container>header>.content>.title h1 strong{}
+.wrapper>.container>header>.content>.title p{}
+.wrapper .form-input{}
+.wrapper .form-input .top-label{}
+.wrapper .form-input .top-label input{}
+.wrapper .form-input .top-label label{}
+.wrapper .form-input form{}
+.wrapper .form-input form .inputs{}
+.wrapper .form-input form .inputs .Email-input{}
+.wrapper .form-input form .inputs .Email-input input{}
+.wrapper .form-input form .inputs .Name-input{}
+.wrapper .form-input form .inputs .Name-input input{}
+.wrapper .form-input form .inputs .phone-input{}
 
 /* input select number */
+
+.wrapper .form-input form .inputs .phone-input details {
+	position: relative;
+	width: 300px;
+	margin-right: 1rem;
+}
+
+.wrapper .form-input form .inputs .phone-input details[open] {
+	z-index: 1;
+}
+
+.wrapper .form-input form .inputs .phone-input summary {
+	padding: 1rem;
+	cursor: pointer;
+	border-radius: 5px;
+	background-color: #ddd;
+	list-style: none;
+}
+
+.wrapper .form-input form .inputs .phone-input summary::-webkit-details-marker {
+	display: none;
+}
+
+.wrapper .form-input form .inputs .phone-input details[open] summary:before {
+	content: "";
+	display: block;
+	width: 100vw;
+	height: 100vh;
+	background: transparent;
+	position: fixed;
+	top: 0;
+	left: 0;
+}
+
+.wrapper .form-input form .inputs .phone-input summary:after {
+	content: "";
+	display: inline-block;
+	float: right;
+	width: 0.5rem;
+	height: 0.5rem;
+	border-bottom: 1px solid currentColor;
+	border-left: 1px solid currentColor;
+	border-bottom-left-radius: 2px;
+	transform: rotate(45deg) translate(50%, 0%);
+	transform-origin: center center;
+	transition: transform ease-in-out 100ms;
+}
+
+.wrapper .form-input form .inputs .phone-input summary:focus {
+	outline: none;
+}
+
+.wrapper .form-input form .inputs .phone-input details[open] summary:after {
+	transform: rotate(-45deg) translate(0%, 0%);
+}
+
+.wrapper .form-input form .inputs .phone-input ul {
+	width: 100%;
+	background: #ddd;
+	position: absolute;
+	top: calc(100% + 0.5rem);
+	left: 0;
+	padding: 1rem;
+	margin: 0;
+	box-sizing: border-box;
+	border-radius: 5px;
+	max-height: 200px;
+	overflow-y: auto;
+}
+
+.wrapper .form-input form .inputs .phone-input li {
+	margin: 0;
+	padding: 1rem 0;
+	border-bottom: 1px solid #ccc;
+}
+
+.wrapper .form-input form .inputs .phone-input li:first-child {
+	padding-top: 0;
+}
+
+.wrapper .form-input form .inputs .phone-input li:last-child {
+	padding-bottom: 0;
+	border-bottom: none;
+}
+
+/* FAKE SELECT */
+
+.wrapper .form-input form .inputs .phone-input summary.radios {
+	counter-reset: radios;
+}
+
+.wrapper .form-input form .inputs .phone-input summary.radios:before {
+	content: var(--selection);
+}
+
+.wrapper .form-input form .inputs .phone-input input[type="radio"] {
+	counter-increment: radios;
+	appearance: none;
+	display: none;
+}
+
+.wrapper .form-input form .inputs .phone-input input[type="radio"]:checked {
+	display: inline;
+	--display: block;
+}
+
+.wrapper .form-input form .inputs .phone-input input[type="radio"]:after {
+	content: attr(title);
+	display: inline;
+	font-size: 1rem;
+}
+
+.wrapper .form-input form .inputs .phone-input ul.list {
+	counter-reset: labels;
+}
+
+.wrapper .form-input form .inputs .phone-input label {
+	width: 100%;
+	display: flex;
+	cursor: pointer;
+	justify-content: space-between;
+}
+
+.wrapper .form-input form .inputs .phone-input label span {
+	--display: none;
+	display: var(--display);
+	width: 1rem;
+	height: 1rem;
+	border: 1px solid #727272;
+	border-radius: 3px;
+}
+
+.wrapper .form-input form .inputs .phone-input input{}
+.wrapper .form-input form .inputs .budget-input{}
+
+/* input select budget */
+/*the container must be positioned relative:*/
+.wrapper .form-input form .inputs .budget-input .custom-select {
+    position: relative;
+    font-family: Arial;
+  }
+  
+  .wrapper .form-input form .inputs .budget-input .custom-select select {
+    display: none; /*hide original SELECT element:*/
+  }
+  
+  .wrapper .form-input form .inputs .budget-input .select-selected {
+    background-color: DodgerBlue;
+  }
+  
+  /*style the arrow inside the select element:*/
+  .wrapper .form-input form .inputs .budget-input .select-selected:after {
+    position: absolute;
+    content: "";
+    top: 14px;
+    right: 10px;
+    width: 0;
+    height: 0;
+    border: 6px solid transparent;
+    border-color: #fff transparent transparent transparent;
+  }
+  
+  /*point the arrow upwards when the select box is open (active):*/
+  .wrapper .form-input form .inputs .budget-input .select-selected.select-arrow-active:after {
+    border-color: transparent transparent #fff transparent;
+    top: 7px;
+  }
+  
+  /*style the items (options), including the selected item:*/
+  .wrapper .form-input form .inputs .budget-input .select-items div,.select-selected {
+    color: #ffffff;
+    padding: 8px 16px;
+    border: 1px solid transparent;
+    border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+    cursor: pointer;
+    user-select: none;
+  }
+  
+  /*style items (options):*/
+  .wrapper .form-input form .inputs .budget-input .select-items {
+    position: absolute;
+    background-color: DodgerBlue;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 99;
+  }
+  
+  /*hide the items when the select box is closed:*/
+  .wrapper .form-input form .inputs .budget-input .select-hide {
+    display: none;
+  }
+  
+  .wrapper .form-input form .inputs .budget-input .select-items div:hover, .same-as-selected {
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+
+  .wrapper .form-input form .next_button{}
+  .wrapper .form-input form .next_button:hover{}
+  .wrapper>.container>header>.content .image{}
+  .wrapper>.container>header>.content .image .header-vector{}
+  .wrapper>.container>main{}
+  .wrapper #sec_1{}
+  h2.bigTitle{}
+  .content .head{}
+  .content .head h3{}
+  .content .head p{}
+  .wrapper #sec_1{}
+  .wrapper #sec_1>.items{}
+  .wrapper #sec_1>.items>.item.first{}
+  .wrapper #sec_1>.items>.item.first>.content{}
+  .wrapper #sec_1>.items>.item.first>.content>.head{}
+  .wrapper #sec_1>.items>.item.first>.content>.head h3{}
+  .wrapper #sec_1>.items>.item.first>.content>.head p{}
+  .wrapper #sec_1>.items>.item.first>.content>.icons{}
+  .wrapper #sec_1>.items>.item.first>.content>.icons>ul{}
+  .wrapper #sec_1>.items>.item.first>.content>.icons>ul>li{transition: all .3s;opacity: 0;}
+  .wrapper #sec_1>.items>.item.first>.content>.icons>ul>li.active{opacity: 1;}
+  .wrapper #sec_1>.items>.item.first>.content>.icons>ul>li .icon{}
+  .wrapper #sec_1>.items>.item.first>.content>.icons>ul>li:nth-child(1) .icon::after{content: 01;}
+  .wrapper #sec_1>.items>.item.first>.content>.icons>ul>li:nth-child(2) .icon::after{content: 02;}
+  .wrapper #sec_1>.items>.item.first>.content>.icons>ul>li:nth-child(3) .icon::after{content: 03;}
+  .wrapper #sec_1>.items>.item.first>.content>.icons>ul>li:nth-child(4) .icon::after{content: 04;}
+  .wrapper #sec_1>.items>.item.first>.content>.icons>ul>li:nth-child(5) .icon::after{content: 05;}
+  .wrapper #sec_1>.items>.item.first>.content>.icons>ul>li .icon img{}
+  .wrapper #sec_1>.items>.item.first>.content>.icons>.line{}
+  .wrapper #sec_1>.items>.item.first>.content>.icons>.line::after{position:absolute; top:0; bottom:0; margin:auto 0; content: ''; width: 5px; background: #8141D2;}
+  .wrapper #sec_1>.items>.item.first>.content>.icons>.line .dot{}
+  .wrapper #sec_1>.items>.item.first>.content>.textinfo{}
+  .wrapper #sec_1>.items>.item.first>.content>.textinfo>ul.title{}
+  .wrapper #sec_1>.items>.item.first>.content>.textinfo>ul.title>li.item{transition: all .3s;opacity: 0;transform: translateY(10px);}
+  .wrapper #sec_1>.items>.item.first>.content>.textinfo>ul.title>li.active{opacity: 1;transform: translateY(0px);} 
+  .wrapper #sec_1>.items>.item.first>.content>.textinfo>ul.title>li>h4{}
+  .wrapper #sec_1>.items>.item.first>.content>.textinfo>ul.textarea{}
+  .wrapper #sec_1>.items>.item.first>.content>.textinfo>ul.textarea>li.item{transition: all .3s;opacity: 0;transform: translateY(10px);}
+  .wrapper #sec_1>.items>.item.first>.content>.textinfo>ul.textarea>li.active{opacity: 1;transform: translateY(0px);} 
+  .wrapper #sec_1>.items>.item.first>.content>.textinfo>ul.textarea>li p{}
+  .wrapper #sec_1>.items>.item.first>.content>.textinfo>ul.textarea>li p strong{}
+  .wrapper #sec_1>.items>.item.first>.content>.textinfo>ul.textarea>li p ul{}
+  .wrapper #sec_1>.items>.item.first>.content>.textinfo>ul.textarea>li p ul li{}
+  .wrapper #sec_1>.items>.item.first>.content>.textinfo>ul.textarea>li p span{}
+  .wrapper #sec_1>.items>.item.first>.animated-json{}
+  .wrapper #sec_1>.items>.item.first>.animated-json .vector{}
+  .wrapper #sec_1>.items>.item.second{}
+  .wrapper #sec_1>.items>.item.second>.content{}
+  .wrapper #sec_1>.items>.item.second>.content>.head{}
+  .wrapper #sec_1>.items>.item.second>.content>.head h3{}
+  .wrapper #sec_1>.items>.item.second>.content>.head p{}
+  .wrapper #sec_1>.items>.item.second>.content>ul.items{}
+  .wrapper #sec_1>.items>.item.second>.content>ul.items>li.item{}
+  .wrapper #sec_1>.items>.item.second>.content>ul.items>li>.box{}
+  .wrapper #sec_1>.items>.item.second>.content>ul.items>li>.box>img{}
+  .wrapper #sec_1>.items>.item.second>.content>ul.items>li>.box>h5{}
+  .wrapper #sec_1>.items>.item.second>.content>ul.items>li>.box>p{}
+  .wrapper #sec_1>.items>.item.second>.animated-json{}
+  .wrapper #sec_1>.items>.item.second>.animated-json .vector{}
+  .wrapper #sec_1>.items>.item.third{}
+  .wrapper #sec_1>.items>.item.third>.content{}
+  .wrapper #sec_1>.items>.item.third>.content .head{}
+  .wrapper #sec_1>.items>.item.third>.content .head h3{}
+  .wrapper #sec_1>.items>.item.third>.content .head p{}
+  .wrapper #sec_1>.items>.item.third>.content>ul.items{}
+  .wrapper #sec_1>.items>.item.third>.content>ul.items>li.item{}
+  .wrapper #sec_1>.items>.item.third>.content>ul.items>li>.box{}
+  .wrapper #sec_1>.items>.item.third>.content>ul.items>li>.box .icon{}
+  .wrapper #sec_1>.items>.item.third>.content>ul.items>li>.box .icon img{}
+  .wrapper #sec_1>.items>.item.third>.content>ul.items>li>.box .text h5{}
+  .wrapper #sec_1>.items>.item.third>.content>ul.items>li>.box .text p{}
+  .wrapper #sec_1>.items>.item.third>.animated-json{}
+  .wrapper #sec_1>.items>.item.third>.animated-json .vector{}
+  .wrapper #sec_1 .vertical-line{}
+  .wrapper #sec_1 .vertical-line::after{content: '';}
+  .wrapper .center-form{}
+  .wrapper .center-form>.text{}
+  .wrapper .center-form>.text h6{}
+  .wrapper .center-form>.text p{}
+  .wrapper .center-form>.form-section{}
+  
+
+  .form-input.center{}
+  .form-input.center .top-label{}
+  .form-input.center .top-label input{}
+  .form-input.center .top-label label{}
+  .form-input.center form{}
+  .form-input.center form .inputs{}
+  .form-input.center form .inputs .Email-input{}
+  .form-input.center form .inputs .Email-input input{}
+  .form-input.center form .inputs .Name-input{}
+  .form-input.center form .inputs .Name-input input{}
+  .form-input.center form .inputs .phone-input{}
+  .form-input.center form .inputs .phone-input input{}
+  .form-input.center form .inputs .budget-input{}
+  .form-input.center form .next_button{}
+  .form-input.center form .next_button:hover{}
+
+  /* input select number center */
+
+.form-input.center form .inputs .phone-input details {
+	position: relative;
+	width: 300px;
+	margin-right: 1rem;
+}
+
+.form-input.center form .inputs .phone-input details[open] {
+	z-index: 1;
+}
+
+.form-input.center form .inputs .phone-input summary {
+	padding: 1rem;
+	cursor: pointer;
+	border-radius: 5px;
+	background-color: #ddd;
+	list-style: none;
+}
+
+.form-input.center form .inputs .phone-input summary::-webkit-details-marker {
+	display: none;
+}
+
+.form-input.center form .inputs .phone-input details[open] summary:before {
+	content: "";
+	display: block;
+	width: 100vw;
+	height: 100vh;
+	background: transparent;
+	position: fixed;
+	top: 0;
+	left: 0;
+}
+
+.form-input.center form .inputs .phone-input summary:after {
+	content: "";
+	display: inline-block;
+	float: right;
+	width: 0.5rem;
+	height: 0.5rem;
+	border-bottom: 1px solid currentColor;
+	border-left: 1px solid currentColor;
+	border-bottom-left-radius: 2px;
+	transform: rotate(45deg) translate(50%, 0%);
+	transform-origin: center center;
+	transition: transform ease-in-out 100ms;
+}
+
+.form-input.center form .inputs .phone-input summary:focus {
+	outline: none;
+}
+
+.form-input.center form .inputs .phone-input details[open] summary:after {
+	transform: rotate(-45deg) translate(0%, 0%);
+}
+
+.form-input.center form .inputs .phone-input ul {
+	width: 100%;
+	background: #ddd;
+	position: absolute;
+	top: calc(100% + 0.5rem);
+	left: 0;
+	padding: 1rem;
+	margin: 0;
+	box-sizing: border-box;
+	border-radius: 5px;
+	max-height: 200px;
+	overflow-y: auto;
+}
+
+.form-input.center form .inputs .phone-input li {
+	margin: 0;
+	padding: 1rem 0;
+	border-bottom: 1px solid #ccc;
+}
+
+.form-input.center form .inputs .phone-input li:first-child {
+	padding-top: 0;
+}
+
+.form-input.center form .inputs .phone-input li:last-child {
+	padding-bottom: 0;
+	border-bottom: none;
+}
+
+/* FAKE SELECT */
+
+.form-input.center form .inputs .phone-input summary.radios {
+	counter-reset: radios;
+}
+
+.form-input.center form .inputs .phone-input summary.radios:before {
+	content: var(--selection);
+}
+
+.form-input.center form .inputs .phone-input input[type="radio"] {
+	counter-increment: radios;
+	appearance: none;
+	display: none;
+}
+
+.form-input.center form .inputs .phone-input input[type="radio"]:checked {
+	display: inline;
+	--display: block;
+}
+
+.form-input.center form .inputs .phone-input input[type="radio"]:after {
+	content: attr(title);
+	display: inline;
+	font-size: 1rem;
+}
+
+.form-input.center form .inputs .phone-input ul.list {
+	counter-reset: labels;
+}
+
+.form-input.center form .inputs .phone-input label {
+	width: 100%;
+	display: flex;
+	cursor: pointer;
+	justify-content: space-between;
+}
+
+.form-input.center form .inputs .phone-input label span {
+	--display: none;
+	display: var(--display);
+	width: 1rem;
+	height: 1rem;
+	border: 1px solid #727272;
+	border-radius: 3px;
+}
+
+.wrapper #sec_2{}
+.wrapper #sec_2 h2{}
+.wrapper #sec_2>.texts{}
+.wrapper #sec_2>.texts>ul{}
+.wrapper #sec_2>.texts>ul>li{}
+.wrapper #sec_2>.texts>ul>li>h3{}
+.wrapper #sec_2>.texts>ul>li>p{}
+.wrapper #sec_2>.texts>ul>li>p ul{}
+.wrapper #sec_2>.texts>ul>li>p ul li{}
+.wrapper #sec_2>.animated-vector{}
+.wrapper #sec_2>.animated-vector .vector{}
+
+.wrapper #sec_3{}
+.wrapper #sec_3 h2{}
+.wrapper #sec_3>.content{}
+.wrapper #sec_3>.content>ul.items{}
+.wrapper #sec_3>.content>ul.items>li.item{}
+.wrapper #sec_3>.content>ul.items>li.item .box{}
+.wrapper #sec_3>.content>ul.items>li.item .box .bgColor{}
+.wrapper #sec_3>.content>ul.items>li.item .box .bgColor::after{content: '';}
+.wrapper #sec_3>.content>ul.items>li.item .box .bgColor span{}
+.wrapper #sec_3>.content>ul.items>li.item .box .text{}
+.wrapper #sec_3>.content>ul.items>li.item .box .text p{}
+
+.wrapper #sec_4{}
+.wrapper #sec_4 h2{}
+.wrapper #sec_4>.content{}
+.wrapper #sec_4>.content>.texts{}
+.wrapper #sec_4>.content>.texts h4{}
+.wrapper #sec_4>.content>.texts p{}
+.wrapper #sec_4>.content>.profiles{}
+
+
+
+
+
+
+/* input select number footer */
 
 details {
 	position: relative;
@@ -149,70 +648,3 @@ label span {
 	border: 1px solid #727272;
 	border-radius: 3px;
 }
-
-
-/* input select budget */
-/*the container must be positioned relative:*/
-.custom-select {
-    position: relative;
-    font-family: Arial;
-  }
-  
-  .custom-select select {
-    display: none; /*hide original SELECT element:*/
-  }
-  
-  .select-selected {
-    background-color: DodgerBlue;
-  }
-  
-  /*style the arrow inside the select element:*/
-  .select-selected:after {
-    position: absolute;
-    content: "";
-    top: 14px;
-    right: 10px;
-    width: 0;
-    height: 0;
-    border: 6px solid transparent;
-    border-color: #fff transparent transparent transparent;
-  }
-  
-  /*point the arrow upwards when the select box is open (active):*/
-  .select-selected.select-arrow-active:after {
-    border-color: transparent transparent #fff transparent;
-    top: 7px;
-  }
-  
-  /*style the items (options), including the selected item:*/
-  .select-items div,.select-selected {
-    color: #ffffff;
-    padding: 8px 16px;
-    border: 1px solid transparent;
-    border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
-    cursor: pointer;
-    user-select: none;
-  }
-  
-  /*style items (options):*/
-  .select-items {
-    position: absolute;
-    background-color: DodgerBlue;
-    top: 100%;
-    left: 0;
-    right: 0;
-    z-index: 99;
-  }
-  
-  /*hide the items when the select box is closed:*/
-  .select-hide {
-    display: none;
-  }
-  
-  .select-items div:hover, .same-as-selected {
-    background-color: rgba(0, 0, 0, 0.1);
-  }
-
-
-
-  
