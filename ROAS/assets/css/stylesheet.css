@@ -23,6 +23,7 @@ body{}
 .wrapper>.container>header>.navbar>.nav>nav>ul>li>a span{}
 .wrapper>.container>header>.navbar>.nav>nav>ul>li>a:hover span{}
 .wrapper>.container>header>.navbar>.dropdown{}
+.wrapper>.container>header>.navbar>.dropdown:hover{}
 .wrapper>.container>header>.navbar>.dropdown .dropdown-select{}
 .wrapper>.container>header>.navbar>.dropdown .dropdown-select #dropdown-title{}
 .wrapper>.container>header>.navbar>.dropdown .dropdown-select #dropdown-title .dropdown-check{}
@@ -510,7 +511,128 @@ body{}
 .wrapper #sec_4>.content>.texts h4{}
 .wrapper #sec_4>.content>.texts p{}
 .wrapper #sec_4>.content>.profiles{}
+.wrapper #sec_4>.content>.profiles .slider{}
+.wrapper #sec_4>.content>.profiles .slider>.owl-carousel{}
+.wrapper #sec_4>.content>.profiles .slider>.owl-carousel>.item{}
+.wrapper #sec_4>.content>.profiles .slider>.owl-carousel>.item .box{}
+.wrapper #sec_4>.content>.profiles .slider>.owl-carousel>.item .box .img{}
+.wrapper #sec_4>.content>.profiles .slider>.owl-carousel>.item .box .img img{}
+.wrapper #sec_4>.content>.profiles .slider>.owl-carousel>.item .box .info{}
+.wrapper #sec_4>.content>.profiles .slider>.owl-carousel>.item .box .info strong{}
+.wrapper #sec_4>.content>.profiles .slider>.owl-carousel>.item .box .info span{}
 
+
+.wrapper footer{}
+.wrapper footer .bgColor{}
+.wrapper footer .bgColor>.content{}
+.wrapper footer .bgColor>.content>.info{}
+.wrapper footer .bgColor>.content>.info>div:nth-child(1){}
+.wrapper footer .bgColor>.content>.info>div>.icon{}
+.wrapper footer .bgColor>.content>.info>div>.icon>h3{}
+.wrapper footer .bgColor>.content>.info>div>.icon>img{}
+.wrapper footer .bgColor>.content>.info>div>.address{}
+.wrapper footer .bgColor>.content>.info>div>.address ul{}
+.wrapper footer .bgColor>.content>.info>div>.address ul li{}
+.wrapper footer .bgColor>.content>.info>div>.address ul li strong{}
+.wrapper footer .bgColor>.content>.info>div>.address ul li p{}
+
+.wrapper footer .bgColor>.content>.info>.social{}
+.wrapper footer .bgColor>.content>.info>.social>div:nth-child(1){}
+.wrapper footer .bgColor>.content>.info>.social>div:nth-child(2){}
+.wrapper footer .bgColor>.content>.info>.social .icon{}
+.wrapper footer .bgColor>.content>.info>.social .icon img{}
+.wrapper footer .bgColor>.content>.info>.social .icon h3{}
+.wrapper footer .bgColor>.content>.info>.social .mail{}
+.wrapper footer .bgColor>.content>.info>.social .mail a{}
+.wrapper footer .bgColor>.content>.info>.social>div:nth-child(2) ul{}
+.wrapper footer .bgColor>.content>.info>.social>div:nth-child(2) ul li{}
+.wrapper footer .bgColor>.content>.info>.social>div:nth-child(2) ul li a{}
+
+.footer-form{}
+.footer-form>h3{}
+.footer-form>span{}
+.footer-form>form{}
+.footer-form>form input{}
+.footer-form>form .FullName{}
+.footer-form>form .FullName label{}
+.footer-form>form .FullName input{}
+.footer-form>form .MailAddress{}
+.footer-form>form .MailAddress label{}
+.footer-form>form .MailAddress input{}
+.footer-form>form .budget-input{}
+.footer-form>form .budget-input label{}
+.footer-form>form .budget-input .custom-select{}
+.footer-form>form .budget-input .custom-select select{}
+
+/* input select budget */
+/*the container must be positioned relative:*/
+.footer-form form .inputs .budget-input .custom-select {
+    position: relative;
+    font-family: Arial;
+  }
+  
+  .footer-form form .inputs .budget-input .custom-select select {
+    display: none; /*hide original SELECT element:*/
+  }
+  
+  .footer-form form .inputs .budget-input .select-selected {
+    background-color: DodgerBlue;
+  }
+  
+  /*style the arrow inside the select element:*/
+  .footer-form form .inputs .budget-input .select-selected:after {
+    position: absolute;
+    content: "";
+    top: 14px;
+    right: 10px;
+    width: 0;
+    height: 0;
+    border: 6px solid transparent;
+    border-color: #fff transparent transparent transparent;
+  }
+  
+  /*point the arrow upwards when the select box is open (active):*/
+  .footer-form form .inputs .budget-input .select-selected.select-arrow-active:after {
+    border-color: transparent transparent #fff transparent;
+    top: 7px;
+  }
+  
+  /*style the items (options), including the selected item:*/
+  .footer-form form .inputs .budget-input .select-items div,.select-selected {
+    color: #ffffff;
+    padding: 8px 16px;
+    border: 1px solid transparent;
+    border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+    cursor: pointer;
+    user-select: none;
+  }
+  
+  /*style items (options):*/
+  .footer-form form .inputs .budget-input .select-items {
+    position: absolute;
+    background-color: DodgerBlue;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 99;
+  }
+  
+  /*hide the items when the select box is closed:*/
+  .footer-form form .inputs .budget-input .select-hide {
+    display: none;
+  }
+  
+  .footer-form form .inputs .budget-input .select-items div:hover, .same-as-selected {
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+
+  .footer-form form .phone-input{}
+  .footer-form form .phone-input>div{}
+  .footer-form form .phone-input>div label{}
+  .footer-form form .phone-input>div input{}
+  .footer-form form .button{}
+  .footer-form form .button .send_button{}
+  .footer-form form .button .send_button:hover{}
 
 
 
@@ -518,17 +640,17 @@ body{}
 
 /* input select number footer */
 
-details {
+.footer-form form .phone-input details {
 	position: relative;
 	width: 300px;
 	margin-right: 1rem;
 }
 
-details[open] {
+.footer-form form .phone-input details[open] {
 	z-index: 1;
 }
 
-summary {
+.footer-form form .phone-input summary {
 	padding: 1rem;
 	cursor: pointer;
 	border-radius: 5px;
@@ -536,11 +658,11 @@ summary {
 	list-style: none;
 }
 
-summary::-webkit-details-marker {
+.footer-form form .phone-input summary::-webkit-details-marker {
 	display: none;
 }
 
-details[open] summary:before {
+.footer-form form .phone-input details[open] summary:before {
 	content: "";
 	display: block;
 	width: 100vw;
@@ -551,7 +673,7 @@ details[open] summary:before {
 	left: 0;
 }
 
-summary:after {
+.footer-form form .phone-input summary:after {
 	content: "";
 	display: inline-block;
 	float: right;
@@ -565,15 +687,15 @@ summary:after {
 	transition: transform ease-in-out 100ms;
 }
 
-summary:focus {
+.footer-form form .phone-input summary:focus {
 	outline: none;
 }
 
-details[open] summary:after {
+.footer-form form .phone-input details[open] summary:after {
 	transform: rotate(-45deg) translate(0%, 0%);
 }
 
-ul {
+.footer-form form .phone-input ul {
 	width: 100%;
 	background: #ddd;
 	position: absolute;
@@ -587,60 +709,60 @@ ul {
 	overflow-y: auto;
 }
 
-li {
+.footer-form form .phone-input li {
 	margin: 0;
 	padding: 1rem 0;
 	border-bottom: 1px solid #ccc;
 }
 
-li:first-child {
+.footer-form form .phone-input li:first-child {
 	padding-top: 0;
 }
 
-li:last-child {
+.footer-form form .phone-input li:last-child {
 	padding-bottom: 0;
 	border-bottom: none;
 }
 
 /* FAKE SELECT */
 
-summary.radios {
+.footer-form form .phone-input summary.radios {
 	counter-reset: radios;
 }
 
-summary.radios:before {
+.footer-form form .phone-input summary.radios:before {
 	content: var(--selection);
 }
 
-input[type="radio"] {
+.footer-form form .phone-input input[type="radio"] {
 	counter-increment: radios;
 	appearance: none;
 	display: none;
 }
 
-input[type="radio"]:checked {
+.footer-form form .phone-input input[type="radio"]:checked {
 	display: inline;
 	--display: block;
 }
 
-input[type="radio"]:after {
+.footer-form form .phone-input input[type="radio"]:after {
 	content: attr(title);
 	display: inline;
 	font-size: 1rem;
 }
 
-ul.list {
+.footer-form form .phone-input ul.list {
 	counter-reset: labels;
 }
 
-label {
+.footer-form form .phone-input label {
 	width: 100%;
 	display: flex;
 	cursor: pointer;
 	justify-content: space-between;
 }
 
-label span {
+.footer-form form .phone-input label span {
 	--display: none;
 	display: var(--display);
 	width: 1rem;
