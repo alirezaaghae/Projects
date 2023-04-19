@@ -58,11 +58,18 @@ body{
     position: relative;
     padding: 10px 13px;
     z-index: 1;
+    background: #5552EB;
+    border-radius: 7px;
+    border: 1px solid #5552EB;
 }
-.wrapper>.container>header>.topNavbar>.dropdown .dropdown-select:before{content: "";background: #5552EB;width: 100%;border-radius: 7px;height: 100%;display: block;top: 0;right: 0;position: absolute;z-index: 0;}
+.wrapper>.container>header>.topNavbar>.dropdown .dropdown-select:hover #dropdown-title .dropdown-copy{color: #5552EB;}
+.wrapper>.container>header>.topNavbar>.dropdown .dropdown-select:hover::before{color: #FFFFFF;width: 100%;height: 100%;}
+.wrapper>.container>header>.topNavbar>.dropdown .dropdown-select:hover #dropdown-title .dropdown-check{background-image: url(../images/arrow2.svg);}
+.wrapper>.container>header>.topNavbar>.dropdown .dropdown-select::before{content: "";transition: all .3s;background: white;width: 0;border-radius: 6px;height: 0;display: block;top: 0;left: 0;right: 0;bottom: 0;margin: auto;position: absolute;z-index: 0;}
 .wrapper>.container>header>.topNavbar>.dropdown .dropdown-select #dropdown-title{
     z-index: 1;
     position: relative;
+    transition: all .3s;
     color: #FFFFFF;
     font-weight: 500;
     font-size: 14px;
@@ -80,7 +87,9 @@ body{
     height: 15px;
     margin-left: 10px;
 }
-.wrapper>.container>header>.topNavbar>.dropdown .dropdown-select #dropdown-title .dropdown-copy{}
+.wrapper>.container>header>.topNavbar>.dropdown .dropdown-select #dropdown-title .dropdown-copy{
+    transition: all .3s;
+}
 .wrapper>.container>header>.topNavbar>.dropdown .dropdown-select .dropdown-scrim{}
 .wrapper>.container>header>.topNavbar>.dropdown .dropdown-options{
     margin-top: 2px;
@@ -501,10 +510,14 @@ body{
 }
   .wrapper #sec_1>div>.items>.item.first>.content>.icons>ul>li{transition: all .3s;margin-right: 66px;border-left: 5px solid white;}
   .wrapper #sec_1>div>.items>.item.first>.content>.icons>ul>li.active{}
-  .wrapper #sec_1>div>.items>.item.first>.content>.icons>ul>li .icon{}
+  .wrapper #sec_1>div>.items>.item.first>.content>.icons>ul>li.active .icon{
+    background: #8141D2;
+}
+  .wrapper #sec_1>div>.items>.item.first>.content>.icons>ul>li .icon{
+}
   .wrapper #sec_1>div>.items>.item>.content>.icons ul li .icon{
     position: relative;
-    background: #8141D2;
+    background: #ccb9e4;
     border-radius: 12px;
     display: flex;
     justify-content: center;
@@ -512,11 +525,13 @@ body{
     width: 60px;
     height: 60px;
 }
-  .wrapper #sec_1>div>.items>.item.first>.content>.icons>ul>li:nth-child(1) .icon::after{content: '01';position: absolute;right: -35px;z-index: -1;font-family: 'Abril Fatface';font-style: normal;font-weight: 400;font-size: 40px;line-height: 67px;color: #8141D2;background-color: white;padding-right: 5px;}
-  .wrapper #sec_1>div>.items>.item.first>.content>.icons>ul>li:nth-child(2) .icon::after{content: '02';position: absolute;right: -40px;z-index: -1;font-family: 'Abril Fatface';font-style: normal;font-weight: 400;font-size: 40px;line-height: 67px;color: #8141D2;background-color: white;padding-right: 5px;}
-  .wrapper #sec_1>div>.items>.item.first>.content>.icons>ul>li:nth-child(3) .icon::after{content: '03';position: absolute;right: -41px;z-index: -1;font-family: 'Abril Fatface';font-style: normal;font-weight: 400;font-size: 40px;line-height: 67px;color: #8141D2;background-color: white;padding-right: 5px;}
-  .wrapper #sec_1>div>.items>.item.first>.content>.icons>ul>li:nth-child(4) .icon::after{content: '04';position: absolute;right: -43px;z-index: -1;font-family: 'Abril Fatface';font-style: normal;font-weight: 400;font-size: 40px;line-height: 67px;color: #8141D2;background-color: white;padding-right: 5px;}
-  .wrapper #sec_1>div>.items>.item.first>.content>.icons>ul>li:nth-child(5) .icon::after{content: '05';position: absolute;right: -40px;z-index: -1;font-family: 'Abril Fatface';font-style: normal;font-weight: 400;font-size: 40px;line-height: 67px;color: #8141D2;background-color: white;padding-right: 5px;}
+
+  .wrapper #sec_1>div>.items>.item.first>.content>.icons>ul>li:nth-child(1) .icon::after{content: '01';position: absolute;right: -35px;z-index: -1;font-family: 'Abril Fatface';font-style: normal;font-weight: 400;font-size: 40px;line-height: 67px;color: #ccb9e4;background-color: white;padding-right: 5px;}
+  .wrapper #sec_1>div>.items>.item.first>.content>.icons>ul>li:nth-child(2) .icon::after{content: '02';position: absolute;right: -40px;z-index: -1;font-family: 'Abril Fatface';font-style: normal;font-weight: 400;font-size: 40px;line-height: 67px;color: #ccb9e4;background-color: white;padding-right: 5px;}
+  .wrapper #sec_1>div>.items>.item.first>.content>.icons>ul>li:nth-child(3) .icon::after{content: '03';position: absolute;right: -41px;z-index: -1;font-family: 'Abril Fatface';font-style: normal;font-weight: 400;font-size: 40px;line-height: 67px;color: #CCB9D6;background-color: white;padding-right: 5px;}
+  .wrapper #sec_1>div>.items>.item.first>.content>.icons>ul>li:nth-child(4) .icon::after{content: '04';position: absolute;right: -43px;z-index: -1;font-family: 'Abril Fatface';font-style: normal;font-weight: 400;font-size: 40px;line-height: 67px;color: #ccb9e4;background-color: white;padding-right: 5px;}
+  .wrapper #sec_1>div>.items>.item.first>.content>.icons>ul>li:nth-child(5) .icon::after{content: '05';position: absolute;right: -40px;z-index: -1;font-family: 'Abril Fatface';font-style: normal;font-weight: 400;font-size: 40px;line-height: 67px;color: #ccb9e4;background-color: white;padding-right: 5px;}
+  .wrapper #sec_1>div>.items>.item.first>.content>.icons>ul>li.active .icon::after{color: #8141D2;}
   .wrapper #sec_1>div>.items>.item.first>.content>.icons>ul>li .icon img{}
   .wrapper #sec_1>div>.items>.item>.content>.icons>ul>li .icon img{
     height: 40px;
@@ -1203,14 +1218,28 @@ color: #F9F9F9;}
     font-weight: 300;
 }
 .footer-form>form{}
+.footer-form>form>div{
+    position: relative;
+}
+.bottom-line{}
+.bottom-line .fill-line{}
 .footer-form>form input{}
 .footer-form>form .FullName{}
-.footer-form>form .FullName label{}
+.footer-form>form .FullName .bottom-line{}
+.footer-form>form .FullName .bottom-line .fill-line{}
+.footer-form>form .FullName label{
+    font-family: 'Poppins';
+    font-weight: 300;
+    font-size: 15px;
+    color: #BDBDBD;
+}
 .footer-form>form .FullName input{}
 .footer-form>form .MailAddress{}
+.footer-form>form .MailAddress .bottom-line .fill-line{}
 .footer-form>form .MailAddress label{}
 .footer-form>form .MailAddress input{}
 .footer-form>form .budget-input{}
+.footer-form>form .budget-input .bottom-line .fill-line{}
 .footer-form>form .budget-input label{}
 .footer-form>form .budget-input .custom-select{}
 .footer-form>form .budget-input .custom-select select{}
@@ -1278,6 +1307,7 @@ color: #F9F9F9;}
   }
 
   .footer-form form .phone-input{}
+  .footer-form form .phone-input .bottom-line .fill-line{}
   .footer-form form .phone-input>div{}
   .footer-form form .phone-input>div label{}
   .footer-form form .phone-input>div input{}
