@@ -106,30 +106,27 @@ document.addEventListener("click", closeAllSelect);
 
 
 
-// $('.owl-carousel.first').owlCarousel({
-//     rtl:true,
-//     loop:true,
-//     dots: true,
-//     autoplay: true,
-//     autoplayTimeout: 6000,
-//     nav: true,
-//     margin: 20,
-//     navText : ["<img src='assets/images/right_button.svg' width='54px'>","<img src='assets/images/left_button.svg' width='54px'>"],
-//     responsive:{
-//       0:{
-//           items:1,
-//           nav:false,
-//           margin: 10
-//       },
-//       600:{
-//           items:2,
-//           margin: 30
-//       },
-//       1000:{
-//           items:3,
-//       }
-//      }
-// });
+$('.owl-carousel').owlCarousel({
+    loop:true,
+    nav:false,
+    rtl:true,
+    autoplay: true,
+    autoplayTimeout: 3000,
+    margin: 20,
+    // navText : ["<img src='assets/images/right_button.svg' width='54px'>","<img src='assets/images/left_button.svg' width='54px'>"],
+    responsive:{
+      0:{
+          items:1,
+          margin: 10
+      },
+      600:{
+          margin: 10,
+      },
+      1000:{
+          items:3,
+      }
+     }
+});
 
 
 

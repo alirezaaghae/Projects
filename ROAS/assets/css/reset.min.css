@@ -190,7 +190,7 @@ section {
 html {
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    direction: rtl;
+    direction: ltr;
     font: 62.5%/1.8 sans-serif;
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
