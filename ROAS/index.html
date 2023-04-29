@@ -45,7 +45,7 @@
     <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
-	<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+	<!-- <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script> -->
     <style>
         /* Empty */
     </style>
@@ -97,12 +97,12 @@
                         Increase Your <strong>ROAS</strong>
                     </h1>
                     <p>Leave the creation and management of your campaign to us and fake users from your entire performance marketing stack to win against the competition.</p>
-                    <div class="form-input header">
+                    <div class="form-input header" state="email">
                         <div class="top-label">
                             <input type="radio" class="radio-input" id="Email_menu" name="Email_menu" value="Email_menu"> <label class="active" for="Email_menu">Email</label>
                             <input type="radio" class="radio-input" id="Name_menu" name="Name_menu" value="Name_menu"> <label for="Name_menu">Full Name</label>
                             <input type="radio" class="radio-input" id="Phone_menu" name="Phone_menu" value="Phone_menu"> <label for="Phone_menu">Phone Number</label>
-                            <input type="radio" class="radio-input" id="Email_menu" name="Email_menu" value="Email_menu"> <label for="Email_menu">Monthly Budget</label>
+                            <input type="radio" class="radio-input" id="Budget_menu" name="Budget_menu" value="Budget_menu"> <label for="Budget_menu">Monthly Budget</label>
                         </div>
                         <form class="from">
                             <div class="inputs">
@@ -122,31 +122,11 @@
                                             <input type="radio" name="item" id="item5" title="+974 Qatar">
                                             <input type="radio" name="item" id="item6" title="+27 Africa">
                                         </summary>
-                                        <ul class="list">
-                                            <li>
-                                                <label for="item1">+98 Iran<span></span></label>
-                                            </li>
-                                            <li>
-                                                <label for="item2">+971 UEA</label>
-                                            </li>
-                                            <li>
-                                                <label for="item3">+254 kenya</label>
-                                            </li>
-                                            <li>
-                                                <label for="item4">+968 Oman</label>
-                                            </li>
-                                            <li>
-                                                <label for="item5">+974 Qatar</label>
-                                            </li>
-                                            <li>
-                                                <label for="item5">+27 Africa</label>
-                                            </li>
-                                        </ul>
                                     </details>
                                     <input type="tel" id="phone" name="phone" placeholder="Phone Number">
                                 </div>
                                 <div class="budget-input">
-                                    <div class="custom-select" style="width:200px;">
+                                    <div class="custom-select">
                                         <select>
                                           <option value="0">Monthly Budget</option>
                                           <option value="15,000$">Up to 15,000$</option>
@@ -157,11 +137,32 @@
                                       </div>
                                 </div>
                             </div>
-                            <button class="next_button">Lets Start</button>
+                            <ul class="list">
+                                <li>
+                                    <label for="item1">+98 Iran<span></span></label>
+                                </li>
+                                <li>
+                                    <label for="item2">+971 UEA</label>
+                                </li>
+                                <li>
+                                    <label for="item3">+254 kenya</label>
+                                </li>
+                                <li>
+                                    <label for="item4">+968 Oman</label>
+                                </li>
+                                <li>
+                                    <label for="item5">+974 Qatar</label>
+                                </li>
+                                <li>
+                                    <label for="item5">+27 Africa</label>
+                                </li>
+                            </ul>
+                            <button class="next_button" state="0">Lets Start</button>
                         </form>
                     </div>
                 </div>
                 <div class="image">
+                    <!-- <lottie-player src="assets/json/Header-animation/test01.json"  class="header-vector" background="transparent"  speed="1" loop autoplay></lottie-player> -->
                     <img class="header-vector" src="assets/images/img_header.png" alt="header-image" title="header image">
                 </div>
             </div>
@@ -260,7 +261,7 @@
                                 </div>
                             </div>
                             <div class="animated-json">
-                                <lottie-player src="assets/json/Analyze-animation/data.json"  background="transparent"  speed="1"  style="width: 300px; height: 300px;"  loop autoplay></lottie-player>
+                                <!-- <lottie-player src="assets/json/campaign/data02.json"  background="transparent"  speed="1" class="vector"  loop autoplay></lottie-player> -->
                                 <img class="vector" src="assets/images/img_sec1.png" alt="img_sec1">
                             </div>
                         </div>
@@ -295,6 +296,7 @@
                                 </ul>
                             </div>
                             <div class="animated-json">
+                                <!-- <lottie-player src="assets/json/Protect-animation/D-transparency02-test-gif.json"  background="transparent"  speed="1" class="vector"  loop autoplay></lottie-player> -->
                                 <img class="vector" src="assets/images/img_sec1_2.png" alt="img_sec1_2">
                             </div>
                         </div>
@@ -335,6 +337,7 @@
                                 </ul>
                             </div>
                             <div class="animated-json">
+                                <!-- <lottie-player src="assets/json/Analyze-animation/data.json"  background="transparent"  speed="1" class="vector"  loop autoplay></lottie-player> -->
                                 <img class="vector" src="assets/images/img_sec1_3.png" alt="img_sec1_3">
                             </div>
                         </div>
@@ -354,7 +357,7 @@
                             <input type="radio" class="radio-input" id="Email_menu" name="Email_menu" value="Email_menu"> <label class="active" for="Email_menu">Email</label>
                             <input type="radio" class="radio-input" id="Name_menu" name="Name_menu" value="Name_menu"> <label for="Name_menu">Full Name</label>
                             <input type="radio" class="radio-input" id="Phone_menu" name="Phone_menu" value="Phone_menu"> <label for="Phone_menu">Phone Number</label>
-                            <input type="radio" class="radio-input" id="Email_menu" name="Email_menu" value="Email_menu"> <label for="Email_menu">Monthly Budget</label>
+                            <input type="radio" class="radio-input" id="Budget_menu" name="Budget_menu" value="Budget_menu"> <label for="Budget_menu">Monthly Budget</label>
                         </div>
                         <form class="from">
                             <div class="inputs">
@@ -438,6 +441,7 @@
                         </ul>
                     </div>
                     <div class="animated-vector">
+                        <!-- <lottie-player src="assets/json/Diagram-animation/data.json"  background="transparent"  speed="1" class="vector"  loop autoplay></lottie-player> -->
                         <img class="vector" src="assets/images/img_sec2.png" alt="">
                     </div>
                 </div>

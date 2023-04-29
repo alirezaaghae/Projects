@@ -1,6 +1,6 @@
 @import url(font.css);
-::-moz-selection {color: #fff;background: #000000;}
-::selection {color: #fff;background: #000000;}
+::-moz-selection {color: #fff;background: #000000;    -webkit-text-fill-color: white;}
+::selection {color: #fff;background: #000000;    -webkit-text-fill-color: white; }
 :focus {outline: none;}
 * {margin: 0;padding: 0;}
 html {overflow-x: hidden; scroll-behavior: smooth;}
@@ -99,16 +99,33 @@ body{
     position: absolute;
     width: 100%;
 }
+.wrapper>.container>header>.topNavbar>.dropdown .dropdown-options.open{
+    transform: translateY(0);
+	  opacity: 1;
+}
 .wrapper>.container>header>.topNavbar>.dropdown .dropdown-options .dropdown-options-list{
-    background: #5552EB;
-    border-radius: 7px;
+    /* background: #5552EB; */
+    /* border-radius: 7px; */
 }
 .wrapper>.container>header>.topNavbar>.dropdown .dropdown-options .dropdown-options-list .dropdown-option{
     position: relative;
     padding: 8px;
     text-align: center;
+    cursor: pointer;
+    background: #5552EB;
+    border-radius: 7px;
+	transition:all .3s;
+	border: 1px solid #5552EB;
+	margin-bottom:2px;
 }
-.wrapper>.container>header>.topNavbar>.dropdown .dropdown-options .dropdown-options-list .dropdown-option:first-child{border-bottom: 2px solid #ffffff;}
+.wrapper>.container>header>.topNavbar>.dropdown .dropdown-options .dropdown-options-list .dropdown-option:hover{
+	background: white;
+	
+}
+.wrapper>.container>header>.topNavbar>.dropdown .dropdown-options .dropdown-options-list .dropdown-option:hover .dropdown-copy{
+	color:#5552EB;
+}
+
 .wrapper>.container>header>.topNavbar>.dropdown .dropdown-options .dropdown-options-list .dropdown-option .dropdown-check{
 }
 .wrapper>.container>header>.topNavbar>.dropdown .dropdown-options .dropdown-options-list .dropdown-option .dropdown-copy{
@@ -121,6 +138,7 @@ body{
 .wrapper>.container>header>.content{
     position: relative;
     display: flex;
+    margin-top: 50px;
 }
 .wrapper>.container>header>.content>.title{width: 80%;padding-right: 240px;}
 .wrapper>.container>header>.content>.title h1{
@@ -139,15 +157,32 @@ body{
     transition: all .5s;
     font-weight: 400;
     font-size: 170px;
-    
-
-/* 01 */
-    background: radial-gradient(81.45% 81.45% at 47.56% 86.13%, #A53A3A 0%, #ED2C2C 0.01%, rgba(214, 210, 113, 0.9) 46.65%, rgba(18, 241, 255, 0.8) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+    text-transform: uppercase;
+    color: transparent;
+    background-image: radial-gradient(100% 100% at 100% 100%, #4BFFDF 20.85%, rgba(243, 104, 213, 0.9) 52.5%, rgba(255, 197, 47, 0.8) 100%);
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    text-fill-color: transparent;
+   -webkit-text-fill-color: transparent;
+	  background-clip: text;
+  animation: color 10s linear infinite; 
+  background-size: 500%;  
+  /* -webkit-transform: translate3d(0,0,0); */
+	  -webkit-backface-visibility: hidden;
+
 }
+
+@keyframes color {
+  0% { 
+    background-position: 0% 100%;
+  }
+	50% { 
+    background-position: 100% 100%; 
+  }
+  100% {
+    background-position: 0% 100%;
+  }
+}
+
+
 .wrapper>.container>header>.content>.title p{
     font-family: 'Poppins';
     font-style: normal;
@@ -166,6 +201,9 @@ body{
     top: -30px;
     position: absolute;
 }
+.wrapper .form-input[state="email"] .top-label{
+	top: 0px;
+}
 .wrapper .form-input .top-label input{
     opacity: 0;
 }
@@ -176,11 +214,11 @@ body{
     transition: all .3s;
     cursor: pointer;
 }
-.wrapper .form-input .top-label label.active{color: #67D6A1;font-weight: 500;}
+.wrapper .form-input[state="email"] .top-label #Email_menu+label,.wrapper .form-input[state="name"] .top-label #Name_menu+label,.wrapper .form-input[state="phone"] .top-label #Phone_menu+label,.wrapper .form-input[state="budget"] .top-label #Budget_menu+label{color: #67D6A1;font-weight: 500;}
 .wrapper .form-input .top-label label:hover{color: #67d6a1a8;}
 .wrapper .form-input form{
     position: relative;
-    overflow: hidden;
+    /* overflow: hidden; */
     display: flex;
     justify-content: space-between;
     height: 60px;
@@ -192,6 +230,8 @@ body{
     height: 100%;
     overflow: hidden;
     position: relative;
+    background-color: white;
+    z-index: 1;
 }
 .wrapper .form-input form .inputs .Email-input{
     position: absolute;
@@ -211,21 +251,28 @@ body{
     top: 110%;
 }
 /* .wrapper .form-input form .inputs .Name-input::after{content:'Full Name';} */
-.wrapper .form-input form .inputs .Name-input input{}
+.wrapper .form-input form .inputs .Name-input input{
+    width: 100%;
+    height: 100%;
+    text-indent: 20px;
+}
 .wrapper .form-input form .inputs .phone-input{
     position: absolute;
     height: 100%;
     width: 100%;
     transition: all .3s;
     top: 110%;
+    display: flex;
+    align-items: center;
 }
 /* .wrapper .form-input form .inputs .phone-input::after{content:'Phone Number';} */
 /* input select number */
 
 .wrapper .form-input form .inputs .phone-input details {
 	position: relative;
-	width: 300px;
+	width: 100px;
 	margin-right: 1rem;
+	margin-left: 25px;
 }
 
 .wrapper .form-input form .inputs .phone-input details[open] {
@@ -233,11 +280,16 @@ body{
 }
 
 .wrapper .form-input form .inputs .phone-input summary {
-	padding: 1rem;
+	padding: 5px;
 	cursor: pointer;
-	border-radius: 5px;
-	background-color: #ddd;
+	/* border-radius: 5px; */
+	/* background-color: #ddd; */
 	list-style: none;
+	border: 1px solid #D5D5D5;
+	border-radius: 7px;
+	text-align: center;
+	z-index: 2;
+	position: relative;
 }
 
 .wrapper .form-input form .inputs .phone-input summary::-webkit-details-marker {
@@ -256,7 +308,7 @@ body{
 }
 
 .wrapper .form-input form .inputs .phone-input summary:after {
-	content: "";
+	/* content: ""; */
 	display: inline-block;
 	float: right;
 	width: 0.5rem;
@@ -277,31 +329,40 @@ body{
 	transform: rotate(-45deg) translate(0%, 0%);
 }
 
-.wrapper .form-input form .inputs .phone-input ul {
-	width: 100%;
-	background: #ddd;
+.wrapper .form-input form>ul {
+	z-index: 0;
+	width: 100px;
+	/* background: #ddd; */
 	position: absolute;
-	top: calc(100% + 0.5rem);
-	left: 0;
+	transition:all .3s;
+	left: 25px;
 	padding: 1rem;
 	margin: 0;
 	box-sizing: border-box;
 	border-radius: 5px;
-	max-height: 200px;
+	max-height: 0px;
 	overflow-y: auto;
+	border: 1px solid #D5D5D5;
+	border-radius: 7px;
 }
 
-.wrapper .form-input form .inputs .phone-input li {
+.wrapper .form-input form>ul.list.open{top: calc(100% + 0.5rem);max-height: 200px;}
+
+.wrapper .form-input form>ul li {
 	margin: 0;
-	padding: 1rem 0;
-	border-bottom: 1px solid #ccc;
+	cursor: pointer;
+	/* border-bottom: 1px solid #ccc; */
+	padding:2px;
+	transition:all .3s;
 }
 
-.wrapper .form-input form .inputs .phone-input li:first-child {
+.wrapper .form-input form>ul li:hover{background-color:#eeeeee;border-radius:5px;}
+
+.wrapper .form-input form>ul li:first-child {
 	padding-top: 0;
 }
 
-.wrapper .form-input form .inputs .phone-input li:last-child {
+.wrapper .form-input form>ul li:last-child {
 	padding-bottom: 0;
 	border-bottom: none;
 }
@@ -331,20 +392,36 @@ body{
 	content: attr(title);
 	display: inline;
 	font-size: 1rem;
+	font-family: 'Poppins';
+	font-style: normal;
+	font-weight: 300;
+	font-size: 13px;
+	text-align: center;
+	line-height: 24px;
+/* identical to box height */
+	color: #4B4B4B;
+	cursor: pointer;
 }
 
-.wrapper .form-input form .inputs .phone-input ul.list {
+.wrapper .form-input form>ul.list {
 	counter-reset: labels;
 }
 
-.wrapper .form-input form .inputs .phone-input label {
+.wrapper .form-input form>ul label {
 	width: 100%;
 	display: flex;
 	cursor: pointer;
 	justify-content: space-between;
+	font-family: 'Poppins';
+	font-style: normal;
+	font-weight: 300;
+	font-size: 12px;
+	line-height: 21px;
+/* identical to box height */
+	color: #4B4B4B;
 }
 
-.wrapper .form-input form .inputs .phone-input label span {
+.wrapper .form-input form>ul label span {
 	--display: none;
 	display: var(--display);
 	width: 1rem;
@@ -353,7 +430,10 @@ body{
 	border-radius: 3px;
 }
 
-.wrapper .form-input form .inputs .phone-input input{}
+.wrapper .form-input form .inputs .phone-input input{
+    width: 60%;
+    height: 100%;
+}
 .wrapper .form-input form .inputs .budget-input{
     position: absolute;
     height: 100%;
@@ -367,6 +447,8 @@ body{
 .wrapper .form-input form .inputs .budget-input .custom-select {
     position: relative;
     font-family: Arial;
+    width: 100%;
+    height: 100%;
   }
   
   .wrapper .form-input form .inputs .budget-input .custom-select select {
@@ -374,7 +456,15 @@ body{
   }
   
   .wrapper .form-input form .inputs .budget-input .select-selected {
-    background-color: DodgerBlue;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+/* identical to box height */
+    color: #E6E6E6;
+    /* width: 100%; */
+    /* height: 100%; */
   }
   
   /*style the arrow inside the select element:*/
@@ -399,8 +489,8 @@ body{
   .wrapper .form-input form .inputs .budget-input .select-items div,.select-selected {
     color: #ffffff;
     padding: 8px 16px;
-    border: 1px solid transparent;
-    border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+    /* border: 1px solid transparent; */
+    /* border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent; */
     cursor: pointer;
     user-select: none;
   }
@@ -424,6 +514,8 @@ body{
     background-color: rgba(0, 0, 0, 0.1);
   }
 
+  .form-input[state='email'] form .inputs .Email-input, .form-input[state='name'] form .inputs .Name-input, .form-input[state='phone'] form .inputs .phone-input, .form-input[state='budget'] form .inputs .budget-input{top:0;}
+
   .wrapper .form-input form .next_button{
     background: linear-gradient(90deg, #97ECF1 0%, #5552EB 100%);
     border-radius: 12px;
@@ -440,12 +532,19 @@ body{
     position: relative;
     height: 100%;
 }
-.wrapper .form-input form .inputs>div.active{top:0;}
+
+/* .wrapper .form-input form .inputs>div.active{top:0;} */
   .wrapper .form-input form .next_button:hover{}
   .wrapper>.container>header>.content .image{
     width: 40%;
 }
-  .wrapper>.container>header>.content .image .header-vector{}
+  .wrapper>.container>header>.content .image .header-vector{
+    width: 100%;
+    height: auto;
+    vertical-align: middle;
+    border-radius: 45px;
+    overflow: hidden;
+  }
   .wrapper>.container>main{}
   h2.bigTitle{
     font-family: 'Abril Fatface';
@@ -608,7 +707,10 @@ body{
 }
   .wrapper #sec_1>div>.items>.item.first>.animated-json .vector{
     width: 100%;
+    height: auto;
     vertical-align: middle;
+    border-radius: 45px;
+    overflow: hidden;
 }
   .wrapper #sec_1>div>.items>.item.second{
     display: flex;
@@ -668,7 +770,10 @@ body{
 }
   .wrapper #sec_1>div>.items>.item.second>.animated-json .vector{
     width: 100%;
+    height: auto;
     vertical-align: middle;
+    border-radius: 45px;
+    overflow: hidden;
 }
   .wrapper #sec_1>div>.items>.item.third{
     display: flex;
@@ -723,7 +828,12 @@ body{
   .wrapper #sec_1>div>.items>.item.third>.animated-json{
     width: 40%;
 }
-  .wrapper #sec_1>div>.items>.item.third>.animated-json .vector{}
+  .wrapper #sec_1>div>.items>.item.third>.animated-json .vector{
+    height: auto;
+    vertical-align: middle;
+    border-radius: 45px;
+    overflow: hidden;
+  }
   .wrapper #sec_1 .vertical-line{
     position: relative;
     left: -50px;
@@ -1278,7 +1388,7 @@ color: #F9F9F9;}
   }
   
   /*style the items (options), including the selected item:*/
-  .footer-form form .inputs .budget-input .select-items div,.select-selected {
+  .footer-form form .inputs .budget-input .select-items div,.footer-form form .inputs .budget-input .select-selected {
     color: #ffffff;
     padding: 8px 16px;
     border: 1px solid transparent;

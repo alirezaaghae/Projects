@@ -171,6 +171,25 @@ $('form').submit(function () {
     return false;
 });
 
+// change language option
+$('#dropdown').click(function () {
+  $('#dropdown-options').toggleClass('open');
+});
+
+$('.phone-input .custom-details').click(function () {
+  $('ul.list').toggleClass('open');
+});
+$('#phone').click(function () {
+  $('ul.list').removeClass('open');
+});
+
+// header form function
+$('.next_button').click(function () {
+  $('.next_button').attr("state", "1");
+  $('.form-input').attr("state", "email");
+})
+
+
 // $(function () {
 //     $('.menu-icon,.topNavLinks').click(function () {
 //         $('.firstQS').addClass('show');
