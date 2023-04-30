@@ -183,7 +183,7 @@ body{
 }
 
 
-.wrapper>.container>header>.content>.title p{
+.wrapper>.container>header>.content>.title>p{
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 300;
@@ -201,7 +201,7 @@ body{
     top: -30px;
     position: absolute;
 }
-.wrapper .form-input[state="email"] .top-label{
+.wrapper .form-input[state="email"] .top-label,.wrapper .form-input[state="success"] .top-label{
 	top: 0px;
 }
 .wrapper .form-input .top-label input{
@@ -232,6 +232,13 @@ body{
     position: relative;
     background-color: white;
     z-index: 1;
+}
+.wrapper .form-input[state='budget'] form .inputs{
+	overflow: visible !important;
+}
+.wrapper .form-input[state='budget'] form .inputs>div:not(.budget-input){
+	display:none;
+	opacity: 0;
 }
 .wrapper .form-input form .inputs .Email-input{
     position: absolute;
@@ -264,6 +271,27 @@ body{
     top: 110%;
     display: flex;
     align-items: center;
+}
+.wrapper .form-input form .inputs .successDiv{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    transition: all .3s;
+    left: -110%;
+    display: flex;
+    background: linear-gradient(90deg, #2D0E86 -3.62%, #95E9F1 113.22%);
+    justify-content: center;
+    align-items: center;
+}
+.wrapper .form-input form .inputs .successDiv p{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+/* identical to box height */
+    color: #FFFFFF;
+    text-align: center;
 }
 /* .wrapper .form-input form .inputs .phone-input::after{content:'Phone Number';} */
 /* input select number */
@@ -345,7 +373,8 @@ body{
 	border: 1px solid #D5D5D5;
 	border-radius: 7px;
 }
-
+.wrapper .form-input.center form>ul{background-color:white;border-color:#f86d6d;}
+.wrapper .form-input.center form>ul li label{color:#f04d69;}
 .wrapper .form-input form>ul.list.open{top: calc(100% + 0.5rem);max-height: 200px;}
 
 .wrapper .form-input form>ul li {
@@ -399,7 +428,7 @@ body{
 	text-align: center;
 	line-height: 24px;
 /* identical to box height */
-	color: #4B4B4B;
+	color: #575757;
 	cursor: pointer;
 }
 
@@ -462,27 +491,33 @@ body{
     font-size: 14px;
     line-height: 21px;
 /* identical to box height */
-    color: #E6E6E6;
-    /* width: 100%; */
-    /* height: 100%; */
+    color: #494949;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    background: white;
+    border-radius: 11px;
   }
   
   /*style the arrow inside the select element:*/
   .wrapper .form-input form .inputs .budget-input .select-selected:after {
+    transition: all .3s;
     position: absolute;
     content: "";
-    top: 14px;
-    right: 10px;
-    width: 0;
-    height: 0;
-    border: 6px solid transparent;
-    border-color: #fff transparent transparent transparent;
+    right: 15px;
+    width: 18px;
+    height: 18px;
+    background-image: url('../images/Polygon.svg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
   }
   
   /*point the arrow upwards when the select box is open (active):*/
   .wrapper .form-input form .inputs .budget-input .select-selected.select-arrow-active:after {
     border-color: transparent transparent #fff transparent;
-    top: 7px;
+    transform: rotate(180deg);
   }
   
   /*style the items (options), including the selected item:*/
@@ -493,21 +528,38 @@ body{
     /* border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent; */
     cursor: pointer;
     user-select: none;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+/* identical to box height */
+    color: #282828;
   }
   
   /*style items (options):*/
   .wrapper .form-input form .inputs .budget-input .select-items {
     position: absolute;
-    background-color: DodgerBlue;
     top: 100%;
     left: 0;
     right: 0;
     z-index: 99;
+    border: 1px solid #000000;
+    border-radius: 12px;
+    margin-top: 10px;
+    transition: all .3s;
   }
+
+.wrapper .form-input.center form .inputs .budget-input .select-items{
+	background-color:white;
+}
   
   /*hide the items when the select box is closed:*/
   .wrapper .form-input form .inputs .budget-input .select-hide {
-    display: none;
+    /* display: none; */
+    top: -10px;
+    z-index: -1;
+    opacity: 0;
   }
   
   .wrapper .form-input form .inputs .budget-input .select-items div:hover, .same-as-selected {
@@ -515,6 +567,7 @@ body{
   }
 
   .form-input[state='email'] form .inputs .Email-input, .form-input[state='name'] form .inputs .Name-input, .form-input[state='phone'] form .inputs .phone-input, .form-input[state='budget'] form .inputs .budget-input{top:0;}
+	.wrapper .form-input[state='success'] form .inputs .successDiv{left:0;opacity: 1;}
 
   .wrapper .form-input form .next_button{
     background: linear-gradient(90deg, #97ECF1 0%, #5552EB 100%);
@@ -531,6 +584,10 @@ body{
     align-items: center;
     position: relative;
     height: 100%;
+}
+
+.wrapper .form-input[state='success'] form .next_button{
+	display:none;
 }
 
 /* .wrapper .form-input form .inputs>div.active{top:0;} */
@@ -897,7 +954,8 @@ color: #F9F9F9;}
   .form-input.center .top-label label{
     color: #eee;
 }
-  .form-input.center .top-label label.active{color: #FFF492;}
+  
+  .form-input.center[state="email"] .top-label #Email_menu+label, .form-input.center[state="name"] .top-label #Name_menu+label, .form-input.center[state="phone"] .top-label #Phone_menu+label, .form-input.center[state="budget"] .top-label #Budget_menu+label{color: #FFF492;font-weight: 500;}
   .form-input.center .top-label label:hover{color: #FFF492;}
   .form-input.center form{}
   .form-input.center form .inputs{
@@ -906,12 +964,15 @@ color: #F9F9F9;}
   .form-input.center form .inputs .Email-input{}
   .form-input.center form .inputs .Email-input input{
     background: transparent;
-    color: white;
+    color: #f8706d;
 }
+.form-input.center form .inputs .Email-input input::placeholder{color:#f8706d;}
   .form-input.center form .inputs .Name-input{}
-  .form-input.center form .inputs .Name-input input{}
+  .form-input.center form .inputs .Name-input input{color: #f8706d;}
+  .form-input.center form .inputs .Name-input input::placeholder{color: #f8706d;}
   .form-input.center form .inputs .phone-input{}
-  .form-input.center form .inputs .phone-input input{}
+  .form-input.center form .inputs .phone-input input{color: #f8706d;}
+  .form-input.center form .inputs .phone-input input::placeholder{color: #f8706d;}
   .form-input.center form .inputs .budget-input{}
   .form-input.center form .next_button{
     background: #FFFFFF;
@@ -923,8 +984,8 @@ color: #F9F9F9;}
 
 .form-input.center form .inputs .phone-input details {
 	position: relative;
-	width: 300px;
-	margin-right: 1rem;
+	/* width: 300px; */
+	/* margin-right: 1rem; */
 }
 
 .form-input.center form .inputs .phone-input details[open] {
@@ -932,11 +993,11 @@ color: #F9F9F9;}
 }
 
 .form-input.center form .inputs .phone-input summary {
-	padding: 1rem;
-	cursor: pointer;
-	border-radius: 5px;
-	background-color: #ddd;
-	list-style: none;
+	/* padding: 1rem; */
+	/* cursor: pointer; */
+	/* border-radius: 5px; */
+	/* background-color: #ddd; */
+	/* list-style: none; */
 }
 
 .form-input.center form .inputs .phone-input summary::-webkit-details-marker {
@@ -955,7 +1016,7 @@ color: #F9F9F9;}
 }
 
 .form-input.center form .inputs .phone-input summary:after {
-	content: "";
+	/* content: ""; */
 	display: inline-block;
 	float: right;
 	width: 0.5rem;
@@ -1009,6 +1070,7 @@ color: #F9F9F9;}
 
 .form-input.center form .inputs .phone-input summary.radios {
 	counter-reset: radios;
+	border-color: #ff8e95;
 }
 
 .form-input.center form .inputs .phone-input summary.radios:before {
@@ -1029,7 +1091,8 @@ color: #F9F9F9;}
 .form-input.center form .inputs .phone-input input[type="radio"]:after {
 	content: attr(title);
 	display: inline;
-	font-size: 1rem;
+	/* font-size: 1rem; */
+	color: #f76e6d;
 }
 
 .form-input.center form .inputs .phone-input ul.list {

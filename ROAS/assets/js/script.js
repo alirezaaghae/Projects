@@ -183,12 +183,72 @@ $('#phone').click(function () {
   $('ul.list').removeClass('open');
 });
 
+$('.list label').click(function (e) {
+  e.preventDefault();
+  let listValue = $(this).attr("value");
+  console.log(listValue);
+  return false;
+});
+
 // header form function
 $('.next_button').click(function () {
-  $('.next_button').attr("state", "1");
-  $('.form-input').attr("state", "email");
+  let state = $('.next_button').attr("state");
+  switch (state) {
+    case '0':
+      $('.form-input').attr("state", "name");
+      $('.next_button').text('Next');
+      $('.next_button').attr("state", "1");
+      break;
+    case '1':
+      $('.form-input').attr("state", "phone");
+      $('.next_button').attr("state", "2");
+      break;
+    case '2':
+      $('.form-input').attr("state", "budget");
+      $('.next_button').text('Send');
+      $('.next_button').attr("state", "3");
+      break;
+    case '3':
+      $('.successDiv').css("display", "flex");
+      setTimeout(function(){ 
+        $('.form-input').attr("state", "success");
+       }, 100);
+      break;
+    case '4':
+      console.log(state);
+  }
 })
 
+$('.top-label label').click(function (e) {
+  e.preventDefault();
+  let radio = $(this).attr("value");
+  switch (radio) {
+    case '0':
+      $('.form-input').attr("state", "email");
+      $('.next_button').text('Lets Start');
+      $('.next_button').attr("state", "0");
+      break;
+    case '1':
+      $('.form-input').attr("state", "name");
+      $('.next_button').text('Next');
+      $('.next_button').attr("state", "1");
+      break;
+    case '2':
+      $('.form-input').attr("state", "phone");
+      $('.next_button').text('Next');
+      $('.next_button').attr("state", "2");
+      
+      break;
+    case '3':
+      $('.form-input').attr("state", "budget");
+      $('.next_button').text('Send');
+      $('.next_button').attr("state", "3");
+      break;
+    default: console.log('default');
+  }
+  return false;
+
+});
 
 // $(function () {
 //     $('.menu-icon,.topNavLinks').click(function () {
