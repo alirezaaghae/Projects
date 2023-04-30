@@ -283,6 +283,7 @@ body{
     justify-content: center;
     align-items: center;
 }
+
 .wrapper .form-input form .inputs .successDiv p{
     font-family: 'Poppins';
     font-style: normal;
@@ -293,6 +294,8 @@ body{
     color: #FFFFFF;
     text-align: center;
 }
+.wrapper .form-input.center form .inputs .successDiv{background: linear-gradient(90deg, #FFFFFF -3.62%, #FFCDB8 122.39%);}
+.wrapper .form-input.center form .inputs .successDiv p{color: #F34B66;}
 /* .wrapper .form-input form .inputs .phone-input::after{content:'Phone Number';} */
 /* input select number */
 
@@ -300,7 +303,7 @@ body{
 	position: relative;
 	width: 100px;
 	margin-right: 1rem;
-	margin-left: 25px;
+	margin-left: 13px;
 }
 
 .wrapper .form-input form .inputs .phone-input details[open] {
@@ -325,14 +328,14 @@ body{
 }
 
 .wrapper .form-input form .inputs .phone-input details[open] summary:before {
-	content: "";
+/* 	content: "";
 	display: block;
 	width: 100vw;
 	height: 100vh;
 	background: transparent;
 	position: fixed;
 	top: 0;
-	left: 0;
+	left: 0; */
 }
 
 .wrapper .form-input form .inputs .phone-input summary:after {
@@ -363,7 +366,7 @@ body{
 	/* background: #ddd; */
 	position: absolute;
 	transition:all .3s;
-	left: 25px;
+	left: 14px;
 	padding: 1rem;
 	margin: 0;
 	box-sizing: border-box;
@@ -417,7 +420,7 @@ body{
 	--display: block;
 }
 
-.wrapper .form-input form .inputs .phone-input input[type="radio"]:after {
+.wrapper .form-input form .inputs .phone-input input[type="radio"]:after,.wrapper .form-input form .inputs .phone-input .listValue {
 	content: attr(title);
 	display: inline;
 	font-size: 1rem;
@@ -431,6 +434,7 @@ body{
 	color: #575757;
 	cursor: pointer;
 }
+.wrapper .form-input.center form .inputs .phone-input .listValue{color:#f7686c;}
 
 .wrapper .form-input form>ul.list {
 	counter-reset: labels;
@@ -563,7 +567,7 @@ body{
   }
   
   .wrapper .form-input form .inputs .budget-input .select-items div:hover, .same-as-selected {
-    background-color: rgba(0, 0, 0, 0.1);
+    /* background-color: rgba(0, 0, 0, 0.1); */
   }
 
   .form-input[state='email'] form .inputs .Email-input, .form-input[state='name'] form .inputs .Name-input, .form-input[state='phone'] form .inputs .phone-input, .form-input[state='budget'] form .inputs .budget-input{top:0;}
@@ -1005,14 +1009,14 @@ color: #F9F9F9;}
 }
 
 .form-input.center form .inputs .phone-input details[open] summary:before {
-	content: "";
+/* 	content: "";
 	display: block;
 	width: 100vw;
 	height: 100vh;
 	background: transparent;
 	position: fixed;
 	top: 0;
-	left: 0;
+	left: 0; */
 }
 
 .form-input.center form .inputs .phone-input summary:after {
@@ -1071,6 +1075,14 @@ color: #F9F9F9;}
 .form-input.center form .inputs .phone-input summary.radios {
 	counter-reset: radios;
 	border-color: #ff8e95;
+	font-family: 'Poppins';
+	font-style: normal;
+	font-weight: 300;
+	font-size: 13px;
+	text-align: center;
+	line-height: 24px;
+	color: #575757;
+	cursor: pointer;
 }
 
 .form-input.center form .inputs .phone-input summary.radios:before {
@@ -1393,19 +1405,49 @@ color: #F9F9F9;}
 .footer-form>form{}
 .footer-form>form>div{
     position: relative;
+    display: flex;
+    flex-direction: column;
+    /* cursor: pointer; */
+    margin: 40px 0;
 }
-.bottom-line{}
-.bottom-line .fill-line{}
-.footer-form>form input{}
+.bottom-line{
+    background-color: #BDBDBD;
+    width: 100%;
+    height: 1px;
+    position: relative;
+}
+.bottom-line .fill-line{
+    transition: all .3s;
+    background-color: black;
+    position: relative;
+    height: 100%;
+    width: 0;
+}
+.footer-form>form input{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 24px;
+/* identical to box height */
+    color: #383838;
+    transition: all .3s;
+    height: 0;
+}
 .footer-form>form .FullName{}
 .footer-form>form .FullName .bottom-line{}
 .footer-form>form .FullName .bottom-line .fill-line{}
 .footer-form>form .FullName label{
+    
+}
+.footer-form>form label{
     font-family: 'Poppins';
     font-weight: 300;
     font-size: 15px;
     color: #BDBDBD;
-}
+    transition: all .3s;
+    cursor: pointer;
+    }
 .footer-form>form .FullName input{}
 .footer-form>form .MailAddress{}
 .footer-form>form .MailAddress .bottom-line .fill-line{}
@@ -1414,76 +1456,112 @@ color: #F9F9F9;}
 .footer-form>form .budget-input{}
 .footer-form>form .budget-input .bottom-line .fill-line{}
 .footer-form>form .budget-input label{}
-.footer-form>form .budget-input .custom-select{}
+.footer-form>form .budget-input .custom-select{
+}
 .footer-form>form .budget-input .custom-select select{}
 
 /* input select budget */
 /*the container must be positioned relative:*/
-.footer-form form .inputs .budget-input .custom-select {
+.footer-form form .budget-input .custom-select {
     position: relative;
     font-family: Arial;
   }
   
-  .footer-form form .inputs .budget-input .custom-select select {
+  .footer-form form .budget-input .custom-select select {
     display: none; /*hide original SELECT element:*/
   }
   
-  .footer-form form .inputs .budget-input .select-selected {
-    background-color: DodgerBlue;
+  .footer-form form .budget-input .select-selected {
+    height: 40px;
+    color: #3e3e3e !important;
+    padding: 8px 0 !important;
   }
   
   /*style the arrow inside the select element:*/
-  .footer-form form .inputs .budget-input .select-selected:after {
+  .footer-form form .budget-input .select-selected:after {
     position: absolute;
     content: "";
     top: 14px;
     right: 10px;
-    width: 0;
-    height: 0;
-    border: 6px solid transparent;
-    border-color: #fff transparent transparent transparent;
+    width: 15px;
+    height: 15px;
+    background-image: url(../images/Polygon.svg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    transition: all .3s;
   }
   
   /*point the arrow upwards when the select box is open (active):*/
-  .footer-form form .inputs .budget-input .select-selected.select-arrow-active:after {
+  .footer-form form .budget-input .select-selected.select-arrow-active:after {
     border-color: transparent transparent #fff transparent;
-    top: 7px;
+    transform: rotate(180deg);
   }
   
   /*style the items (options), including the selected item:*/
-  .footer-form form .inputs .budget-input .select-items div,.footer-form form .inputs .budget-input .select-selected {
-    color: #ffffff;
+  .footer-form form .budget-input .select-items div,.footer-form form .budget-input .select-selected {
+    color: #2a2a2a;
     padding: 8px 16px;
     border: 1px solid transparent;
-    border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+    /* border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent; */
     cursor: pointer;
     user-select: none;
   }
   
   /*style items (options):*/
-  .footer-form form .inputs .budget-input .select-items {
+  .footer-form form .budget-input .select-items {
     position: absolute;
-    background-color: DodgerBlue;
+    background-color: white;
+    border: 1px solid #797979;
+    border-radius: 10px;
     top: 100%;
     left: 0;
     right: 0;
     z-index: 99;
+    margin-top: 20px;
+    transition: all .3s;
   }
   
   /*hide the items when the select box is closed:*/
-  .footer-form form .inputs .budget-input .select-hide {
+  .footer-form form .budget-input .select-hide {
     display: none;
+    top: -20px;
+    z-index: 0;
+    opacity: 0;
   }
   
-  .footer-form form .inputs .budget-input .select-items div:hover, .same-as-selected {
-    background-color: rgba(0, 0, 0, 0.1);
+  .footer-form form .budget-input .select-items div:hover, .same-as-selected {
+    background-color: rgb(103 214 161 / 17%);
   }
 
-  .footer-form form .phone-input{}
+  .footer-form form .phone-input{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+}
   .footer-form form .phone-input .bottom-line .fill-line{}
-  .footer-form form .phone-input>div{}
+  .footer-form form .phone-input>div{width: 75%;}
+.footer-form form .phone-input>div>div{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.footer-form form .phone-input>div.bottom-line{
+    position: absolute;
+    bottom: 0;
+}
   .footer-form form .phone-input>div label{}
   .footer-form form .phone-input>div input{}
+  .footer-form>form .active{}
+  .footer-form>form .active label{
+    font-size: 13px;
+}
+  .footer-form>form .active input{height:30px;}
+  .footer-form>form .active .fill-line{
+    width: 100%;
+}
+
+
   .footer-form form .button{}
   .footer-form form .button .send_button{
     background: linear-gradient(90deg, #D2D2D2 0%, #A64A2E 0.01%, #FBB371 100%);
@@ -1506,8 +1584,9 @@ color: #F9F9F9;}
 
 .footer-form form .phone-input details {
 	position: relative;
-	width: 300px;
+	width: 100px;
 	margin-right: 1rem;
+	display: flex;
 }
 
 .footer-form form .phone-input details[open] {
@@ -1515,11 +1594,17 @@ color: #F9F9F9;}
 }
 
 .footer-form form .phone-input summary {
-	padding: 1rem;
+	/* padding: 1rem; */
 	cursor: pointer;
 	border-radius: 5px;
-	background-color: #ddd;
+	/* background-color: #ddd; */
 	list-style: none;
+	border: 1px solid #D5D5D5;
+	border-radius: 7px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 5px 0;
 }
 
 .footer-form form .phone-input summary::-webkit-details-marker {
@@ -1538,7 +1623,7 @@ color: #F9F9F9;}
 }
 
 .footer-form form .phone-input summary:after {
-	content: "";
+	/* content: ""; */
 	display: inline-block;
 	float: right;
 	width: 0.5rem;
@@ -1613,6 +1698,13 @@ color: #F9F9F9;}
 	content: attr(title);
 	display: inline;
 	font-size: 1rem;
+	font-family: 'Poppins';
+	font-style: normal;
+	font-weight: 300;
+	font-size: 14px;
+	line-height: 24px;
+/* identical to box height */
+	color: #696969;
 }
 
 .footer-form form .phone-input ul.list {

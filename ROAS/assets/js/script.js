@@ -186,7 +186,10 @@ $('#phone').click(function () {
 $('.list label').click(function (e) {
   e.preventDefault();
   let listValue = $(this).attr("value");
-  console.log(listValue);
+  let listFor = $(this).attr("for");
+  let listTitle = $('summary.radios input[id="'+listFor+'"]').attr('title');
+  $('.listValue').text(listTitle);
+  console.log(listTitle);
   return false;
 });
 
@@ -249,6 +252,16 @@ $('.top-label label').click(function (e) {
   return false;
 
 });
+
+
+// footer form
+$('.footer-form>form>div').click(function (e) {
+  e.preventDefault();
+  $(this).addClass('active');
+  $(this).find( "input" ).focus();
+  return false;
+});
+
 
 // $(function () {
 //     $('.menu-icon,.topNavLinks').click(function () {
