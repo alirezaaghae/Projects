@@ -1,3 +1,8 @@
+var emailValid = false;
+var nameValid = false;
+var phoneValid = false;
+var budgetValid = false;
+
 // just get 11 number input
 var alireza = document.querySelectorAll(".alireza_validator input"),
     i;
@@ -61,6 +66,7 @@ for (i = 0; i < l; i++) {
             for (k = 0; k < yl; k++) {
               y[k].removeAttribute("class");
             }
+            budgetValid = true;
             this.setAttribute("class", "same-as-selected");
             break;
           }
@@ -183,39 +189,88 @@ $('#phone').click(function () {
   $('ul.list').removeClass('open');
 });
 
+$('#sec_1 .icons>ul li').click(function () {
+  let x = $(this).attr('num');
+  $('#sec_1 .icons>ul li').removeClass('active');
+  $('#sec_1 .textinfo li.text').removeClass('active');
+  $('#sec_1 .textinfo li.text.'+x).addClass('active');
+  $(this).addClass('active');
+});
+
 $('.list label').click(function (e) {
   e.preventDefault();
   let listValue = $(this).attr("value");
   let listFor = $(this).attr("for");
-  let listTitle = $('summary.radios input[id="'+listFor+'"]').attr('title');
+  let listTitle = $(this).text();
   $('.listValue').text(listTitle);
   console.log(listTitle);
   return false;
 });
 
+
+
+  $(".Email-input input").blur(function () {
+    if ($(this).is(":invalid") || !$(this).val()) {
+      emailValid = false;
+    } else {
+      emailValid = true;
+    };
+  });
+  $(".Name-input input").blur(function () {
+    if ($(this).is(":invalid") || this.value.length < 2) {
+      nameValid = false;
+    } else {
+      nameValid = true;
+    };
+  });
+  $(".phone-input input").blur(function () {
+    if ($(this).is(":invalid") || this.value.length != 10) {
+      phoneValid = false;
+    } else {
+      phoneValid = true;
+    };
+  });
+  
+
+    // if ($(this).is(":invalid") || this.value.length != 10) {
+    //   phoneValid = false;
+    // } else {
+    //   phoneValid = true;
+    // };
+
 // header form function
 $('.next_button').click(function () {
   let state = $('.next_button').attr("state");
+
   switch (state) {
     case '0':
-      $('.form-input').attr("state", "name");
-      $('.next_button').text('Next');
-      $('.next_button').attr("state", "1");
+      if(emailValid){
+        $('.form-input').attr("state", "name");
+        $('.next_button').text('Next');
+        $('.next_button').attr("state", "1");
+      }
       break;
     case '1':
-      $('.form-input').attr("state", "phone");
-      $('.next_button').attr("state", "2");
+      if(nameValid){
+        $('.form-input').attr("state", "phone");
+        $('.next_button').attr("state", "2");
+      }
       break;
     case '2':
-      $('.form-input').attr("state", "budget");
-      $('.next_button').text('Send');
-      $('.next_button').attr("state", "3");
+      if(phoneValid){
+        $('.form-input').attr("state", "budget");
+        $('.next_button').text('Send');
+        $('.next_button').attr("state", "3");
+      }
       break;
     case '3':
-      $('.successDiv').css("display", "flex");
-      setTimeout(function(){ 
-        $('.form-input').attr("state", "success");
-       }, 100);
+      if(budgetValid){
+        $('.successDiv').css("display", "flex");
+        setTimeout(function(){ 
+          $('.form-input').attr("state", "success");
+        }, 100);
+      }
+      budgetValid = false;
       break;
     case '4':
       console.log(state);
