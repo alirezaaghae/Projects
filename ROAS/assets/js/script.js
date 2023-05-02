@@ -126,6 +126,7 @@ $('.owl-carousel').owlCarousel({
           margin: 10
       },
       600:{
+          items:3,
           margin: 10,
       },
       1000:{
@@ -328,3 +329,4 @@ $('.footer-form>form>div').click(function (e) {
 //     });
 // });
 
+// gasp animation scroll
