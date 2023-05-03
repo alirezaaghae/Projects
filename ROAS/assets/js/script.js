@@ -187,15 +187,37 @@ $('.phone-input .custom-details').click(function () {
   $('ul.list').toggleClass('open');
 });
 $('#phone').click(function () {
-  $('ul.list').removeClass('open');
+  $('ul.list.open').removeClass('open');
 });
 
 $('#sec_1 .icons>ul li').click(function () {
+  $('li.text').removeClass('up');
   let x = $(this).attr('num');
+  $(this).addClass('up');
   $('#sec_1 .icons>ul li').removeClass('active');
   $('#sec_1 .textinfo li.text').removeClass('active');
   $('#sec_1 .textinfo li.text.'+x).addClass('active');
   $(this).addClass('active');
+  switch (x) {
+    case 'one':
+      $('#sec_1 .line .dot').css("left", "17.7%");
+      break;
+    case 'two':
+      $('#sec_1 .line .dot').css("left", "41.7%");
+      break;
+    case 'three':
+      $('#sec_1 .line .dot').css("left", "65%");
+      break;
+    case 'four':
+      $('#sec_1 .line .dot').css("left", "88.5%");
+      break;
+    case 'five':
+      $('#sec_1 .line .dot').css("left", "91.5%");
+      break;
+      
+  }
+  $('li.text:not.active').addClass('up');
+  
 });
 
 $('.list label').click(function (e) {
@@ -204,7 +226,7 @@ $('.list label').click(function (e) {
   let listFor = $(this).attr("for");
   let listTitle = $(this).text();
   $('.listValue').text(listTitle);
-  console.log(listTitle);
+  $('ul.list.open').removeClass('open');
   return false;
 });
 
@@ -276,7 +298,7 @@ $('.next_button').click(function () {
     case '4':
       console.log(state);
   }
-})
+});
 
 $('.top-label label').click(function (e) {
   e.preventDefault();

@@ -714,8 +714,10 @@ body{
     height: 6px;
     border-radius: 100%;
     position: absolute;
-    left: 100px;
+    left: 17.7%;
     top: -2px;
+    transition: all .3s;
+    
 }
   .wrapper #sec_1>div>.items>.item.first>.content>.textinfo{
     margin-top: 35px;
@@ -732,6 +734,8 @@ body{
     transition: all .3s;
 }
   .wrapper #sec_1>div>.items>.item.first>.content>.textinfo>ul.title>li.active{transform: translateY(0px);} 
+  .wrapper #sec_1>div>.items>.item.first>.content>.textinfo>ul.title>li.up{transform: translateY(-45px);} 
+
   .wrapper #sec_1>div>.items>.item.first>.content>.textinfo>ul.title>li>h4{
     font-family: 'Abril Fatface';
     font-style: normal;
@@ -753,6 +757,7 @@ body{
     transition: all .3s;
 }
   .wrapper #sec_1>div>.items>.item.first>.content>.textinfo>ul.textarea>li.active{opacity: 1;transform: translateY(0px);} 
+.wrapper #sec_1>div>.items>.item.first>.content>.textinfo>ul.textarea>li.up{transform: translateY(-60px);} 
   .wrapper #sec_1>div>.items>.item.first>.content>.textinfo>ul.textarea>li p{
     font-family: 'Poppins';
     font-style: normal;
@@ -1206,10 +1211,10 @@ color: #F9F9F9;}
 .wrapper #sec_3>.content>ul.items>li.item:nth-child(3) .box .bgColor{
     background: linear-gradient(90.79deg, #84FFD3 -19.72%, #5E6AD5 42.88%, #8D2ABC 121.68%);
 }
-.wrapper #sec_3>.content>ul.items>li.item .box .bgColor::after{content: '';position: absolute;width: 100%;height: 100%;z-index: 1;}
+.wrapper #sec_3>.content>ul.items>li.item .box .bgColor::after{content: '';position: absolute;width: 100%;height: 100%;z-index: 0;background-size: 100% 100%;}
 .wrapper #sec_3>.content>ul.items>li.item:nth-child(1) .box .bgColor::after{background-image: url('../images/sec1_box1.svg');}
 .wrapper #sec_3>.content>ul.items>li.item:nth-child(2) .box .bgColor::after{background-image: url('../images/sec1_box2.svg');}
-.wrapper #sec_3>.content>ul.items>li.item:nth-child(3) .box .bgColor::after{background-image: url('../images/sec1_box3.svg');}
+.wrapper #sec_3>.content>ul.items>li.item:nth-child(3) .box .bgColor::after{background-image: url('../images/sec1_box3.svg'); opacity: 0.5;}
 .wrapper #sec_3>.content>ul.items>li.item .box .bgColor span{
     font-family: 'Poppins';
     font-style: normal;
@@ -1218,6 +1223,7 @@ color: #F9F9F9;}
     line-height: 24px;
     text-align: center;
     color: #FFFFFF;
+    z-index: 1;
 }
 .wrapper #sec_3>.content>ul.items>li.item .box .text{}
 .wrapper #sec_3>.content>ul.items>li.item .box .text p{
@@ -1414,12 +1420,12 @@ color: #F9F9F9;}
 .bottom-line{
     background-color: #BDBDBD;
     width: 100%;
-    height: 1px;
+    height: 1.4px;
     position: relative;
 }
 .bottom-line .fill-line{
     transition: all .3s;
-    background-color: black;
+    background-color: #222222;
     position: relative;
     height: 100%;
     width: 0;
@@ -1446,10 +1452,11 @@ color: #F9F9F9;}
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 300;
-    font-size: 14px;
-    line-height: 21px;
+    
 /* identical to box height */
-    color: #4B4B4B;
+    color: #4b4b4b6b;
+    font-size: 17px;
+    line-height: 24px;
     }
 .footer-form>form .FullName input{}
 .footer-form>form .MailAddress{}
@@ -1557,7 +1564,7 @@ color: #F9F9F9;}
   .footer-form form .phone-input>div input{}
   .footer-form>form .active{}
   .footer-form>form .active label{
-    font-size: 13px;
+    font-size: 12px;
 }
   .footer-form>form .active input{height:30px;}
   .footer-form>form .active .fill-line{
