@@ -164,6 +164,7 @@ body{background: #fff;position: relative;}
     display: flex;
     position: relative;
     margin-bottom: 100px;
+    justify-content: space-between;
 }
 #sec_1>.container>.form>.main>.content{
     width: 45%;
@@ -172,6 +173,16 @@ body{background: #fff;position: relative;}
     font-size: 35px;
     color: #494949;
     font-weight: bold;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 1.3;
+/* or 37px */
+    text-align: right;
+    letter-spacing: 0.025em;
+    color: #000000;
+    margin-bottom: 15px;
+    width: 80%;
 }
 #sec_1>.container>.form>.main>.content>span{
     font-size: 13px;
@@ -680,6 +691,12 @@ font-family: "IRANSans";
     background-color: #2e2e2e;
 }
 .wrapper>footer>.container{display: flex;font-size: 15px;color: #ffffff;font-family: "IRANSans";justify-content: space-between;align-items: center;padding: 30px 0;}
+.wrapper>footer>.container:after{
+    content: none;
+}
+.wrapper>footer>.container:before{
+    content: none;
+}
 .wrapper>footer>.container>.logo{}
 .wrapper>footer>.container>.logo>img{width: 150px;}
 .wrapper>footer>.container>nav{
@@ -736,3 +753,255 @@ font-family: "IRANSans";
 
 
 
+/* new edit */
+
+.fpkgs{
+    display: flex;
+    position: relative;
+    width: 50%;
+    justify-content: space-between;
+}
+.fpkgs .slctform{}
+.fpkgs .slctform .circles{
+    display: flex;
+}
+.fpkgs .slctform .circles .active{}
+.fpkgs .slctform .circles .active .dots{}
+.fpkgs .slctform .circles .active .dots .dot,.fpkgs .slctform .circles .active2 .dots .dot{
+    background: #F3C937;
+}
+.fpkgs .slctform .circles>div{
+    display: flex;
+}
+.fpkgs .slctform .circles>div .dots{}
+.fpkgs .slctform .circles>div .dots .dot{
+    background: #E9E9E9;
+    width: 35px;
+    height: 35px;
+    border-radius: 25px;
+    margin: 5px;
+    transition: all .3s;
+}
+.fpkgs .slctform .circles .csections1{}
+.fpkgs .slctform .circles .csections1 .dots{}
+.fpkgs .slctform .circles .csections1 .dots .dot{}
+.fpkgs .slctform .circles .csections2{}
+.fpkgs .slctform .circles .csections2 .dots{}
+.fpkgs .slctform .circles .csections2 .dots .dot{}
+.fpkgs .slctform .circles .csections3{}
+.fpkgs .slctform .circles .csections3 .dots{}
+.fpkgs .slctform .circles .csections3 .dots .dot{}
+.fpkgs .slctform .circles .csections4{}
+.fpkgs .slctform .circles .csections4 .dots{}
+.fpkgs .slctform .circles .csections4 .dots .dot{}
+.fpkgs .slctform .fpkgsitems{
+    margin-top: 30px;
+}
+.fpkgs .slctform .fpkgsitems .realitem{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+.fpkgs .slctform .fpkgsitems .realitem>div{
+    border: 1px solid #E3C351;
+    border-radius: 10px;
+    width: 110px;
+    height: 110px;
+    margin: 5px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 34px;
+    text-align: center;
+    color: #E3C351;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all .3s;
+    cursor: pointer;
+}
+.fpkgs .slctform .fpkgsitems .realitem>div:hover{background: #F3C937;color: white;}
+.fpkgs .slctform .fpkgsitems .realitem>div:nth-child(2){}
+.fpkgs .slctform .fpkgsitems .realitem>div span{
+    align-items: center;
+    flex-direction: column-reverse;
+}
+.fpkgs .slctform .fpkgsitems .realitem>div span strong{}
+
+.fpkgs .slctform .fpkgsitems .realitem .active{
+    background: #F3C937;
+    color: white;
+}
+.fpkgs .slctform .fpkgsitems .realitem .active span{}
+.fpkgs .slctform .fpkgsitems .neunaxelform{}
+.fpkgs .slctform .fpkgsitems .neunaxelform form{
+    display: flex;
+    flex-direction: column;
+}
+.fpkgs .slctform .fpkgsitems .neunaxelform form #website{
+}
+.fpkgs .slctform .fpkgsitems .neunaxelform form input{
+    border: 1px solid #D9D9D9;
+    border-radius: 10px;
+    height: 50px;
+    text-indent: 10px;
+    margin: 5px;
+}
+.fpkgs .slctform .fpkgsitems .neunaxelform form input::placeholder{color: #D3D3D3;}
+.fpkgs .slctform .fpkgsitems .neunaxelform form #phone{}
+.fpkgs .slctform .fpkgsitems .neunaxelform form #new_next_button{
+    background: #D9D9D9;
+    border-radius: 10px;
+    height: 50px;
+    margin: 5px;
+    border: none;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 28px;
+    text-align: center;
+    color: #999999;
+}
+.fpkgs .slctform .fpkgsitems .neunaxelform form #new_next_button.disabled{}
+.fpkgs .slctform .fpkgsitems .neunaxelform form #new_next_button:hover{}
+.fpkgs .slctform .registeredItems{}
+.fpkgs .slctform .registeredItems>div{}
+.fpkgs .slctform .registeredItems>div img{}
+.fpkgs .slctform .registeredItems>div span{}
+.fpkgs .slctform .registeredItems>div p{}
+.fpkgs .slctform .registeredItems .back_button{}
+.fpkgs .slctform .registeredItems .back_button:hover{}
+.fpkgs .formInfo{
+    display: flex;
+    flex-direction: column;
+    width: 130px;
+}
+.fpkgs .formInfo .formInfoIcon{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+}
+.fpkgs .formInfo .formInfoIcon img{
+    width: 90%;
+    margin-bottom: 15px;
+}
+.fpkgs .formInfo .formInfoIcon span{
+    text-align: center;
+}
+.fpkgs .formInfo .formInfoIcon span b{
+    font-size: 20px;
+    margin-left: 4px;
+}
+.fpkgs .formInfo .formInfoIcon span strong{
+    color: #FBBF44;
+    display: block;
+    text-align: center;
+    font-size: 16px;
+}
+.fpkgs .formInfo .formInfoIcon span strong{}
+.fpkgs .formInfo .formInfoText{
+    border: 1px solid #ECECEC;
+    border-radius: 14px;
+    padding: 20px;
+}
+.fpkgs .formInfo .formInfoText .topCost{
+    
+/* identical to box height, or 15px */
+    
+/* identical to box height, or 19px */
+    text-align: center;
+}
+.fpkgs .formInfo .formInfoText .topCost span,.fpkgs .formInfo .formInfoText .bottomCost span{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 104.79%;
+    text-align: center;
+    color: #747474;
+}
+.fpkgs .formInfo .formInfoText .topCost strong,.fpkgs .formInfo .formInfoText .bottomCost strong{}
+.fpkgs .formInfo .formInfoText .bottomCost{text-align: center;margin-top: 10px;border-top: 1px solid #C0C0C0;padding-top: 10px;}
+
+#sec_new{
+    background: #D6EAFE;
+    border-radius: 29px;
+    padding: 50px 80px;
+    margin-bottom: 150px;
+}
+#sec_new h2{
+    font-style: normal;
+    font-weight: 700;
+    font-size: 27px;
+    line-height: 36px;
+    color: #3E3E3E;
+    text-align: center;
+}
+#sec_new .cover{
+    display: flex;
+    margin-top: 10px;
+}
+#sec_new .cover .content{
+    width: 65%;
+}
+#sec_new .cover .content p{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 29px;
+    text-align: justify;
+    color: #000000;
+    white-space: pre-line;
+}
+#sec_new .cover .img{
+    width: 45%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+#sec_new .cover .img img{
+    width: 90%;
+}
+
+footer.site-footer .center{
+    width: 50%;
+}
+footer.site-footer .center nav{}
+footer.site-footer .center nav ul{
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+}
+footer.site-footer .center nav ul li{}
+footer.site-footer .center nav ul li a{
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 19px;
+    color: #FFFFFF;
+}
+footer.site-footer .center nav ul li a:hover{}
+footer.site-footer .center nav .contact{
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #474747;
+    padding-top: 12px;
+    margin-top: 12px;
+}
+footer.site-footer .center nav .contact .address{}
+footer.site-footer .center nav .contact .address a{}
+footer.site-footer .center nav .contact .address a span{}
+footer.site-footer .center nav .contact .social{}
+footer.site-footer .center nav .contact .social a{}
+footer.site-footer .center nav .contact .social a span{}
+footer.site-footer .enamad{}
+footer.site-footer .enamad .enamads{}
+footer.site-footer .enamad .enamads a{
+    margin: 5px;
+}
+footer.site-footer .enamad .enamads a img{
+    height: 100px;
+}

@@ -244,3 +244,53 @@ function enableNextButton() {
 
 var isValid;
 
+// new edit
+
+  $( ".realitem2" ).hover(
+    function() {
+      $( '.csections1' ).addClass( "active" );
+      $( '.csections2' ).addClass( "active" );
+    }, function() {
+      $( '.csections2' ).removeClass( "active" );
+    }
+  );
+  $( ".realitem3" ).hover(
+    function() {
+      $( '.csections1' ).addClass( "active" );
+      $( '.csections2' ).addClass( "active" );
+      $( '.csections3' ).addClass( "active" );
+      $( '.csections4' ).addClass( "active" );
+    }, function() {
+      $( '.csections2' ).removeClass( "active" );
+      $( '.csections3' ).removeClass( "active" );
+      $( '.csections4' ).removeClass( "active" );
+    }
+  );
+
+
+  $(".realitem1").click(function () {
+      $('.realitem .active').removeClass( "active" );
+      $(this).addClass("active");
+      $( '.csections1' ).addClass( "active2" );
+      $( '.csections2' ).removeClass( "active2" );
+      $( '.csections3' ).removeClass( "active2" );
+      $( '.csections4' ).removeClass( "active2" );
+  });
+
+  $(".realitem2").click(function () {
+    $('.realitem .active').removeClass( "active" );
+    $(this).addClass("active");
+    $( '.csections1' ).addClass( "active2" );
+    $( '.csections2' ).addClass( "active2" );
+    $( '.csections3' ).removeClass( "active2" );
+    $( '.csections4' ).removeClass( "active2" );
+});
+
+$(".realitem3").click(function () {
+    $('.realitem .active').removeClass( "active" );
+    $(this).addClass("active");
+    $( '.csections1' ).addClass( "active2" );
+    $( '.csections2' ).addClass( "active2" );
+    $( '.csections3' ).addClass( "active2" );
+    $( '.csections4' ).addClass( "active2" );
+});

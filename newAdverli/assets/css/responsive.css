@@ -336,6 +336,89 @@
 .wrapper>footer>.container>#footer_tel:hover{}
 .wrapper>footer>.container>.contact{width: 70%;}
 .wrapper>footer>.container>.contact>.social{justify-content: space-evenly;}
+
+/* new edit */
+.fpkgs{}
+.fpkgs .slctform{}
+.fpkgs .slctform .circles{}
+.fpkgs .slctform .circles .active{}
+.fpkgs .slctform .circles .active .dots{}
+.fpkgs .slctform .circles .active .dots .dot{}
+.fpkgs .slctform .circles>div{}
+.fpkgs .slctform .circles>div .dots{}
+.fpkgs .slctform .circles>div .dots .dot{}
+.fpkgs .slctform .circles .csections1{}
+.fpkgs .slctform .circles .csections1 .dots{}
+.fpkgs .slctform .circles .csections1 .dots .dot{}
+.fpkgs .slctform .circles .csections2{}
+.fpkgs .slctform .circles .csections2 .dots{}
+.fpkgs .slctform .circles .csections2 .dots .dot{}
+.fpkgs .slctform .circles .csections3{}
+.fpkgs .slctform .circles .csections3 .dots{}
+.fpkgs .slctform .circles .csections3 .dots .dot{}
+.fpkgs .slctform .circles .csections4{}
+.fpkgs .slctform .circles .csections4 .dots{}
+.fpkgs .slctform .circles .csections4 .dots .dot{}
+.fpkgs .slctform .fpkgsitems{}
+.fpkgs .slctform .fpkgsitems .realitem{}
+.fpkgs .slctform .fpkgsitems .realitem>div{}
+.fpkgs .slctform .fpkgsitems .realitem>div span{}
+.fpkgs .slctform .fpkgsitems .realitem>div span strong{}
+
+.fpkgs .slctform .fpkgsitems .realitem .active{}
+.fpkgs .slctform .fpkgsitems .realitem .active span{}
+.fpkgs .slctform .fpkgsitems .neunaxelform{}
+.fpkgs .slctform .fpkgsitems .neunaxelform form{}
+.fpkgs .slctform .fpkgsitems .neunaxelform form #website{}
+.fpkgs .slctform .fpkgsitems .neunaxelform form #phone{}
+.fpkgs .slctform .fpkgsitems .neunaxelform form #new_next_button{}
+.fpkgs .slctform .fpkgsitems .neunaxelform form #new_next_button.disabled{}
+.fpkgs .slctform .fpkgsitems .neunaxelform form #new_next_button:hover{}
+.fpkgs .slctform .registeredItems{}
+.fpkgs .slctform .registeredItems>div{}
+.fpkgs .slctform .registeredItems>div img{}
+.fpkgs .slctform .registeredItems>div span{}
+.fpkgs .slctform .registeredItems>div p{}
+.fpkgs .slctform .registeredItems .back_button{}
+.fpkgs .slctform .registeredItems .back_button:hover{}
+.fpkgs .formInfo{}
+.fpkgs .formInfo .formInfoIcon{}
+.fpkgs .formInfo .formInfoIcon img{}
+.fpkgs .formInfo .formInfoIcon span{}
+.fpkgs .formInfo .formInfoIcon span b{}
+.fpkgs .formInfo .formInfoIcon span strong{}
+.fpkgs .formInfo .formInfoIcon span strong{}
+.fpkgs .formInfo .formInfoText{}
+.fpkgs .formInfo .formInfoText .topCost{}
+.fpkgs .formInfo .formInfoText .topCost span,.fpkgs .formInfo .formInfoText .bottomCost span{}
+.fpkgs .formInfo .formInfoText .topCost strong,.fpkgs .formInfo .formInfoText .bottomCost strong{}
+.fpkgs .formInfo .formInfoText .bottomCost{}
+
+#sec_new{}
+#sec_new h2{}
+#sec_new .cover{}
+#sec_new .cover .content{}
+#sec_new .cover .content p{}
+#sec_new .cover .img{}
+#sec_new .cover .img img{}
+
+footer.site-footer .center{}
+footer.site-footer .center nav{}
+footer.site-footer .center nav ul{}
+footer.site-footer .center nav ul li{}
+footer.site-footer .center nav ul li a{}
+footer.site-footer .center nav ul li a:hover{}
+footer.site-footer .center nav .contact{}
+footer.site-footer .center nav .contact .address{}
+footer.site-footer .center nav .contact .address a{}
+footer.site-footer .center nav .contact .address a span{}
+footer.site-footer .center nav .contact .social{}
+footer.site-footer .center nav .contact .social a{}
+footer.site-footer .center nav .contact .social a span{}
+footer.site-footer .enamad{}
+footer.site-footer .enamad .enamads{}
+footer.site-footer .enamad .enamads a{}
+footer.site-footer .enamad .enamads a img{}
 }
 
 @media only screen and (min-width: 320px) and (max-width: 760px) {
@@ -673,6 +756,88 @@ body{}
 .wrapper>footer>.container>#footer_tel:hover{}
 .wrapper>footer>.container>.contact{width:90%;text-align:center;}
 .wrapper>footer>.container>.contact>.social{justify-content: space-evenly;}
+/* new edit */
+.fpkgs{}
+.fpkgs .slctform{}
+.fpkgs .slctform .circles{}
+.fpkgs .slctform .circles .active{}
+.fpkgs .slctform .circles .active .dots{}
+.fpkgs .slctform .circles .active .dots .dot{}
+.fpkgs .slctform .circles>div{}
+.fpkgs .slctform .circles>div .dots{}
+.fpkgs .slctform .circles>div .dots .dot{}
+.fpkgs .slctform .circles .csections1{}
+.fpkgs .slctform .circles .csections1 .dots{}
+.fpkgs .slctform .circles .csections1 .dots .dot{}
+.fpkgs .slctform .circles .csections2{}
+.fpkgs .slctform .circles .csections2 .dots{}
+.fpkgs .slctform .circles .csections2 .dots .dot{}
+.fpkgs .slctform .circles .csections3{}
+.fpkgs .slctform .circles .csections3 .dots{}
+.fpkgs .slctform .circles .csections3 .dots .dot{}
+.fpkgs .slctform .circles .csections4{}
+.fpkgs .slctform .circles .csections4 .dots{}
+.fpkgs .slctform .circles .csections4 .dots .dot{}
+.fpkgs .slctform .fpkgsitems{}
+.fpkgs .slctform .fpkgsitems .realitem{}
+.fpkgs .slctform .fpkgsitems .realitem>div{}
+.fpkgs .slctform .fpkgsitems .realitem>div span{}
+.fpkgs .slctform .fpkgsitems .realitem>div span strong{}
+
+.fpkgs .slctform .fpkgsitems .realitem .active{}
+.fpkgs .slctform .fpkgsitems .realitem .active span{}
+.fpkgs .slctform .fpkgsitems .neunaxelform{}
+.fpkgs .slctform .fpkgsitems .neunaxelform form{}
+.fpkgs .slctform .fpkgsitems .neunaxelform form #website{}
+.fpkgs .slctform .fpkgsitems .neunaxelform form #phone{}
+.fpkgs .slctform .fpkgsitems .neunaxelform form #new_next_button{}
+.fpkgs .slctform .fpkgsitems .neunaxelform form #new_next_button.disabled{}
+.fpkgs .slctform .fpkgsitems .neunaxelform form #new_next_button:hover{}
+.fpkgs .slctform .registeredItems{}
+.fpkgs .slctform .registeredItems>div{}
+.fpkgs .slctform .registeredItems>div img{}
+.fpkgs .slctform .registeredItems>div span{}
+.fpkgs .slctform .registeredItems>div p{}
+.fpkgs .slctform .registeredItems .back_button{}
+.fpkgs .slctform .registeredItems .back_button:hover{}
+.fpkgs .formInfo{}
+.fpkgs .formInfo .formInfoIcon{}
+.fpkgs .formInfo .formInfoIcon img{}
+.fpkgs .formInfo .formInfoIcon span{}
+.fpkgs .formInfo .formInfoIcon span b{}
+.fpkgs .formInfo .formInfoIcon span strong{}
+.fpkgs .formInfo .formInfoIcon span strong{}
+.fpkgs .formInfo .formInfoText{}
+.fpkgs .formInfo .formInfoText .topCost{}
+.fpkgs .formInfo .formInfoText .topCost span,.fpkgs .formInfo .formInfoText .bottomCost span{}
+.fpkgs .formInfo .formInfoText .topCost strong,.fpkgs .formInfo .formInfoText .bottomCost strong{}
+.fpkgs .formInfo .formInfoText .bottomCost{}
+
+#sec_new{}
+#sec_new h2{}
+#sec_new .cover{}
+#sec_new .cover .content{}
+#sec_new .cover .content p{}
+#sec_new .cover .img{}
+#sec_new .cover .img img{}
+
+footer.site-footer .center{}
+footer.site-footer .center nav{}
+footer.site-footer .center nav ul{}
+footer.site-footer .center nav ul li{}
+footer.site-footer .center nav ul li a{}
+footer.site-footer .center nav ul li a:hover{}
+footer.site-footer .center nav .contact{}
+footer.site-footer .center nav .contact .address{}
+footer.site-footer .center nav .contact .address a{}
+footer.site-footer .center nav .contact .address a span{}
+footer.site-footer .center nav .contact .social{}
+footer.site-footer .center nav .contact .social a{}
+footer.site-footer .center nav .contact .social a span{}
+footer.site-footer .enamad{}
+footer.site-footer .enamad .enamads{}
+footer.site-footer .enamad .enamads a{}
+footer.site-footer .enamad .enamads a img{}
 }
 
 @media only screen and (max-width: 555px){
@@ -1010,4 +1175,86 @@ body{}
 .wrapper>footer>.container>#footer_tel:hover{}
 .wrapper>footer>.container>.contact{width:90%;text-align:center;}
 .wrapper>footer>.container>.contact>.social{justify-content: space-evenly;}
+/* new edit */
+.fpkgs{}
+.fpkgs .slctform{}
+.fpkgs .slctform .circles{}
+.fpkgs .slctform .circles .active{}
+.fpkgs .slctform .circles .active .dots{}
+.fpkgs .slctform .circles .active .dots .dot{}
+.fpkgs .slctform .circles>div{}
+.fpkgs .slctform .circles>div .dots{}
+.fpkgs .slctform .circles>div .dots .dot{}
+.fpkgs .slctform .circles .csections1{}
+.fpkgs .slctform .circles .csections1 .dots{}
+.fpkgs .slctform .circles .csections1 .dots .dot{}
+.fpkgs .slctform .circles .csections2{}
+.fpkgs .slctform .circles .csections2 .dots{}
+.fpkgs .slctform .circles .csections2 .dots .dot{}
+.fpkgs .slctform .circles .csections3{}
+.fpkgs .slctform .circles .csections3 .dots{}
+.fpkgs .slctform .circles .csections3 .dots .dot{}
+.fpkgs .slctform .circles .csections4{}
+.fpkgs .slctform .circles .csections4 .dots{}
+.fpkgs .slctform .circles .csections4 .dots .dot{}
+.fpkgs .slctform .fpkgsitems{}
+.fpkgs .slctform .fpkgsitems .realitem{}
+.fpkgs .slctform .fpkgsitems .realitem>div{}
+.fpkgs .slctform .fpkgsitems .realitem>div span{}
+.fpkgs .slctform .fpkgsitems .realitem>div span strong{}
+
+.fpkgs .slctform .fpkgsitems .realitem .active{}
+.fpkgs .slctform .fpkgsitems .realitem .active span{}
+.fpkgs .slctform .fpkgsitems .neunaxelform{}
+.fpkgs .slctform .fpkgsitems .neunaxelform form{}
+.fpkgs .slctform .fpkgsitems .neunaxelform form #website{}
+.fpkgs .slctform .fpkgsitems .neunaxelform form #phone{}
+.fpkgs .slctform .fpkgsitems .neunaxelform form #new_next_button{}
+.fpkgs .slctform .fpkgsitems .neunaxelform form #new_next_button.disabled{}
+.fpkgs .slctform .fpkgsitems .neunaxelform form #new_next_button:hover{}
+.fpkgs .slctform .registeredItems{}
+.fpkgs .slctform .registeredItems>div{}
+.fpkgs .slctform .registeredItems>div img{}
+.fpkgs .slctform .registeredItems>div span{}
+.fpkgs .slctform .registeredItems>div p{}
+.fpkgs .slctform .registeredItems .back_button{}
+.fpkgs .slctform .registeredItems .back_button:hover{}
+.fpkgs .formInfo{}
+.fpkgs .formInfo .formInfoIcon{}
+.fpkgs .formInfo .formInfoIcon img{}
+.fpkgs .formInfo .formInfoIcon span{}
+.fpkgs .formInfo .formInfoIcon span b{}
+.fpkgs .formInfo .formInfoIcon span strong{}
+.fpkgs .formInfo .formInfoIcon span strong{}
+.fpkgs .formInfo .formInfoText{}
+.fpkgs .formInfo .formInfoText .topCost{}
+.fpkgs .formInfo .formInfoText .topCost span,.fpkgs .formInfo .formInfoText .bottomCost span{}
+.fpkgs .formInfo .formInfoText .topCost strong,.fpkgs .formInfo .formInfoText .bottomCost strong{}
+.fpkgs .formInfo .formInfoText .bottomCost{}
+
+#sec_new{}
+#sec_new h2{}
+#sec_new .cover{}
+#sec_new .cover .content{}
+#sec_new .cover .content p{}
+#sec_new .cover .img{}
+#sec_new .cover .img img{}
+
+footer.site-footer .center{}
+footer.site-footer .center nav{}
+footer.site-footer .center nav ul{}
+footer.site-footer .center nav ul li{}
+footer.site-footer .center nav ul li a{}
+footer.site-footer .center nav ul li a:hover{}
+footer.site-footer .center nav .contact{}
+footer.site-footer .center nav .contact .address{}
+footer.site-footer .center nav .contact .address a{}
+footer.site-footer .center nav .contact .address a span{}
+footer.site-footer .center nav .contact .social{}
+footer.site-footer .center nav .contact .social a{}
+footer.site-footer .center nav .contact .social a span{}
+footer.site-footer .enamad{}
+footer.site-footer .enamad .enamads{}
+footer.site-footer .enamad .enamads a{}
+footer.site-footer .enamad .enamads a img{}
 }
