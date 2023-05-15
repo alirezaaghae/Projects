@@ -78,16 +78,19 @@
 #sec_1>.container{}
 #sec_1>.container>.form{/* display: flex; *//* flex-direction: column-reverse; */}
 #sec_1>.container>.form>.main{
-    /* flex-direction: column; */
+    flex-direction: column;
     align-items: center;
     margin-bottom: 0;
 }
 #sec_1>.container>.form>.main>.content{
     width: 80%;
     margin-bottom: 30px;
+    text-align: center;
 }
 #sec_1>.container>.form>.main>.content>h3{
     text-align: right;
+    margin: auto;
+    text-align: center;
 }
 #sec_1>.container>.form>.main>.content>span{
     text-align: right;
@@ -96,6 +99,8 @@
 #sec_1>.container>.form>.main>.content>p{
     max-width: 84%;
     text-align: right;
+    margin: auto;
+    text-align: center;
 }
 #sec_1>.container>.form>.main>.content>ul{}
 #sec_1>.container>.form>.main>.content>ul>li{}
@@ -321,7 +326,7 @@
 .wrapper>footer{}
 .wrapper>footer>.container{
     display: flex;
-    /* flex-direction: column; */
+    flex-direction: column;
 }
 .wrapper>footer>.container>.logo{}
 .wrapper>footer>.container>.logo>img{width:100px;}
@@ -381,7 +386,9 @@
 .fpkgs .slctform .registeredItems>div p{}
 .fpkgs .slctform .registeredItems .back_button{}
 .fpkgs .slctform .registeredItems .back_button:hover{}
-.fpkgs .formInfo{}
+.fpkgs .formInfo{
+    margin-right: 20px;
+}
 .fpkgs .formInfo .formInfoIcon{}
 .fpkgs .formInfo .formInfoIcon img{}
 .fpkgs .formInfo .formInfoIcon span{}
@@ -394,15 +401,34 @@
 .fpkgs .formInfo .formInfoText .topCost strong,.fpkgs .formInfo .formInfoText .bottomCost strong{}
 .fpkgs .formInfo .formInfoText .bottomCost{}
 
-#sec_new{}
+#sec_new{
+    padding: 60px;
+}
 #sec_new h2{}
-#sec_new .cover{}
-#sec_new .cover .content{}
-#sec_new .cover .content p{}
-#sec_new .cover .img{}
-#sec_new .cover .img img{}
+#sec_new .cover{
+    display: flex;
+    flex-direction: column-reverse;
+}
+#sec_new .cover .content{
+    width: 100%;
+    margin-top: 20px;
+}
+#sec_new .cover .content p{
+    width: 100%;
+}
+#sec_new .cover .img{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#sec_new .cover .img img{
+    width: 70%;
+}
 
-footer.site-footer .center{}
+footer.site-footer .center{
+    margin: 34px 0;
+}
 footer.site-footer .center nav{}
 footer.site-footer .center nav ul{}
 footer.site-footer .center nav ul li{}
@@ -757,9 +783,19 @@ body{}
 .wrapper>footer>.container>.contact{width:90%;text-align:center;}
 .wrapper>footer>.container>.contact>.social{justify-content: space-evenly;}
 /* new edit */
-.fpkgs{}
-.fpkgs .slctform{}
-.fpkgs .slctform .circles{}
+.fpkgs{
+    display: flex;
+    flex-direction: column-reverse;
+    width: 100%;
+    align-items: center;
+}
+.fpkgs .slctform{
+    width: 100%;
+    display: flex;
+}
+.fpkgs .slctform .circles{
+    display: none;
+}
 .fpkgs .slctform .circles .active{}
 .fpkgs .slctform .circles .active .dots{}
 .fpkgs .slctform .circles .active .dots .dot{}
@@ -778,15 +814,18 @@ body{}
 .fpkgs .slctform .circles .csections4{}
 .fpkgs .slctform .circles .csections4 .dots{}
 .fpkgs .slctform .circles .csections4 .dots .dot{}
-.fpkgs .slctform .fpkgsitems{}
-.fpkgs .slctform .fpkgsitems .realitem{}
-.fpkgs .slctform .fpkgsitems .realitem>div{}
+.fpkgs .slctform .fpkgsitems{width: 100%;display: flex;flex-direction: column;align-items: center;justify-content: center;}
+.fpkgs .slctform .fpkgsitems .realitem{display: flex;justify-content: flex-end;width: 330px;}
+.fpkgs .slctform .fpkgsitems .realitem>div{width: 150px;height: 150px;}
 .fpkgs .slctform .fpkgsitems .realitem>div span{}
 .fpkgs .slctform .fpkgsitems .realitem>div span strong{}
 
-.fpkgs .slctform .fpkgsitems .realitem .active{}
+.fpkgs .slctform .fpkgsitems .realitem .active{
+}
 .fpkgs .slctform .fpkgsitems .realitem .active span{}
-.fpkgs .slctform .fpkgsitems .neunaxelform{}
+.fpkgs .slctform .fpkgsitems .neunaxelform{
+    width: 100%;
+}
 .fpkgs .slctform .fpkgsitems .neunaxelform form{}
 .fpkgs .slctform .fpkgsitems .neunaxelform form #website{}
 .fpkgs .slctform .fpkgsitems .neunaxelform form #phone{}
@@ -813,25 +852,62 @@ body{}
 .fpkgs .formInfo .formInfoText .topCost strong,.fpkgs .formInfo .formInfoText .bottomCost strong{}
 .fpkgs .formInfo .formInfoText .bottomCost{}
 
-#sec_new{}
+#sec_new{
+    margin: 10px auto;
+    background: inherit;
+    padding: 10px;
+}
 #sec_new h2{}
-#sec_new .cover{}
-#sec_new .cover .content{}
-#sec_new .cover .content p{}
-#sec_new .cover .img{}
-#sec_new .cover .img img{}
+#sec_new .cover{
+    display: flex;
+    flex-direction: column-reverse;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+#sec_new .cover .content{
+    width: 100%;
+}
+#sec_new .cover .content p{
+    width: 100%;
+    margin: 20px 0;
+}
+#sec_new .cover .img{
+    width: 100%;
+}
+#sec_new .cover .img img{
+    width: 100%;
+}
 
-footer.site-footer .center{}
+footer.site-footer .center{
+    margin: 30px 0;
+}
 footer.site-footer .center nav{}
-footer.site-footer .center nav ul{}
-footer.site-footer .center nav ul li{}
+footer.site-footer .center nav ul{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+footer.site-footer .center nav ul li{
+    margin: 10px;
+}
 footer.site-footer .center nav ul li a{}
 footer.site-footer .center nav ul li a:hover{}
-footer.site-footer .center nav .contact{}
-footer.site-footer .center nav .contact .address{}
+footer.site-footer .center nav .contact{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+footer.site-footer .center nav .contact .address{
+    text-align: center;
+    margin: 10px 0 20px 0;
+}
 footer.site-footer .center nav .contact .address a{}
 footer.site-footer .center nav .contact .address a span{}
-footer.site-footer .center nav .contact .social{}
+footer.site-footer .center nav .contact .social{
+}
 footer.site-footer .center nav .contact .social a{}
 footer.site-footer .center nav .contact .social a span{}
 footer.site-footer .enamad{}

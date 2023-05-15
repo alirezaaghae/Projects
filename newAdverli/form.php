@@ -30,14 +30,10 @@ if(!empty($_SERVER['HTTP_CLIENT_IP'])){$ip = $_SERVER['HTTP_CLIENT_IP'];}elseif(
     $datetime=date('Y-m-d H:i:s');
 
     $selected = $_POST['item'];
-    $name = $_POST['name'];
     $phone = $_POST['phone'];
     $website = $_POST['website'];
-    $charge = $_POST['costs'];
-    $key_words = $_POST['key_words'];
-    $social = $_POST['social'];
 
-    mysqli_query($db_connection,"INSERT INTO package (selected, name, phone, website, charge, key_words, social, date) VALUES ('$selected', '$name', '$phone', '$website', '$charge', '$key_words', '$social', '$datetime')");
+    mysqli_query($db_connection,"INSERT INTO package (selected, phone, date) VALUES ('$selected', '$phone', '$website', '$datetime')");
 
 
 
@@ -60,14 +56,10 @@ $parameters['isflash'] =false;
 echo $sms_client->SendSimpleSMS2($parameters)->SendSimpleSMS2Result;
 }
 function smscompiler($string){
-global $selected,$name,$phone,$website,$charge,$key_words,$social,$datetime;
+global $selected,$phone,$website,$datetime;
 $string=str_replace('{selected}',$selected,$string);
-$string=str_replace('{name}',$name,$string);
 $string=str_replace('{phone}',$phone,$string);
 $string=str_replace('{website}',$website,$string);
-$string=str_replace('{charge}',$charge,$string);
-$string=str_replace('{key_words}',$key_words,$string);
-$string=str_replace('{social}',$social,$string);
 $string=str_replace('{datetime}',$datetime,$string);
 return $string;
 }
