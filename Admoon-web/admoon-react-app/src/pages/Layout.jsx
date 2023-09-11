@@ -6,7 +6,7 @@ const Layout = () => {
       <div id="MainNavBar" className="desktop">
         <div id="navbar">
             <div className="logo">
-                <Link to="/"><img src="assets/images/admoonLogoBlue.svg" alt="admoon-logo" title="admoon-logo"/></Link>
+                <Link to="/"><img src={window.location.origin + "/assets/images/admoonLogoBlue.svg"} alt="admoon-logo" title="admoon-logo"/></Link>
             </div>
             <nav>
                 <ul>

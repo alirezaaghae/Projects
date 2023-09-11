@@ -7,16 +7,16 @@ const Footer = (props) => {
         <div className="container">
             <div className="location">
                 <a className="map" href="https://goo.gl/maps/AGM85TRxLHGSoKiS6" target="_blank">
-                    <img src="assets/images/footerMapCover.png" alt="location" title="location"/>
+                    <img src={window.location.origin + "/assets/images/footerMapCover.png"} alt="location" title="location"/>
                 </a>
                 <div className="text">
                     <ul>
                         <li>
-                            <img src="assets/images/locationIcon.svg" alt="location-icon" title="location-icon"/>
+                            <img src={window.location.origin + "/assets/images/locationIcon.svg"} alt="location-icon" title="location-icon"/>
                             <a href="https://goo.gl/maps/AGM85TRxLHGSoKiS6">501, Baniyas CenterAl Maktoum sr., DeiraDubai, UAE</a>
                         </li>
                         <li>
-                            <img src="assets/images/phoneIcon.svg" alt="phone-icon" title="phone-icon"/>
+                            <img src={window.location.origin + "/assets/images/phoneIcon.svg"} alt="phone-icon" title="phone-icon"/>
                             <a href="tel:+9685483422">+968 - 548 3422</a>
                             <a href="tel:+9684692578">+968 - 469 2578</a>
                         </li>
@@ -69,7 +69,7 @@ const Footer = (props) => {
         </div>
         <div className="footerNav desktop">
             <div className="logo">
-                <img src="assets/images/admoonLogoWhite.svg" alt="admoon-logo" title="admoon-logo"/>
+                <img src={window.location.origin + "/assets/images/admoonLogoWhite.svg"} alt="admoon-logo" title="admoon-logo"/>
             </div>
             <div className="footerNavBar">
                 <ul className="navv">
@@ -115,14 +115,14 @@ const Footer = (props) => {
             </div>
             <div className="trustUs">
                 <div className="GPartner">
-                    <a target="_blank" href="https://www.google.com/partners/agency?id=6288273986" className="footerbottomgpartner"><img src="assets/images/GPartner.png"/></a>
+                    <a target="_blank" href="https://www.google.com/partners/agency?id=6288273986" className="footerbottomgpartner"><img src={window.location.origin + "/assets/images/GPartner.png"}/></a>
                 </div>
                 <div className="Social">
                     <ul>
-                        <li><a className="linkedin" target="_blank" href="#"><img src="assets/images/LinkdinIcon.svg" alt="Linkdin-Icon" title="Linkdin-Icon"/></a></li>
-                        <li><a className="telegram" target="_blank" href="#"><img src="assets/images/telegramIcon.svg" alt="telegram-Icon" title="telegram-Icon"/></a></li>
-                        <li><a className="whatsapp" target="_blank" href="#"><img src="assets/images/whatsappIcon.svg" alt="whatsapp-Icon" title="whatsapp-Icon"/></a></li>
-                        <li><a className="instagram" target="_blank" href="#"><img src="assets/images/instagramIcon.svg" alt="instagram-Icon" title="instagram-Icon"/></a></li>
+                        <li><a className="linkedin" target="_blank" href="#"><img src={window.location.origin + "/assets/images/LinkdinIcon.svg"} alt="Linkdin-Icon" title="Linkdin-Icon"/></a></li>
+                        <li><a className="telegram" target="_blank" href="#"><img src={window.location.origin + "/assets/images/telegramIcon.svg"} alt="telegram-Icon" title="telegram-Icon"/></a></li>
+                        <li><a className="whatsapp" target="_blank" href="#"><img src={window.location.origin + "/assets/images/whatsappIcon.svg"} alt="whatsapp-Icon" title="whatsapp-Icon"/></a></li>
+                        <li><a className="instagram" target="_blank" href="#"><img src={window.location.origin + "/assets/images/instagramIcon.svg"} alt="instagram-Icon" title="instagram-Icon"/></a></li>
                     </ul>
                 </div>
             </div>
@@ -134,7 +134,7 @@ const Footer = (props) => {
                     <div className="panel">
                         <div className="panel-heading">
                             <h4 className="panel-title">
-                            <a data-toggle="collapse" href="#collapse101">Services <img src="assets/images/downArrow.svg"/></a>
+                            <a data-toggle="collapse" href="#collapse101">Services <img src={window.location.origin + "/assets/images/downArrow.svg"}/></a>
                             </h4>
                         </div>
                         <div id="collapse101" className="panel-collapse collapse">
@@ -156,7 +156,7 @@ const Footer = (props) => {
                     <div className="panel">
                         <div className="panel-heading">
                             <h4 className="panel-title">
-                            <a data-toggle="collapse" href="#collapse102">Solution for industry <img src="assets/images/downArrow.svg"/></a>
+                            <a data-toggle="collapse" href="#collapse102">Solution for industry <img src={window.location.origin + "/assets/images/downArrow.svg"}/></a>
                             </h4>
                         </div>
                         <div id="collapse102" className="panel-collapse collapse">
@@ -170,7 +170,7 @@ const Footer = (props) => {
                     <div className="panel">
                         <div className="panel-heading">
                             <h4 className="panel-title">
-                            <a data-toggle="collapse" href="#collapse103">Learn about <img src="assets/images/downArrow.svg"/></a>
+                            <a data-toggle="collapse" href="#collapse103">Learn about <img src={window.location.origin + "/assets/images/downArrow.svg"}/></a>
                             </h4>
                         </div>
                         <div id="collapse103" className="panel-collapse collapse">
@@ -202,19 +202,19 @@ const Footer = (props) => {
             </div>
             <div className="trustUs">
                 <div className="GPartner">
-                    <a target="_blank" href="https://www.google.com/partners/agency?id=6288273986" className="footerbottomgpartner"><img src="assets/images/GPartner.png"/></a>
+                    <a target="_blank" href="https://www.google.com/partners/agency?id=6288273986" className="footerbottomgpartner"><img src={window.location.origin + "/assets/images/GPartner.png"}/></a>
                 </div>
                 <div className="Social">
                     <ul>
-                        <li><a className="linkedin" target="_blank" href="#"><img src="assets/images/LinkdinIcon.svg" alt="Linkdin-Icon" title="Linkdin-Icon"/></a></li>
-                        <li><a className="telegram" target="_blank" href="#"><img src="assets/images/telegramIcon.svg" alt="telegram-Icon" title="telegram-Icon"/></a></li>
-                        <li><a className="whatsapp" target="_blank" href="#"><img src="assets/images/whatsappIcon.svg" alt="whatsapp-Icon" title="whatsapp-Icon"/></a></li>
-                        <li><a className="instagram" target="_blank" href="#"><img src="assets/images/instagramIcon.svg" alt="instagram-Icon" title="instagram-Icon"/></a></li>
+                        <li><a className="linkedin" target="_blank" href="#"><img src={window.location.origin + "/assets/images/LinkdinIcon.svg"} alt="Linkdin-Icon" title="Linkdin-Icon"/></a></li>
+                        <li><a className="telegram" target="_blank" href="#"><img src={window.location.origin + "/assets/images/telegramIcon.svg"} alt="telegram-Icon" title="telegram-Icon"/></a></li>
+                        <li><a className="whatsapp" target="_blank" href="#"><img src={window.location.origin + "/assets/images/whatsappIcon.svg"} alt="whatsapp-Icon" title="whatsapp-Icon"/></a></li>
+                        <li><a className="instagram" target="_blank" href="#"><img src={window.location.origin + "/assets/images/instagramIcon.svg"} alt="instagram-Icon" title="instagram-Icon"/></a></li>
                     </ul>
                 </div>
             </div>
             <div className="logo">
-                <Link to="/"><img src="assets/images/admoonLogoWhite.svg" alt="admoon-logo" title="admoon-logo"/></Link>
+                <Link to="/"><img src={window.location.origin + "/assets/images/admoonLogoWhite.svg"} alt="admoon-logo" title="admoon-logo"/></Link>
             </div>
         </div>
     </footer>

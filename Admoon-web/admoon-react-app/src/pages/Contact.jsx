@@ -5,7 +5,6 @@ import Footer from "./Footer";
 import $ from 'jquery';
 import {Helmet} from "react-helmet";
 
-
 const Contact = (props) => {
 
     useEffect(() => {
