@@ -1,0 +1,277 @@
+@import url(styleFontIran.css);
+::-moz-selection {color: #fff;background: #1B99DA;}
+::selection {color: #fff;background: #1B99DA;}
+:focus {outline: none;}
+* {margin: 0;padding: 0;}
+html {overflow-x: hidden;position: relative;scroll-behavior: smooth;scroll-padding-top: 50px;}
+html,body,button,input,optgroup,a,span,form,div,ul,li,p,strong,em,div,h1,h2,h3,h4,h5,h6,section,main,select,textarea {}
+a,button,::after,::before{transition:all .3s;text-decoration: none;}
+/*    start code here   */
+
+.mobile{display: none;}
+.desktop{display: inherit;}
+
+body{
+    position: relative;
+}
+.wrapper{
+    position: relative;
+}
+
+#sec_1{
+    background-image: url(../images/Headerbackground.png);
+    background-position: 100% 40%;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+}
+#sec_1::after{content: '';width: 100%;height: 116px;position: absolute;bottom: 0;background: linear-gradient(0deg, #ffffff 25.94%, rgba(0, 24, 41, 0.00) 100.94%);}
+#sec_1 header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#sec_1 header .logo>a{
+    position: relative;
+    display: inline-block;
+}
+#sec_1 header .logo{}
+#sec_1 header .logo img{
+    height: 110px;
+}
+#sec_1 header .navbar1{
+    height: 100%;
+    position: relative;
+}
+#sec_1 header .navbar1 ul{
+    display: flex;
+}
+#sec_1 header .navbar1 ul li{}
+#sec_1 header .navbar1 ul li a{
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    color: white;
+    display: inline-block;
+    padding: 0 20px;
+    transition: all .3s;
+}
+#sec_1 header .navbar1 ul li a:hover{
+    transform: scale(1.1);
+}
+#sec_1 header .button{}
+#sec_1 header .button a{
+    border-radius: var(--colors-4-px, 4px);
+    border: 1px solid var(--colors-blue-blue-6, #0098FF);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    color: white;
+    padding: 10px 16px;
+    transition: all .3s;
+}
+#sec_1 header .button a:hover{
+    background-color: white;
+    color: #021a5a;
+}
+#sec_1 .content{
+    margin-top: 80px;
+    text-align: center;
+}
+#sec_1 .content p{
+    margin-bottom: 45px;
+}
+#sec_1 .content p img{}
+#sec_1 .content a{
+    border-radius: 9px;
+    border: 1px solid #FFF;
+    background: rgba(12, 51, 126, 0.05);
+    backdrop-filter: blur(2px);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    color: white;
+    padding: 8px 66px;
+}
+#sec_1 .content a:hover{background-color: white; color: #021a5a;}
+
+#sec_2{
+    margin-top: 100px;
+}
+#sec_2>.container{}
+#sec_2>.container>.title{}
+#sec_2>.container>.title>img{
+    height: 80px;
+}
+#sec_2>.container>.table.desktop{
+    margin-top: 30px;
+}
+#sec_2>.container>.table.desktop .content{}
+#sec_2>.container>.table.desktop .content>img{}
+#sec_2>.container>.table.desktop .content .links{}
+#sec_2>.container>.table.desktop .content .links ul{
+    display: flex;
+    height: 47px;
+    width: 100%;
+    position: relative;
+    justify-content: space-around;
+}
+#sec_2>.container>.table.desktop .content .links ul li{
+    width: 100%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#sec_2>.container>.table.desktop .content .links ul li:nth-child(1){
+    color: #004473;
+    text-align: center;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 40px;
+}
+#sec_2>.container>.table.desktop .content .links ul li a{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    transition: all .3s;
+}
+#sec_2>.container>.table.desktop .content .links ul li a:hover{
+    transform: scale(1.1);
+    background-color: #e7f5ff;
+}
+#sec_2>.container>.table.desktop .content .links ul li a img{
+    height: 23px;
+}
+#sec_2>.container>.table.mobile{}
+#sec_2>.container>.table.mobile .content{}
+#sec_2>.container>.table.mobile .content .slider{}
+#sec_2>.container>.table.mobile .content .slider .owl-carousel{}
+#sec_2>.container>.table.mobile .content .slider .item{}
+#sec_2>.container>.table.mobile .content .slider .item a{}
+#sec_2>.container>.table.mobile .content .slider .item a img{}
+
+#sec_3{
+    margin-top: 200px;
+}
+#sec_3 .title{
+    margin-bottom: 50px;
+}
+#sec_3 .title img{
+    height: 35px;
+}
+#sec_3 .box{}
+#sec_3 .box ul{}
+#sec_3 .box ul li{}
+#sec_3 .box ul li img{}
+#sec_3 .blueBox{
+    margin-top: 80px;
+}
+#sec_3 .blueBox img{}
+
+#sec_4{
+    margin-top: 250px;
+    position: relative;
+}
+#sec_4 .container{}
+#sec_4 .container>.content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#sec_4 .container>.content>.img{
+    width: 45%;
+}
+#sec_4 .container>.content>.img img{}
+#sec_4 .container>.content>.text{
+    width: 50%;
+}
+#sec_4 .container>.content>.text a{}
+#sec_4 .container>.content>.text a img{}
+
+#sec_5{margin-top: 200px;background-color: #0d214c;padding: 50px 0;}
+#sec_5 img{}
+
+#sec_6{
+    margin-top: 90px;
+}
+#sec_6 .container{}
+#sec_6 .container a{}
+#sec_6 .container a img{}
+
+footer{
+    background: #0D1E47;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    padding: 40px 70px;
+    margin-top: 150px;
+}
+footer>.container>.content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+footer>.container>.content .logo{}
+footer>.container>.content .logo a{
+    display: inline-block;
+}
+footer>.container>.content .logo a img{
+    height: 110px;
+}
+footer>.container>.content .navbar1{}
+footer>.container>.content .navbar1 ul{
+    display: flex;
+}
+footer>.container>.content .navbar1 ul li{
+    padding: 20px;
+}
+footer>.container>.content .navbar1 ul li a{
+    color: #C2C2C2;
+    text-align: right;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 48px; /* 300% */
+}
+footer>.container>.content .social{}
+footer>.container>.content .social .content{
+    display: flex;
+    flex-direction: column;
+}
+footer>.container>.content .social .content span{
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    color: white;
+    text-align: center;
+    display: inline-block;
+}
+footer>.container>.content .social .content ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5px;
+}
+footer>.container>.content .social .content ul li{
+    margin: 10px;
+}
+footer>.container>.content .social .content ul li a{
+    display: inline-block;
+    position: relative;
+    width: 40px;
+}
+footer>.container>.content .social .content ul li a img{
+    position: relative;
+    width: 100%;
+}
