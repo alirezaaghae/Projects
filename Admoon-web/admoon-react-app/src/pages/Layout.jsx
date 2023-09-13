@@ -1,6 +1,18 @@
 import { Outlet, Link } from "react-router-dom";
+import $ from 'jquery';
 
 const Layout = () => {
+
+    const OpenBox = (box) => {
+        $('.selectBox.' + box).css("height", "224px");
+    }
+
+    const CloseBox = (box) => {
+        $('.selectBox.' + box ).css("height", "0");
+    }
+
+
+
   return (
     <>
       <div id="MainNavBar" className="desktop">
@@ -10,7 +22,11 @@ const Layout = () => {
             </div>
             <nav>
                 <ul>
-                    <li className="navIcon" id="Services">
+                    <li className="navIcon" 
+                        id="Services" 
+                        onMouseEnter={() => OpenBox('ServicesNav')}
+                        onMouseLeave={() => CloseBox('ServicesNav')}
+                    >
                         <span>Services</span>
                         <Link to="/">Services</Link>
                     </li>
@@ -22,7 +38,11 @@ const Layout = () => {
                         <span>Solution for industry</span>
                         <Link to="/industry">Solution for industry</Link>
                     </li>
-                    <li className="navIcon" id="LearnAbout">
+                    <li className="navIcon" 
+                        id="LearnAbout"
+                        onMouseEnter={() => OpenBox('LearnAbout')}
+                        onMouseLeave={() => CloseBox('LearnAbout')}
+                    >
                         <span>Learn about</span>
                         <Link to="/">Learn about</Link>
                     </li>
@@ -38,7 +58,10 @@ const Layout = () => {
             </nav>
         </div>
 
-        <div className="selectBox ServicesNav">
+        <div className="selectBox ServicesNav"
+            onMouseEnter={() => OpenBox('ServicesNav')}
+            onMouseLeave={() => CloseBox('ServicesNav')}
+        >
             <ul>
                 <li>
                     <Link to="/audit">Audit</Link>
@@ -55,7 +78,10 @@ const Layout = () => {
             </ul>
         </div>
 
-        <div className="selectBox LearnAbout">
+        <div className="selectBox LearnAbout"
+            onMouseEnter={() => OpenBox('LearnAbout')}
+            onMouseLeave={() => CloseBox('LearnAbout')}
+        >
             <ul>
                 <li>
                     <Link to="/">Search campaign</Link>

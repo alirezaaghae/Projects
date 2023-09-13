@@ -404,22 +404,6 @@ window.onload = function() {
     return false;
   });
 
-  $( "#Services,.ServicesNav" ).hover(
-    function() {
-      $('.selectBox.ServicesNav').css("height", "224px");
-    }, function() {
-        $('.selectBox.ServicesNav').css("height", "0");
-    }
-  );
-
-  $( "#LearnAbout,.LearnAbout" ).hover(
-    function() {
-      $('.selectBox.LearnAbout').css("height", "277px");
-    }, function() {
-      $('.selectBox.LearnAbout').css("height", "0");
-    }
-  );
-
   // about us
   // open box
 

@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import Layout from "./Layout";
 import Footer from "./Footer";
 import $ from 'jquery';
-import {Helmet} from "react-helmet";
+import { Helmet, HelmetProvider } from 'react-helmet-async';
 
 const Audit = (props) => {
 
@@ -18,7 +18,7 @@ const Audit = (props) => {
       }, []);
 
     return (
-    <>
+    <HelmetProvider>
     <Helmet>
         <meta itemprop="description" content={props.description} />
         <meta name="theme-color" content={props.colorTheme} />
@@ -368,7 +368,7 @@ const Audit = (props) => {
     </div>
 
     <Footer FPS={props.title}></Footer>
-    </>
+    </HelmetProvider>
     );
   };
   

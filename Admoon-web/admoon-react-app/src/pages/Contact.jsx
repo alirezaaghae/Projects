@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import Layout from "./Layout";
 import Footer from "./Footer";
 import $ from 'jquery';
-import {Helmet} from "react-helmet";
+import { Helmet, HelmetProvider } from 'react-helmet-async';
 
 const Contact = (props) => {
 
@@ -18,7 +18,7 @@ const Contact = (props) => {
       }, []);
 
     return (
-    <>
+    <HelmetProvider>
     <Helmet>
         <meta itemprop="description" content={props.description} />
         <meta name="theme-color" content={props.colorTheme} />
@@ -126,7 +126,7 @@ const Contact = (props) => {
                             </div>
                             <div className="PhoneNumber">
                                 <label>Phone Number
-                                    <input type="tel" name="phone" maxlength="15" required/>
+                                    <input type="tel" name="phone" maxLength="15" required/>
                                 </label>
                                 <div className="bottom-line"><div className="fill-line"></div></div>
                             </div>
@@ -150,7 +150,7 @@ const Contact = (props) => {
         </div>
     </div>
       <Footer FPS={props.title}></Footer>
-    </>
+    </HelmetProvider>
     );
   };
   
