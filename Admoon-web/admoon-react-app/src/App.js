@@ -49,7 +49,7 @@ function App() {
         window.addEventListener('load', onPageLoad);
         return () => window.removeEventListener('load', onPageLoad);
       }
-    },2000)
+    },200)
   }, []);
 
   const Loading = () => {

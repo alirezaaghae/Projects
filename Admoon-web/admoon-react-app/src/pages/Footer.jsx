@@ -1,6 +1,12 @@
+import { event } from "jquery";
 import { Link } from "react-router-dom";
+import $ from 'jquery';
 
 const Footer = (props) => {
+    const FocusInput = event => {
+        event.currentTarget.classList.add('active');
+        // monde
+    }
     return (
         <footer className="site-footer footer-index" role="contentinfo">
         <div className="footerContact">
@@ -34,7 +40,7 @@ const Footer = (props) => {
                           <option value="AccountSuspension">Account Suspension</option>
                         </select>
                     </div>
-                    <div className="FullName footer-input">
+                    <div className="FullName footer-input" onClick={FocusInput}>
                         <label>Full Name
                             <input type="text" name="name" min="2" max="20" required/>
                         </label>
