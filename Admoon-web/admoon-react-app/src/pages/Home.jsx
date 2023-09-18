@@ -2,45 +2,12 @@ import { useEffect } from 'react';
 import { Link } from "react-router-dom";
 import Layout from "./Layout";
 import Footer from "./Footer";
+import CM_Slider from "../components/CM_Slider";
 import $ from 'jquery';
-import OwlCarousel from 'react-owl-carousel2';
-import '../owl.theme.default.css';
+
 import { Helmet, HelmetProvider } from 'react-helmet-async';
 
 const Home = (props) => {
-// Owl Slider
-    const options = {
-        loop:true,
-        dots:false,
-        nav:true,
-        // rtl:true,
-        autoplay: true,
-        autoplayHoverPause: true,
-        singleItem:true,
-        autoplayTimeout: 6000,
-        navText : ["<img src='assets/images/leftArrowSlider.svg' width='54px'/>","<img src='assets/images/rightArrowSlider.svg' width='54px'/>"],
-        responsive:{
-            0:{
-                items:1,
-                nav:false
-            },
-            600:{
-                items:1,
-                nav:false
-            },
-            1000:{
-                items:1
-            }
-           }
-    };
-     
-    const events = {
-        // onDragged: function(event) { console.log('onDragged: ' + event.type); },
-		// onChanged: function(event) { console.log('onChanged: ' + event.type); },
-		// onTranslate: function(event) { console.log('onTranslate: ' + event.type); }
-    };
-// Owl Slider END
-
     useEffect(() => {
         $('html').addClass(props.title);
         $('body').attr('id', props.page);
@@ -341,59 +308,7 @@ const Home = (props) => {
                     <div className="container">
                         <h2>What our customers say about Us</h2>
                         <div className="slider">
-                            <OwlCarousel className='owl-carousel' options={options} events={events}>
-                                <div className="item">
-                                    <div className="stars">
-                                        <img src="assets/images/starIcon.svg" alt="star" width="25" height="25" className="star"/>
-                                        <img src="assets/images/starIcon.svg" alt="star" width="25" height="25" className="star"/>
-                                        <img src="assets/images/starIcon.svg" alt="star" width="25" height="25" className="star"/>
-                                        <img src="assets/images/starIcon.svg" alt="star" width="25" height="25" className="star"/>
-                                        <img src="assets/images/starIcon.svg" alt="star" width="25" height="25" className="star"/>
-                                    </div>
-                                    <p>Together, we'll align your ads with your business objectives, ensuring every penny spent brings profitable returns. No more guesswork; I'll let data-driven decisions and my expert guidance light the way to success.</p>
-                                    <div className="profile">
-                                        <div className="img"><img src="assets/images/C1Profile2.png" alt="customer-profile" title="customer-profile"/></div>
-                                        <div className="info">
-                                            <span className="name">Ali Hajizadeh</span>
-                                            <span className="field">CEO on Admoon</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="item">
-                                    <div className="stars">
-                                        <img src="assets/images/starIcon.svg" alt="star" width="25" height="25" className="star"/>
-                                        <img src="assets/images/starIcon.svg" alt="star" width="25" height="25" className="star"/>
-                                        <img src="assets/images/starIcon.svg" alt="star" width="25" height="25" className="star"/>
-                                        <img src="assets/images/starIcon.svg" alt="star" width="25" height="25" className="star"/>
-                                        <img src="assets/images/starIcon.svg" alt="star" width="25" height="25" className="star"/>
-                                    </div>
-                                    <p>Together, we'll align your ads with your business objectives, ensuring every penny spent brings profitable returns. No more guesswork; I'll let data-driven decisions and my expert guidance light the way to success.</p>
-                                    <div className="profile">
-                                        <div className="img"><img src="assets/images/C1Profile2.png" alt="customer-profile" title="customer-profile"/></div>
-                                        <div className="info">
-                                            <span className="name">Ali Hajizadeh</span>
-                                            <span className="field">CEO on Admoon</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="item">
-                                    <div className="stars">
-                                        <img src="assets/images/starIcon.svg" alt="star" width="25" height="25" className="star"/>
-                                        <img src="assets/images/starIcon.svg" alt="star" width="25" height="25" className="star"/>
-                                        <img src="assets/images/starIcon.svg" alt="star" width="25" height="25" className="star"/>
-                                        <img src="assets/images/starIcon.svg" alt="star" width="25" height="25" className="star"/>
-                                        <img src="assets/images/starIcon.svg" alt="star" width="25" height="25" className="star"/>
-                                    </div>
-                                    <p>Together, we'll align your ads with your business objectives, ensuring every penny spent brings profitable returns. No more guesswork; I'll let data-driven decisions and my expert guidance light the way to success.</p>
-                                    <div className="profile">
-                                        <div className="img"><img src="assets/images/C1Profile2.png" alt="customer-profile" title="customer-profile"/></div>
-                                        <div className="info">
-                                            <span className="name">Ali Hajizadeh</span>
-                                            <span className="field">CEO on Admoon</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </OwlCarousel>
+                            <CM_Slider/>
                         </div>
                     </div>
                 </section>

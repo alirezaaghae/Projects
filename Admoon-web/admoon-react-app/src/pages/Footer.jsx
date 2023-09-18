@@ -4,8 +4,9 @@ import $ from 'jquery';
 
 const Footer = (props) => {
     const FocusInput = event => {
-        event.currentTarget.classList.add('active');
-        // monde
+        event.preventDefault()
+        event.currentTarget.classList.add('active')
+        event.currentTarget.getElementsByTagName("input")[0].focus();
     }
     return (
         <footer className="site-footer footer-index" role="contentinfo">
@@ -46,18 +47,18 @@ const Footer = (props) => {
                         </label>
                         <div className="bottom-line"><div className="fill-line"></div></div>
                     </div>
-                    <div className="MailAddress footer-input">
+                    <div className="MailAddress footer-input" onClick={FocusInput}>
                         <label>Email
                             <input type="email" name="email"/>
                         </label>
                         <div className="bottom-line"><div className="fill-line"></div></div>
                     </div>
-                    <div className="WebsiteAddress footer-input">
+                    <div className="WebsiteAddress footer-input" onClick={FocusInput}>
                         <label>Website URL
                         <input type="text" name="website"/></label>
                         <div className="bottom-line"><div className="fill-line"></div></div>
                     </div>
-                    <div className="PhoneNumber footer-input">
+                    <div className="PhoneNumber footer-input" onClick={FocusInput}>
                         <label>Phone Number
                             <input type="tel" name="phone" maxLength="15" required/>
                         </label>

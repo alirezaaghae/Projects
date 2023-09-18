@@ -27,48 +27,49 @@ import './App.css';
 // const [wageFeeSum , setWageFeeSum] = useState('');
 // const [pricePerDot , setPricePerDot] = useState('');
 
-function App() {
+const App = () => {
 
   const [isloading, setIsloading] = useState(true);
 
   // This will run one time after the component mounts
-  useEffect(() => {
-    const onPageLoad = () => {
-      setIsloading(false)
-      let x = document.getElementsByClassName("loading")[0]
-      x.style.top = '-100%'
-      setTimeout(function(){
-        x.style.display = 'none'
-      },1000)
-    };
+  
+  // useEffect(() => {
+  //   const onPageLoad = () => {
+  //     setIsloading(false)
+  //     let x = document.getElementsByClassName("loading")[0]
+  //     x.style.top = '-100%'
+  //     setTimeout(function(){
+  //       x.style.display = 'none'
+  //     },1000)
+  //   };
 
-    setTimeout(function(){
-      if (document.readyState === 'complete') {
-        onPageLoad();
-      } else {
-        window.addEventListener('load', onPageLoad);
-        return () => window.removeEventListener('load', onPageLoad);
-      }
-    },200)
-  }, []);
+  //   setTimeout(function(){
+  //     if (document.readyState === 'complete') {
+  //       onPageLoad();
+  //     } else {
+  //       window.addEventListener('load', onPageLoad);
+  //       return () => window.removeEventListener('load', onPageLoad);
+  //     }
+  //   },200)
+  // }, []);
 
   const Loading = () => {
     return(
-      <div class="loading">
-        <div class="loading-text">
-            <span class="loading-text-words">A</span>
-            <span class="loading-text-words">D</span>
-            <span class="loading-text-words">M</span>
-            <span class="loading-text-words">O</span>
-            <span class="loading-text-words">O</span>
-            <span class="loading-text-words">N</span>
+      <div className="loading">
+        <div className="loading-text">
+            <span className="loading-text-words">A</span>
+            <span className="loading-text-words">D</span>
+            <span className="loading-text-words">M</span>
+            <span className="loading-text-words">O</span>
+            <span className="loading-text-words">O</span>
+            <span className="loading-text-words">N</span>
             <br/>
-            <span class="loading-text-words sec">A</span>
-            <span class="loading-text-words sec">G</span>
-            <span class="loading-text-words sec">E</span>
-            <span class="loading-text-words sec">N</span>
-            <span class="loading-text-words sec">C</span>
-            <span class="loading-text-words sec">Y</span>
+            <span className="loading-text-words sec">A</span>
+            <span className="loading-text-words sec">G</span>
+            <span className="loading-text-words sec">E</span>
+            <span className="loading-text-words sec">N</span>
+            <span className="loading-text-words sec">C</span>
+            <span className="loading-text-words sec">Y</span>
         </div>
     </div>
     );
@@ -76,7 +77,7 @@ function App() {
 
   return (
     <>
-      <Loading/>
+      {/* <Loading/> */}
       <BrowserRouter>
         <Routes>
             <Route path="/" index element={<Home title="ADMOON" page="homePage" description="Admoon Description" colorTheme="#041541" />} />

@@ -4,8 +4,15 @@ import Layout from "./Layout";
 import Footer from "./Footer";
 import $ from 'jquery';
 import { Helmet, HelmetProvider } from 'react-helmet-async';
+import SFM_Form from '../components/SFM_Form';
 
 const Ads = (props) => {
+    
+    const FocusInput = event => {
+        event.preventDefault()
+        event.currentTarget.classList.add('active')
+        event.currentTarget.getElementsByTagName("input")[0].focus();
+    }
 
     useEffect(() => {
         $('html').addClass(props.page);
@@ -135,24 +142,24 @@ const Ads = (props) => {
                         <div className="formPriceSubmiting">
                             <div className="top"><span>Let’s we learn about you</span><button>X</button></div>
                             <form className="form customForm">
-                                <div className="WebsiteAddress">
+                                <div className="WebsiteAddress" onClick={FocusInput}>
                                     <label>Website URL
                                     <input type="text" name="website"/></label>
                                     <div className="bottom-line"><div className="fill-line"></div></div>
                                 </div>
-                                <div className="FullName">
+                                <div className="FullName" onClick={FocusInput}>
                                     <label>Full Name
                                         <input type="text" name="name" min="2" max="20" required/>
                                     </label>
                                     <div className="bottom-line"><div className="fill-line"></div></div>
                                 </div>
-                                <div className="MailAddress">
+                                <div className="MailAddress" onClick={FocusInput}>
                                     <label>Email
                                         <input type="email" name="email"/>
                                     </label>
                                     <div className="bottom-line"><div className="fill-line"></div></div>
                                 </div>
-                                <div className="PhoneNumber">
+                                <div className="PhoneNumber" onClick={FocusInput}>
                                     <label>Phone Number
                                         <input type="tel" name="phone" maxLength="15" required/>
                                     </label>
@@ -235,47 +242,10 @@ const Ads = (props) => {
             </section>
             {/* <section id="statistics"></section> */}
             <section id="Form2" className="sfm">
-                <div className="container">
-                    <div className="box">
-                        <div className="priceInfo">
-                            <div className="text">
-                                <span>Do you want these numbers to be yours?</span>
-                            </div>
-                            <div className="button">
-                                <button className="formDiscover">Start Now</button>
-                            </div>
-                        </div>
-                        <div className="form-input center" state="email" page="Audit">
-                            <div className="top-label">
-                                <label className="active" value="0">Email<input type="radio" className="radio-input Email_menu2" name="top_label_menu" value="0"/></label>
-                                <label value="1">Full Name<input type="radio" className="radio-input Name_menu2" name="top_label_menu" value="1" checked/></label>
-                                <label value="2">Phone Number<input type="radio" className="radio-input Phone_menu2" name="top_label_menu" value="2"/></label>
-                                <label value="3">Website URL<input type="radio" className="radio-input Budget_menu2" name="top_label_menu" value="3"/></label>
-                            </div>
-                            <form className="from">
-                                <div className="inputs">
-                                    <div className="Email-input">
-                                        <input type="email" name="email" placeholder="Email"/>
-                                    </div>
-                                    <div className="Name-input">
-                                        <input type="text" name="name" placeholder="Full Name" min="2" max="20" required/>
-                                    </div>
-                                    <div className="phone-input alireza_validator">
-                                        <input type="tel" className="phone123" name="phone" placeholder="Phone Number" maxLength="15" required/>
-                                    </div>
-                                    <div className="website-input">
-                                        <input type="url" name="website" placeholder="Website address" max="30"/>
-                                    </div>
-
-                                    <div className="successDiv">
-                                        <p>Thank you for ordering us! We will call you back</p>
-                                    </div>
-                                </div>
-                                <button className="next_button" state="0">Next</button>
-                            </form>
-                        </div>
-                    </div>
-                </div>
+                <SFM_Form 
+                    spanText={[<span>Do you want these numbers to be yours?</span>]}
+                    buttonText="Start Now"
+                />
             </section>
             <section id="Questions">
                 <div className="container">

@@ -6,6 +6,12 @@ import $ from 'jquery';
 import { Helmet, HelmetProvider } from 'react-helmet-async';
 
 const Contact = (props) => {
+    
+    const FocusInput = event => {
+        event.preventDefault()
+        event.currentTarget.classList.add('active')
+        event.currentTarget.getElementsByTagName("input")[0].focus();
+    }
 
     useEffect(() => {
         $('html').addClass(props.page);
@@ -107,24 +113,24 @@ const Contact = (props) => {
                                   <option value="AccountSuspension">Account Suspension</option>
                                 </select>
                             </div>
-                            <div className="FullName">
+                            <div className="FullName" onClick={FocusInput}>
                                 <label>Full Name
                                     <input type="text" name="name" min="2" max="20" required/>
                                 </label>
                                 <div className="bottom-line"><div className="fill-line"></div></div>
                             </div>
-                            <div className="MailAddress">
+                            <div className="MailAddress" onClick={FocusInput}>
                                 <label>Email
                                     <input type="email" name="email"/>
                                 </label>
                                 <div className="bottom-line"><div className="fill-line"></div></div>
                             </div>
-                            <div className="WebsiteAddress">
+                            <div className="WebsiteAddress" onClick={FocusInput}>
                                 <label>Website URL
                                 <input type="text" name="website"/></label>
                                 <div className="bottom-line"><div className="fill-line"></div></div>
                             </div>
-                            <div className="PhoneNumber">
+                            <div className="PhoneNumber" onClick={FocusInput}>
                                 <label>Phone Number
                                     <input type="tel" name="phone" maxLength="15" required/>
                                 </label>

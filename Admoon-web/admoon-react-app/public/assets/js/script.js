@@ -371,23 +371,28 @@ window.onload = function() {
         $('.next_button').attr("state", "0");
         break;
       case '1':
-        $('.form-input').attr("state", "name");
-        $('.next_button').text('Next');
-        $('.next_button.send_button').removeClass('send_button');
-        $('.next_button').attr("state", "1");
+        if(emailValid){
+          $('.form-input').attr("state", "name");
+          $('.next_button').text('Next');
+          $('.next_button.send_button').removeClass('send_button');
+          $('.next_button').attr("state", "1");
+        }
         break;
       case '2':
-        $('.form-input').attr("state", "phone");
-        $('.next_button').text('Next');
-        $('.next_button.send_button').removeClass('send_button');
-        $('.next_button').attr("state", "2");
-        
+        if(emailValid && nameValid){
+          $('.form-input').attr("state", "phone");
+          $('.next_button').text('Next');
+          $('.next_button.send_button').removeClass('send_button');
+          $('.next_button').attr("state", "2");
+        }
         break;
       case '3':
-        $('.form-input').attr("state", "website");
-        $('.next_button').text('Send');
-        $('.next_button').addClass('send_button');
-        $('.next_button').attr("state", "3");
+        if(emailValid && nameValid && phoneValid){
+          $('.form-input').attr("state", "website");
+          $('.next_button').text('Send');
+          $('.next_button').addClass('send_button');
+          $('.next_button').attr("state", "3");
+        }
         break;
       default: console.log('default');
     }
@@ -397,12 +402,12 @@ window.onload = function() {
 
   // label form
   // inputs form
-  $('.customForm>div').click(function (e) {
-    e.preventDefault();
-    $(this).addClass('active');
-    $(this).find( "input" ).focus();
-    return false;
-  });
+  // $('.customForm>div').click(function (e) {
+  //   e.preventDefault();
+  //   $(this).addClass('active');
+  //   $(this).find( "input" ).focus();
+  //   return false;
+  // });
 
   // about us
   // open box
@@ -422,9 +427,9 @@ window.onload = function() {
     }, 100);
   });
 
-  $('.formDiscover').click(function () {
-    $('.box').addClass('open');
-  });
+  // $('.formDiscover').click(function () {
+  //   $('.box').addClass('open');
+  // });
 
   var cPlusPlus = 0;
   setInterval(function() {
