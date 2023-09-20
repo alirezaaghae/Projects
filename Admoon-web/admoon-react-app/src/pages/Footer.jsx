@@ -1,13 +1,74 @@
 import { event } from "jquery";
 import { Link } from "react-router-dom";
 import $ from 'jquery';
+import { useEffect, useState } from "react";
 
 const Footer = (props) => {
+    const [emailValid, setEmailValid] = useState(false);
+    const [nameValid, setNameValid] = useState(false);
+    const [phoneValid, setPhoneValid] = useState(false);
+    const [websiteValid, setWebsiteValid] = useState(false);
+
+    const [inputs, setInputs] = useState({});
+
     const FocusInput = event => {
         event.preventDefault()
         event.currentTarget.classList.add('active')
         event.currentTarget.getElementsByTagName("input")[0].focus();
     }
+
+    const handleChange = (event) => {
+        const name = event.target.name;
+        const value = event.target.value;
+        setInputs(values => ({...values, [name]: value}))
+
+        switch (name) {
+            case 'name': 
+              if (value == '' || value.length < 2) {
+                setNameValid(false)
+              } else {
+                setNameValid(true)
+              }
+            break
+            case 'email': 
+            if (value == '') {
+                setEmailValid(false)
+              } else {
+                setEmailValid(true)
+              }
+            break
+            case 'phone': 
+            if (value == '' || value.length < 2 || value.length > 15) {
+                setPhoneValid(false)
+              } else {
+                setPhoneValid(true)
+              }
+            break
+            case 'website': 
+            if (value == '' || value.length < 2) {
+                setWebsiteValid(false)
+              } else {
+                setWebsiteValid(true)
+              }
+            break
+        }
+    }
+
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        if(emailValid && nameValid && phoneValid && websiteValid){
+            props.formData(inputs)
+            formReset()
+            document.getElementById('footerform').classList.add('success')
+        } else {
+            console.log(emailValid , nameValid , phoneValid , websiteValid)
+        }
+    }   
+
+    const formReset = () => {
+        setInputs({})
+    }
+
     return (
         <footer className="site-footer footer-index" role="contentinfo">
         <div className="footerContact">
@@ -43,29 +104,29 @@ const Footer = (props) => {
                     </div>
                     <div className="FullName footer-input" onClick={FocusInput}>
                         <label>Full Name
-                            <input type="text" name="name" min="2" max="20" required/>
+                            <input type="text" name="name" min="2" max="20" value={inputs.name || ""} onChange={handleChange} required/>
                         </label>
                         <div className="bottom-line"><div className="fill-line"></div></div>
                     </div>
                     <div className="MailAddress footer-input" onClick={FocusInput}>
                         <label>Email
-                            <input type="email" name="email"/>
+                            <input type="email" name="email" value={inputs.email || ""} onChange={handleChange}/>
                         </label>
                         <div className="bottom-line"><div className="fill-line"></div></div>
                     </div>
                     <div className="WebsiteAddress footer-input" onClick={FocusInput}>
                         <label>Website URL
-                        <input type="text" name="website"/></label>
+                        <input type="url" name="website" value={inputs.website || ""} onChange={handleChange}/></label>
                         <div className="bottom-line"><div className="fill-line"></div></div>
                     </div>
                     <div className="PhoneNumber footer-input" onClick={FocusInput}>
                         <label>Phone Number
-                            <input type="tel" name="phone" maxLength="15" required/>
+                            <input type="tel" name="phone" maxLength="15" value={inputs.phone || ""} onChange={handleChange} required/>
                         </label>
                         <div className="bottom-line"><div className="fill-line"></div></div>
                     </div>
                     <div className="button footer-button">
-                        <button className="send_button">Submit</button>
+                        <button className="send_button" onClick={handleSubmit}>Submit</button>
                     </div>
                 </form>
                 <div className="successQS">

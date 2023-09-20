@@ -75,19 +75,24 @@ const App = () => {
     );
   }
 
+  const [inputsData, setInputsData] = useState({})
+  useEffect(() => {
+    console.log(inputsData);
+  })
+  
   return (
     <>
       {/* <Loading/> */}
       <BrowserRouter>
         <Routes>
-            <Route path="/" index element={<Home title="ADMOON" page="homePage" description="Admoon Description" colorTheme="#041541" />} />
-            <Route path="contactUs" element={<Contact title="Contact US" page="ContactUs" description="Contact us Description" colorTheme="#252E60" />} />
-            <Route path="aboutUs" element={<About title="About us" page="AboutUs" description="About us Description" colorTheme="#252E60"  />} />
-            <Route path="audit" element={<Audit title="Audit" page="Audit" description="Audit Description" colorTheme="#a96e16" />} />
-            <Route path="tuneUp" element={<TuneUp title="Tune up" page="TuneUp" description="Tune up Description" colorTheme="#045349" />} />
-            <Route path="adsManagement" element={<Ads title="Ads Management" page="AdsManage" description="Ads Management Description" colorTheme="#232d61" />} />
-            <Route path="caseStudy" element={<CaseStudy title="Case Studies" page="CaseStudy" description="Case Studies Description" colorTheme="#252E60" />} />
-            <Route path="caseStudy/single" exact element={<Single title="Zarif Bar" page="Single" description="Zarif Bar Description" colorTheme="#252E60" />} />
+            <Route path="/" index element={<Home title="ADMOON" page="homePage" description="Admoon Description" colorTheme="#041541" mainFormData={setInputsData}/>} />
+            <Route path="contactUs" element={<Contact title="Contact US" page="ContactUs" description="Contact us Description" colorTheme="#252E60" mainFormData={setInputsData}/>} />
+            <Route path="aboutUs" element={<About title="About us" page="AboutUs" description="About us Description" colorTheme="#252E60" mainFormData={setInputsData}/>} />
+            <Route path="audit" element={<Audit title="Audit" page="Audit" description="Audit Description" colorTheme="#a96e16" mainFormData={setInputsData}/>} />
+            <Route path="tuneUp" element={<TuneUp title="Tune up" page="TuneUp" description="Tune up Description" colorTheme="#045349" mainFormData={setInputsData}/>} />
+            <Route path="adsManagement" element={<Ads title="Ads Management" page="AdsManage" description="Ads Management Description" colorTheme="#232d61" mainFormData={setInputsData}/>} />
+            <Route path="caseStudy" element={<CaseStudy title="Case Studies" page="CaseStudy" description="Case Studies Description" colorTheme="#252E60" mainFormData={setInputsData}/>} />
+            <Route path="caseStudy/single" exact element={<Single title="Zarif Bar" page="Single" description="Zarif Bar Description" colorTheme="#252E60" mainFormData={setInputsData}/>} />
             <Route path="*" element={<NoPage title="" page="" description="" colorTheme=""  />} />
         </Routes>
       </BrowserRouter>

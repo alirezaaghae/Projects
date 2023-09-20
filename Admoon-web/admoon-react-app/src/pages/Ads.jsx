@@ -5,6 +5,7 @@ import Footer from "./Footer";
 import $ from 'jquery';
 import { Helmet, HelmetProvider } from 'react-helmet-async';
 import SFM_Form from '../components/SFM_Form';
+import Intro from '../components/Intro';
 
 const Ads = (props) => {
     
@@ -57,12 +58,10 @@ const Ads = (props) => {
             </div> 
         </header>
         <main id="ServicesMain">
-            <section id="Intro">
-                <div className="container">
-                    <h2>Our Expert Team Delivers Winning Results!</h2>
-                    <p>Our agency offers a team of experienced professionals with extensive digital advertising experience to help you dominate the competition and achieve exceptional results. We analyze your competition, develop tailored strategies, and provide tools, insights, and expertise to stand out in the crowd. With our expert team by your side, you can unleash your full potential and position your business for success.</p>
-                </div>
-            </section>
+            <Intro>
+                <h2>Our Expert Team Delivers Winning Results!</h2>
+                <p>Our agency offers a team of experienced professionals with extensive digital advertising experience to help you dominate the competition and achieve exceptional results. We analyze your competition, develop tailored strategies, and provide tools, insights, and expertise to stand out in the crowd. With our expert team by your side, you can unleash your full potential and position your business for success.</p>
+            </Intro>
             <section id="Steps">
                 <div className="container">
                     <h2>What happens in our management service!</h2>
@@ -245,6 +244,7 @@ const Ads = (props) => {
                 <SFM_Form 
                     spanText={[<span>Do you want these numbers to be yours?</span>]}
                     buttonText="Start Now"
+                    formData={(data) => props.mainFormData(data)}
                 />
             </section>
             <section id="Questions">
@@ -347,7 +347,10 @@ const Ads = (props) => {
         </main>
     </div>
 
-    <Footer FPS={props.title}></Footer>
+    <Footer 
+        FPS={props.title} 
+        formData={(data) => props.mainFormData(data)}
+    />
     </HelmetProvider>
     );
   };

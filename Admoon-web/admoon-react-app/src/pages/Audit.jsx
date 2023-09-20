@@ -5,6 +5,7 @@ import Footer from "./Footer";
 import $ from 'jquery';
 import { Helmet, HelmetProvider } from 'react-helmet-async';
 import SFM_Form from '../components/SFM_Form';
+import Intro from '../components/Intro';
 
 const Audit = (props) => {
 
@@ -53,12 +54,10 @@ const Audit = (props) => {
             </div> 
         </header>
         <main id="ServicesMain">
-            <section id="Intro">
-                <div className="container">
-                    <h2>The Audit steps we take for you</h2>
-                    <p>During the process of creating an audit for your Google Ads campaign, our team follows a meticulous and comprehensive approach to ensure no stone is left unturned. Here's a breakdown of what we do:                </p>
-                </div>
-            </section>
+            <Intro>
+                <h2>The Audit steps we take for you</h2>
+                <p>During the process of creating an audit for your Google Ads campaign, our team follows a meticulous and comprehensive approach to ensure no stone is left unturned. Here's a breakdown of what we do:</p>
+            </Intro>
             <section id="Steps">
                 <div className="container">
                     <h2>Step into Success with Tune Up</h2>
@@ -97,6 +96,7 @@ const Audit = (props) => {
                 <SFM_Form 
                     spanText={[<span>Let us make your account more valuable</span>,<b>Price: <strong><del>$200</del> - $50</strong></b>]}
                     buttonText="Discover more"
+                    formData={(data) => props.mainFormData(data)}
                 />
             </section>
             <section id="collaborating">
@@ -186,6 +186,7 @@ const Audit = (props) => {
                 <SFM_Form 
                     spanText={[<span>Let us make your account more valuable</span>,<b>Price: <strong><del>$200</del> - $50</strong></b>]}
                     buttonText="Start Now"
+                    formData={(data) => props.mainFormData(data)}
                 />
             </section>
             <section id="Questions">
@@ -293,7 +294,10 @@ const Audit = (props) => {
         </main>
     </div>
 
-    <Footer FPS={props.title}></Footer>
+    <Footer 
+        FPS={props.title} 
+        formData={(data) => props.mainFormData(data)}
+    />
     </HelmetProvider>
     );
   };

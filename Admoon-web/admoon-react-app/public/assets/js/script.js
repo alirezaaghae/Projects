@@ -313,92 +313,92 @@ window.onload = function() {
       // };
 
   // header form function
-  $('.next_button').click(function () {
-    let state = $('.next_button').attr("state");
+  // $('.next_button').click(function () {
+  //   let state = $('.next_button').attr("state");
 
-    switch (state) {
-      case '0':
-        if(emailValid){
-          $('.form-input').attr("state", "name");
-          $('.next_button').text('Next');
-          $('.next_button').attr("state", "1");
-        }
-        break;
-      case '1':
-        if(nameValid){
-          $('.form-input').attr("state", "phone");
-          $('.next_button').attr("state", "2");
-        }
-        break;
-      case '2':
-        if(phoneValid){
-          $('.form-input').attr("state", "website");
-          $('.next_button').text('Send');
-          $('.next_button').addClass('send_button');
-          $('.next_button').attr("state", "3");
-        }
-        break;
-      case '3':
-        if(websiteValid){
-          $('.successDiv').css("display", "flex");
-          setTimeout(function(){ 
-            $('.form-input').attr("state", "success");
-          }, 100);
-        }
-        websiteValid = false;
-        break;
-      default: 
-        break;
-    }
-  });
+  //   switch (state) {
+  //     case '0':
+  //       if(emailValid){
+  //         $('.form-input').attr("state", "name");
+  //         $('.next_button').text('Next');
+  //         $('.next_button').attr("state", "1");
+  //       }
+  //       break;
+  //     case '1':
+  //       if(nameValid){
+  //         $('.form-input').attr("state", "phone");
+  //         $('.next_button').attr("state", "2");
+  //       }
+  //       break;
+  //     case '2':
+  //       if(phoneValid){
+  //         $('.form-input').attr("state", "website");
+  //         $('.next_button').text('Send');
+  //         $('.next_button').addClass('send_button');
+  //         $('.next_button').attr("state", "3");
+  //       }
+  //       break;
+  //     case '3':
+  //       if(websiteValid){
+  //         $('.successDiv').css("display", "flex");
+  //         setTimeout(function(){ 
+  //           $('.form-input').attr("state", "success");
+  //         }, 100);
+  //       }
+  //       websiteValid = false;
+  //       break;
+  //     default: 
+  //       break;
+  //   }
+  // });
 
-  $('.send_button').click(function () {
-      if (emailValid && nameValid && phoneValid && websiteValid){
-          sendAjaxForm();
-      }else {
-          return false;
-      }
-  });
+  // $('.send_button').click(function () {
+  //     if (emailValid && nameValid && phoneValid && websiteValid){
+  //         sendAjaxForm();
+  //     }else {
+  //         return false;
+  //     }
+  // });
 
-  $('.top-label label').click(function (e) {
-    e.preventDefault();
-    let radio = $(this).attr("value");
-    switch (radio) {
-      case '0':
-        $('.form-input').attr("state", "email");
-        $('.next_button').text('Lets Start');
-        $('.next_button.send_button').removeClass('send_button');
-        $('.next_button').attr("state", "0");
-        break;
-      case '1':
-        if(emailValid){
-          $('.form-input').attr("state", "name");
-          $('.next_button').text('Next');
-          $('.next_button.send_button').removeClass('send_button');
-          $('.next_button').attr("state", "1");
-        }
-        break;
-      case '2':
-        if(emailValid && nameValid){
-          $('.form-input').attr("state", "phone");
-          $('.next_button').text('Next');
-          $('.next_button.send_button').removeClass('send_button');
-          $('.next_button').attr("state", "2");
-        }
-        break;
-      case '3':
-        if(emailValid && nameValid && phoneValid){
-          $('.form-input').attr("state", "website");
-          $('.next_button').text('Send');
-          $('.next_button').addClass('send_button');
-          $('.next_button').attr("state", "3");
-        }
-        break;
-      default: console.log('default');
-    }
-    return false;
+  // $('.top-label label').click(function (e) {
+  //   e.preventDefault();
+  //   let radio = $(this).attr("value");
+  //   switch (radio) {
+  //     case '0':
+  //       $('.form-input').attr("state", "email");
+  //       $('.next_button').text('Lets Start');
+  //       $('.next_button.send_button').removeClass('send_button');
+  //       $('.next_button').attr("state", "0");
+  //       break;
+  //     case '1':
+  //       if(emailValid){
+  //         $('.form-input').attr("state", "name");
+  //         $('.next_button').text('Next');
+  //         $('.next_button.send_button').removeClass('send_button');
+  //         $('.next_button').attr("state", "1");
+  //       }
+  //       break;
+  //     case '2':
+  //       if(emailValid && nameValid){
+  //         $('.form-input').attr("state", "phone");
+  //         $('.next_button').text('Next');
+  //         $('.next_button.send_button').removeClass('send_button');
+  //         $('.next_button').attr("state", "2");
+  //       }
+  //       break;
+  //     case '3':
+  //       if(emailValid && nameValid && phoneValid){
+  //         $('.form-input').attr("state", "website");
+  //         $('.next_button').text('Send');
+  //         $('.next_button').addClass('send_button');
+  //         $('.next_button').attr("state", "3");
+  //       }
+  //       break;
+  //     default: console.log('default');
+  //   }
+  //   return false;
 
-  });
+  // });
 
   // label form
   // inputs form

@@ -1,6 +1,6 @@
 import OwlCarousel from 'react-owl-carousel2';
 import '../owl.theme.default.css';
-import * as comments from './Comments';
+import {people, getImageUrl} from './Data';
 
 const CM_Slider = () => {
     const options = {
@@ -33,7 +33,7 @@ const CM_Slider = () => {
         // onTranslate: function(event) { console.log('onTranslate: ' + event.type); }
     }
 
-    const listItems = comments.people.map(person =>
+    const listItems = people.map(person =>
         <div className="item" key={person.id}>
             <div className="stars">
             {Array.from(Array(person.star), (e, i) => {
@@ -42,7 +42,7 @@ const CM_Slider = () => {
             </div>
             <p>{person.comment}</p>
             <div className="profile">
-                <div className="img"><img src={comments.getImageUrl(person)} alt={person.name} title={person.name+' '+person.field}/></div>
+                <div className="img"><img src={getImageUrl(person)} alt={person.name} title={person.name+' '+person.field}/></div>
                 <div className="info">
                     <span className="name">{person.name}</span>
                     <span className="field">{person.field}</span>

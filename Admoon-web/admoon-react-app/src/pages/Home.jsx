@@ -326,7 +326,10 @@ const Home = (props) => {
                 </section> */}
             </main>
         </div>
-        <Footer FPS={props.title}></Footer>
+        <Footer 
+            FPS={props.title} 
+            formData={(data) => props.mainFormData(data)}
+        />
       </HelmetProvider>
    );
   };

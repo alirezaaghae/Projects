@@ -155,7 +155,10 @@ const Contact = (props) => {
             </main>
         </div>
     </div>
-      <Footer FPS={props.title}></Footer>
+    <Footer 
+        FPS={props.title} 
+        formData={(data) => props.mainFormData(data)}
+    />
     </HelmetProvider>
     );
   };

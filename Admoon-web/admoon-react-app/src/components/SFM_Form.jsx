@@ -37,95 +37,97 @@ export default function SFM_Form (props){
               }
             break
             case 'website': 
-            if (value == '' || this.value.length < 2) {
+            if (value == '' || value.length < 2) {
                 setWebsiteValid(false)
               } else {
                 setWebsiteValid(true)
               }
             break
         }
-        console.log(nameValid,emailValid,phoneValid,websiteValid)
     }
 
-const handleSubmit = (event) => {
-    event.preventDefault();
-    console.log(inputs);
-    let state = event.target.getAttribute("state");
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        let state = event.target.getAttribute("state");
 
-    switch (state) {
-      case '0':
-        if(emailValid){
-          $('.form-input').attr("state", "name");
-          $('.next_button').text('Next');
-          event.target.setAttribute("state", "1");
+        switch (state) {
+          case '0':
+            if(emailValid){
+              $('.form-input').attr("state", "name");
+              $('.next_button').text('Next');
+              event.target.setAttribute("state", "1");
+            }
+            break;
+          case '1':
+            if(nameValid){
+              $('.form-input').attr("state", "phone");
+              event.target.setAttribute("state", "2");
+            }
+            break;
+          case '2':
+            if(phoneValid){
+              $('.form-input').attr("state", "website");
+              $('.next_button').text('Send');
+              $('.next_button').addClass('send_button');
+              event.target.setAttribute("state", "3");
+            }
+            break;
+          case '3':
+            if(websiteValid){
+              props.formData(inputs)
+              formReset()
+              $('.successDiv').css("display", "flex");
+              setTimeout(function(){ 
+                $('.form-input').attr("state", "success");
+              }, 100);
+            }
+            setWebsiteValid(false)
+            break;
+          default: 
+            break;
         }
-        break;
-      case '1':
-        if(nameValid){
-          $('.form-input').attr("state", "phone");
-          event.target.setAttribute("state", "2");
-        }
-        break;
-      case '2':
-        if(phoneValid){
-          $('.form-input').attr("state", "website");
-          $('.next_button').text('Send');
-          $('.next_button').addClass('send_button');
-          event.target.setAttribute("state", "3");
-        }
-        break;
-      case '3':
-        if(websiteValid){
-          $('.successDiv').css("display", "flex");
-          setTimeout(function(){ 
-            $('.form-input').attr("state", "success");
-          }, 100);
-        }
-        setWebsiteValid(false)
-        break;
-      default: 
-        break;
+    }   
+    const topLabel = (event) => {
+        let radio = event.target.value;
+        console.log(radio);
+        switch (radio) {
+            case '0':
+              $('.form-input').attr("state", "email");
+              $('.next_button').text('Lets Start');
+              $('.next_button.send_button').removeClass('send_button');
+              $('.next_button').attr("state", "0");
+              break;
+            case '1':
+              if(emailValid){
+                $('.form-input').attr("state", "name");
+                $('.next_button').text('Next');
+                $('.next_button.send_button').removeClass('send_button');
+                $('.next_button').attr("state", "1");
+              }
+              break;
+            case '2':
+              if(emailValid && nameValid){
+                $('.form-input').attr("state", "phone");
+                $('.next_button').text('Next');
+                $('.next_button.send_button').removeClass('send_button');
+                $('.next_button').attr("state", "2");
+              }
+              break;
+            case '3':
+              if(emailValid && nameValid && phoneValid){
+                $('.form-input').attr("state", "website");
+                $('.next_button').text('Send');
+                $('.next_button').addClass('send_button');
+                $('.next_button').attr("state", "3");
+              }
+              break;
+            default: console.log('default');
+          }
+          return false;
     }
-}   
-const topLabel = (event) => {
-    let radio = event.currentTarget.value;
-    console.log(radio);
-    switch (radio) {
-        case '0':
-          $('.form-input').attr("state", "email");
-          $('.next_button').text('Lets Start');
-          $('.next_button.send_button').removeClass('send_button');
-          $('.next_button').attr("state", "0");
-          break;
-        case '1':
-          if(emailValid){
-            $('.form-input').attr("state", "name");
-            $('.next_button').text('Next');
-            $('.next_button.send_button').removeClass('send_button');
-            $('.next_button').attr("state", "1");
-          }
-          break;
-        case '2':
-          if(emailValid && nameValid){
-            $('.form-input').attr("state", "phone");
-            $('.next_button').text('Next');
-            $('.next_button.send_button').removeClass('send_button');
-            $('.next_button').attr("state", "2");
-          }
-          break;
-        case '3':
-          if(emailValid && nameValid && phoneValid){
-            $('.form-input').attr("state", "website");
-            $('.next_button').text('Send');
-            $('.next_button').addClass('send_button');
-            $('.next_button').attr("state", "3");
-          }
-          break;
-        default: console.log('default');
-      }
-      return false;
-}
-
+    const formReset = () => {
+      setInputs({})
+    }
     return(
         <div className="container">
                     <div className="box">

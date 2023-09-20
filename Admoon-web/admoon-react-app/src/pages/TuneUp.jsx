@@ -5,6 +5,8 @@ import Footer from "./Footer";
 import $ from 'jquery';
 import { Helmet, HelmetProvider } from 'react-helmet-async';
 import SFM_Form from '../components/SFM_Form';
+import Intro from '../components/Intro';
+import Steps from '../components/Steps';
 
 const TuneUp = (props) => {
 
@@ -53,13 +55,14 @@ const TuneUp = (props) => {
             </div> 
         </header>
         <main id="ServicesMain">
-            <section id="Intro">
-                <div className="container">
-                    <h2>Tune Up Goes Beyond Audits!</h2>
-                    <p>Experience the ultimate boost with Tune Up – taking audits to new heights. While audits uncover insights, Tune Up brings them to life. We implement recommendations, optimize your campaign, and solve existing issues. It's like having a personal pit crew for your Google Ads success. Say goodbye to guesswork and hello to a turbocharged campaign. Let's conquer the digital advertising landscape together!</p>
-                </div>
-            </section>
-            <section id="Steps">
+            <Intro>
+                <h2>Tune Up Goes Beyond Audits!</h2>
+                <p>Experience the ultimate boost with Tune Up – taking audits to new heights. While audits uncover insights, Tune Up brings them to life. We implement recommendations, optimize your campaign, and solve existing issues. It's like having a personal pit crew for your Google Ads success. Say goodbye to guesswork and hello to a turbocharged campaign. Let's conquer the digital advertising landscape together!</p>
+            </Intro>
+            <Steps name='tuneup'>
+                Step into Success with Tune Up
+            </Steps>
+            {/* <section id="Steps">
                 <div className="container">
                     <h2>Step into Success with Tune Up</h2>
                     <div className="content">
@@ -92,11 +95,12 @@ const TuneUp = (props) => {
                         </ul>
                     </div>
                 </div>
-            </section>
+            </section> */}
             <section id="Form" className="sfm">
                 <SFM_Form 
                     spanText={[<span>Let us make your account more valuable</span>,<b>Price: <strong><del></del>$1,500</strong></b>]}
                     buttonText="Discover more"
+                    formData={(data) => props.mainFormData(data)}
                 />
             </section>
             <section id="collaborating">
@@ -185,6 +189,7 @@ const TuneUp = (props) => {
                 <SFM_Form 
                     spanText={[<span>Do you want these numbers to be yours?</span>,<b>Price: <strong><del></del>$1,500</strong></b>]} 
                     buttonText="Start Now"
+                    formData={(data) => props.mainFormData(data)}
                 />
             </section>
             <section id="Questions">
@@ -288,7 +293,10 @@ const TuneUp = (props) => {
         </main>
     </div>
 
-    <Footer FPS={props.title}></Footer>
+    <Footer 
+        FPS={props.title} 
+        formData={(data) => props.mainFormData(data)}
+    />
     </HelmetProvider>
     );
   };
