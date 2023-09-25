@@ -8,6 +8,299 @@
 }
 
 @media only screen and (min-width: 320px) and (max-width: 760px) {
+    body{background: #fff;position: relative;}
+.wrapper{position: relative;}
+.wrapper>header{
+    background-position: top;
+    background: white;
+    height: auto;
+}
+.wrapper>header::before{height: 5px;}
+.wrapper>header>.nav{
+    position: relative;
+}
+.wrapper>header>.nav .container{
+}
+.wrapper>header>.nav .container .box{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+}
+.wrapper>header>.nav .container .box>.call{}
+.wrapper>header>.nav .container .box>.call a{}
+.wrapper>header>.nav .container .box>.call a::after{content: ''; display: inline-block; background-image: url('../images/phone_icon.svg');background-repeat: no-repeat; background-position: center; height: 16px;width: 16px;}
+.wrapper>header>.nav .container .box>.call a span{}
+.wrapper>header>.nav .container .box>.call a span img{}
+.wrapper>header>.nav .container .box>nav{
+    display: none;
+}
+.wrapper>header>.nav .container .box>nav ul{}
+.wrapper>header>.nav .container .box>nav ul li{}
+.wrapper>header>.nav .container .box>nav ul li a{}
+.wrapper>header>.nav .container .box>nav ul li a span{}
+.wrapper>header>.nav .container .box>.logo{}
+.wrapper>header>.nav .container .box>.logo img{}
+.wrapper>header>.content{position: relative;bottom: 0;display: flex;height: auto;flex-direction: column;}
+.wrapper>header>.content::before{content: '';background-image: url('../images/headerBG.png');background-repeat: no-repeat;background-size: cover;background-position: left;width: 100%;aspect-ratio: 1/1;}
+.wrapper>header>.content .cont{
+    width: 100%;
+}
+.wrapper>header>.content .cont .textBox{
+    width: 100%;
+    position: relative;
+}
+.wrapper>header>.content .cont .textBox h1{
+    text-align: center;
+}
+.wrapper>header>.content .cont .textBox p{
+    text-align: center;
+    margin: 20px 0;
+    font-weight: 300;
+    line-height: 2;
+}
+.wrapper>header>.content .cont .textBox a{margin: auto;}
+.wrapper>header>.content .cont .textBox a span{}
+.wrapper>header>.content .cont .textBox a span{}
+.wrapper>header>.content .cont .textBox .item{}
+.wrapper>header>.content .cont .textBox .item ul{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.wrapper>header>.content .cont .textBox .item ul li{
+    width: 50%;
+    margin: 0;
+    margin-top: 10px;
+}
+.wrapper>header>.content .cont .textBox .item ul li .box{}
+.wrapper>header>.content .cont .textBox .item ul li .box img{}
+.wrapper>header>.content .cont .textBox .item ul li .box span{}
+
+#sec_1{
+    margin-top: 40px;
+}
+#sec_1>.container{}
+#sec_1>.container>h2{
+    font-size: 20px;
+}
+#sec_1>.container>p{
+    width: 100%;
+}
+#sec_1>.container>p span{}
+#sec_1>.container>ul{}
+#sec_1>.container>ul>li{
+    margin-top: 30px;
+}
+#sec_1>.container>ul>li>.box{}
+#sec_1>.container>ul>li>.box>img{}
+#sec_1>.container>ul>li>.box>span{}
+
+#sec_2{}
+#sec_2>.rows{}
+#sec_2>.rows>.roww{
+    display: flex;
+    flex-direction: column-reverse;
+}
+#sec_2>.rows>.roww>.content{
+    width: 100%;
+    margin-top: 30px;
+}
+#sec_2>.rows>.roww>.content>.box{
+    text-align: center;
+}
+#sec_2>.rows>.roww>.content>.box>h3{}
+#sec_2>.rows>.roww>.content>.box>span{}
+#sec_2>.rows>.roww>.content>.box>ul{}
+#sec_2>.rows>.roww>.content>.box>ul>li{}
+#sec_2>.rows>.roww>.content>.box>ul>li>span{}
+#sec_2>.rows>.roww>.content>.box>a{
+    margin: 30px auto;
+}
+#sec_2>.rows>.roww>.content>.box>a>span{}
+#sec_2>.rows>.roww>.content>.box>a::after{content: ''; display: inline-block; background-image: url('../images/leftArrow.svg');background-repeat: no-repeat; background-position: center; height: 16px;width: 16px;}
+#sec_2>.rows>.roww>.img{
+    width: 100%;
+}
+#sec_2>.rows>.roww>.img img{}
+#sec_2>.rows>.roww.second{
+    flex-direction: column;
+    margin: 20px 0;
+}
+#sec_2>.rows>.roww.second>.content{}
+
+#sec_3{
+    background-position: left;
+    margin-top: 50px;
+}
+#sec_3>.cover{
+    margin-bottom: 97px;
+    margin-top: 50px;
+}
+#sec_3::before{
+    background: linear-gradient(181deg, rgba(237, 0, 7, 0.90) 64.69%, rgba(237, 0, 7, 0.00) 124.31%);
+}
+#sec_3>.cover>.container{}
+#sec_3>.cover>.container>.content{
+    width: 100%;
+    text-align: center;
+}
+#sec_3>.cover>.container>.content>h3{}
+#sec_3>.cover>.container>.content>span{}
+#sec_3>.cover>.container>.content>p{
+    text-align: center;
+    font-size: 17px;
+    font-weight: 200;
+    line-height: 2;
+}
+#sec_3>.cover>.container>.content>a{
+    margin: 30px auto;
+}
+#sec_3>.cover>.container>.content>a span{}
+#sec_3>.cover>.container>.content>a::after{content: ''; display: inline-block; background-image: url('../images/leftArrow.svg');background-repeat: no-repeat; background-position: center; height: 16px;width: 16px;}
+
+#sec_4{
+    margin-top: 40px;
+}
+#sec_4>.container{}
+#sec_4>.container>.title{}
+#sec_4>.container>.title h2{}
+#sec_4>.container>.title span{
+    width: 97%;
+    display: inline-block;
+}
+#sec_4>.container>.phoneInfo{}
+#sec_4>.container>.phoneInfo>.social{
+    flex-wrap: wrap;
+}
+#sec_4>.container>.phoneInfo>.social span{}
+#sec_4>.container>.phoneInfo>.social a{}
+#sec_4>.container>.phoneInfo>.social a.whatsapp{
+    width: 70%;
+    margin-right: 0;
+    margin-top: 10px;
+}
+#sec_4>.container>.phoneInfo>.social a.whatsapp::after{}
+#sec_4>.container>.phoneInfo>.social a.whatsapp span{}
+#sec_4>.container>.phoneInfo>ul{}
+#sec_4>.container>.phoneInfo>ul>li{}
+#sec_4>.container>.phoneInfo>ul>li a{
+    margin-top: 10px;
+    padding: 15px 0;
+}
+#sec_4>.container>.phoneInfo>ul>li a .location{}
+#sec_4>.container>.phoneInfo>ul>li a .location img{}
+#sec_4>.container>.phoneInfo>ul>li a .location span{}
+#sec_4>.container>.phoneInfo>ul>li a .phone{}
+#sec_4>.container>.phoneInfo>ul>li a .phone .top{}
+#sec_4>.container>.phoneInfo>ul>li a .phone .top img{}
+#sec_4>.container>.phoneInfo>ul>li a .phone .top span{}
+#sec_4>.container>.phoneInfo>ul>li a .phone>span{}
+
+#sec_5{}
+#sec_5>.container{}
+#sec_5>.container>.box{}
+#sec_5>.container>.box{}
+#sec_5>.container>.box>h2{}
+#sec_5>.container>.box>ul{
+}
+#sec_5>.container>.box>ul li::after{position: absolute;right: -4px;/* z-index: 0; */filter: brightness(1.1);}
+#sec_5>.container>.box>ul li .item{
+    position: relative;
+    /* z-index: 2; */
+}
+#sec_5>.container>.box>ul li{
+    /* display: flex; */
+    /* flex-direction: column; */
+}
+#sec_5>.container>.box>ul li:last-child:after{display: inherit;}
+#sec_5>.container>.box>ul li .item .img{}
+#sec_5>.container>.box>ul li .item .img img{}
+#sec_5>.container>.box>ul li .item span{
+    display: inline-block;
+    height: 30px;
+}
+
+#sec_6{
+    overflow: hidden;
+}
+#sec_6>.container{}
+#sec_6>.container>.box{
+    flex-direction: column;
+}
+#sec_6>.container>.box>.img{
+    width: 100%;
+    transform: scale(1.1);
+}
+#sec_6>.container>.box>.img img{}
+#sec_6>.container>.box>.content{
+    margin-top: 60px;
+    width: 100%;
+    text-align: center;
+    padding: 0;
+}
+#sec_6>.container>.box>.content>h3{
+    font-size: 17px;
+}
+#sec_6>.container>.box>.content>h3 span{
+    font-size: 17px;
+}
+#sec_6>.container>.box>.content>p{
+    font-size: 16px;
+    text-align: center;
+    font-weight: 300;
+    line-height: 2;
+}
+#sec_6>.container>.box>.content>form{}
+#sec_6>.container>.box>.content>form>label{}
+#sec_6>.container>.box>.content>form>input{}
+#sec_6>.container>.box>.content>form>input::placeholder{}
+#sec_6>.container>.box>.content>form>#select{
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+}
+#sec_6>.container>.box>.content>form>#select li{}
+#sec_6>.container>.box>.content>form>#select li input{}
+#sec_6>.container>.box>.content>form>#select li input label{}
+#sec_6>.container>.box>.content>form>#send_button{
+    margin-top: 20px;
+}
+#sec_6>.container>.box>.content>form>#send_button>span{}
+#sec_6>.container>.box>.content>form>#send_button:hover{}
+#sec_6>.container>.box>.content>form>#send_button:hover>span{}
+
+footer{}
+footer .container{
+    padding-bottom: 23px;
+}
+footer .container>ul.items{}
+footer .container>ul.items{}
+footer .container>ul.items>li.item{
+    padding: 15px 30px;
+}
+footer .container>ul.items>li.item>.box{}
+footer .container>ul.items>li.item>.box>.title{}
+footer .container>ul.items>li.item>.box>.title h4{}
+footer .container>ul.items>li.item>.box>.content{}
+footer .container>ul.items>li.item>.box>.content>p{
+    font-size: 16px;
+    line-height: 2;
+    font-weight: 200;
+}
+footer .container>ul.items>li.item>.box>.content>ul{}
+footer .container>ul.items>li.item>.box>.content>ul>li{}
+footer .container>ul.items>li.item>.box>.content>ul>li>a{
+    font-size: 16px;
+    line-height: 2;
+    font-weight: 300;
+}
+footer .container>ul.items>li.item>.logo{}
+footer .container>ul.items>li.item>.logo>img{
+    width: 50%;
+    margin: auto;
+}
 
 }
 
