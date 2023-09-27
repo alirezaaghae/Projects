@@ -70,7 +70,7 @@ body{background: #fff;position: relative;}
 .wrapper>header>.nav .container .box>nav ul li a{
     display: flex;
 }
-.wrapper>header>.nav .container .box>nav ul li a:hover span{color: #ec0306;}
+.wrapper>header>.nav .container .box>nav ul li a:hover span{color: #af2124;}
 .wrapper>header>.nav .container .box>nav ul li a span{
     color: #000;
     text-align: right;
@@ -304,8 +304,8 @@ body{background: #fff;position: relative;}
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 30px;
     padding: 10px 40px;
+    margin-top: 10px;
     width: fit-content;
 }
 #sec_2>.rows>.roww>.content>.box>a::after{content: '';display: inline-block;background-image: url('../images/leftArrow.svg');background-repeat: no-repeat;background-position: center;height: 16px;width: 16px;margin-right: 10px;}
@@ -317,6 +317,17 @@ body{background: #fff;position: relative;}
 #sec_2>.rows>.roww>.content>.box>a:hover{background:transparent;}
 #sec_2>.rows>.roww>.content>.box>a:hover>span{color: #ED0007;}
 #sec_2>.rows>.roww>.content>.box>a:hover::after{background-image: url('../images/leftArrowRed.svg');}
+
+#sec_2>.rows>.roww>.content>.box>a.moreInfo{
+    background: inherit;
+    border:none;
+    margin-top: 30px;
+}
+#sec_2>.rows>.roww>.content>.box>a.moreInfo::after{filter: brightness(0.5);}
+#sec_2>.rows>.roww>.content>.box>a.moreInfo>span{color:#828282;font-weight: 200;}
+#sec_2>.rows>.roww>.content>.box>a.moreInfo:hover{}
+#sec_2>.rows>.roww>.content>.box>a.moreInfo:hover>span{color: #ED0007;}
+#sec_2>.rows>.roww>.content>.box>a.moreInfo:hover::after{filter: brightness(1);}
 
 #sec_2>.rows>.roww>.img img{}
 #sec_2>.rows>.roww.second{}
@@ -620,6 +631,10 @@ body{background: #fff;position: relative;}
 #sec_6>.container>.box>.content{
     width: 50%;
     padding: 0 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 #sec_6>.container>.box>.content>h3{
     color: #1E1E1E;
@@ -774,13 +789,16 @@ footer .container>ul.items>li.item>.logo>img{
 }
 
 .successDiv{display: none;}
-.successDiv p{color: #ED0007;
+.successDiv p{
+    color: #ED0007;
     text-align: justify;
     text-align: center;
     font-family: IRANSans;
     font-size: 13px;
     font-style: normal;
-    font-weight: 300;
+    font-weight: 700;
     line-height: 1.8;
-    letter-spacing: -0.165px;}
+    letter-spacing: -0.165px;
+    margin: 20px auto;
+    }
 .successDiv.open{display: flex;justify-content: center;text-align: center;}

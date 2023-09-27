@@ -252,7 +252,9 @@
     font-weight: 300;
     line-height: 2;
 }
-#sec_6>.container>.box>.content>form{}
+#sec_6>.container>.box>.content>form{
+    width: 90%;
+}
 #sec_6>.container>.box>.content>form>label{}
 #sec_6>.container>.box>.content>form>input{}
 #sec_6>.container>.box>.content>form>input::placeholder{}
@@ -261,7 +263,9 @@
     display: flex;
     justify-content: center;
 }
-#sec_6>.container>.box>.content>form>#select li{}
+#sec_6>.container>.box>.content>form>#select li{
+    width: 100%;
+}
 #sec_6>.container>.box>.content>form>#select li input{}
 #sec_6>.container>.box>.content>form>#select li input label{}
 #sec_6>.container>.box>.content>form>#send_button{

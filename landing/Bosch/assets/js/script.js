@@ -2,6 +2,7 @@ var nameValid = false;
 var locationValid = false;
 var phoneValid = false;
 var serviceValid = false;
+var captchaValid = false;
 
 var nameInput = '';
 var locationInput = '';
@@ -76,15 +77,28 @@ $('form').submit(function () {
 
 
 $('#send_button').click(function () {
-    if ($('#select input').is(":checked")) {
-        serviceInput = $('input[name="service"]:checked').val();
-    }
-    if (phoneValid){
-        sendAjaxForm();
-    }else {
-        alert('لطفا شماره تماس خود را به طور صحیح وارد کنید.')
+    var v = grecaptcha.getResponse();
+    if(v.length == 0)
+    {
+        document.getElementById('captcha').innerHTML=" بهمون بگو که ربات نیستی :)";
+        captchaValid = false;
         return false;
+    }else
+    {
+        document.getElementById('captcha').innerHTML="هویت تایید شد";
+        document.getElementById('captcha').style.color = "green";
+        captchaValid = true;
+        if ($('#select input').is(":checked")) { serviceInput = $('input[name="service"]:checked').val(); }
+        
+        if (phoneValid){
+            sendAjaxForm();
+        }else {
+            alert('لطفا فرم را با دقت پر کنید.')
+            return false;
+        }
+        
     }
+    
 });
 
 
