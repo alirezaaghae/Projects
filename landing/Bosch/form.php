@@ -9,9 +9,9 @@ if(!empty($_SERVER['HTTP_CLIENT_IP'])){$ip = $_SERVER['HTTP_CLIENT_IP'];}elseif(
 
 // database details
     $host = "localhost";
-    $username = "adverlin_landing";
-    $password = "T2y9k)8(Qr2bJW";
-    $dbname = "adverlin_landing";
+    $username = "admoon2_bosch";
+    $password = "admoon2_bosch";
+    $dbname = "admoon2_bosch";
 
     // creating a connection
     $db_connection = mysqli_connect($host, $username, $password, $dbname);
