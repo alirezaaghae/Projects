@@ -129,6 +129,7 @@ export default function SFM_Form (props){
       setInputs({})
     }
     return(
+      <section id={props.id} className="sfm">
         <div className="container">
             <div className="box">
                 <div className="priceInfo">
@@ -170,5 +171,6 @@ export default function SFM_Form (props){
                 </div>
             </div>
         </div>
+      </section>
     )
 }

@@ -5,7 +5,7 @@ export default function Steps(props) {
     return(
         <section id="Steps">
             <div className="container">
-                <h2>{props.children}</h2>
+                <h2>{props.title}</h2>
                 <div className="content">
                     <ul>
                         {Object.keys(x).map((step,i) => (
