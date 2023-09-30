@@ -6,6 +6,8 @@ import $ from 'jquery';
 import { Helmet, HelmetProvider } from 'react-helmet-async';
 import SFM_Form from '../components/SFM_Form';
 import Intro from '../components/Intro';
+import Steps from '../components/Steps';
+import Collaborating from '../components/Collaborating';
 
 const Audit = (props) => {
 
@@ -58,40 +60,9 @@ const Audit = (props) => {
                 <h2>The Audit steps we take for you</h2>
                 <p>During the process of creating an audit for your Google Ads campaign, our team follows a meticulous and comprehensive approach to ensure no stone is left unturned. Here's a breakdown of what we do:</p>
             </Intro>
-            <section id="Steps">
-                <div className="container">
-                    <h2>Step into Success with Tune Up</h2>
-                    <div className="content">
-                        <ul>
-                            <li>
-                                <div className="title"><strong className="desktop">Account Analysis & Optimization</strong></div>    
-                                <div className="number"><b>1</b></div>
-                                <div className="text"><div className="paragraph"><strong className="mobile">Account Analysis & Optimization</strong><p>We analyze your Google Ads account structure, settings, and targeting to optimize campaign reach and alignment with business goals.</p></div></div>
-                            </li>
-                            <li>
-                                <div className="title"><strong className="desktop">Performance Evaluation</strong></div>
-                                <div className="number"><b>2</b></div>
-                                <div className="text"><div className="paragraph"><strong className="mobile">Performance Evaluation</strong><p>Metrics like CTR, conversion rates, CPA, and ROAS are assessed to identify strengths and weaknesses, guiding improvements.</p></div></div>
-                            </li>
-                            <li>
-                                <div className="title"><strong className="desktop">Keyword & Ad Copy Refinement</strong></div>
-                                <div className="number"><b>3</b></div>
-                                <div className="text"><div className="paragraph"><strong className="mobile">Keyword & Ad Copy Refinement</strong><p>We conduct keyword analysis to refine targeting and reduce ad spend, while improving ad copy and extensions for better click-through and conversion rates.</p></div></div>    
-                            </li>
-                            <li>
-                                <div className="title"><strong className="desktop">Bidding Strategy Optimization</strong></div>
-                                <div className="number"><b>4</b></div>
-                                <div className="text"><div className="paragraph"><strong className="mobile">Bidding Strategy Optimization</strong><p>Maximize ROI with reviewed bidding strategies, bid adjustments, and automated options, based on campaign objectives and data analysis.</p></div></div>
-                            </li>
-                            <li>
-                                <div className="title"><strong className="desktop">Competitor Analysis & Detailed Report</strong></div>
-                                <div className="number"><b>5</b></div>
-                                <div className="text"><div className="paragraph"><strong className="mobile">Competitor Analysis & Detailed Report</strong><p>Thorough competitor analysis identifies areas for differentiation and provides a detailed report with data-driven insights, recommendations, and action steps for enhanced campaign performance.</p></div></div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </section>
+            <Steps name={props.page}>
+                Step into Success with audit
+            </Steps>
             <section id="Form" className="sfm">
                 <SFM_Form 
                     spanText={[<span>Let us make your account more valuable</span>,<b>Price: <strong><del>$200</del> - $50</strong></b>]}
@@ -99,42 +70,8 @@ const Audit = (props) => {
                     formData={(data) => props.mainFormData(data)}
                 />
             </section>
-            <section id="collaborating">
-                <div className="container">
-                    <div className="title">
-                        <h2>Start collaborating in 4 easy steps</h2>
-                        <p>To implement the advice, our Tune Up service is here to optimize your campaign. Here are the steps:</p>
-                    </div>
-                    <div className="items">
-                        <ul className="row">
-                            <li className="col-xl-12 col-lg-12 col-md-12 col-sm-24 col-24">
-                                <div className="content">
-                                    <img src="assets/images/step1Icon.svg" alt="step-Icon" title="step-Icon"/>
-                                    <p>You can securely share access to your Google Ads account or export relevant data for us to analyze.</p>
-                                </div>
-                            </li>
-                            <li className="col-xl-12 col-lg-12 col-md-12 col-sm-24 col-24">
-                                <div className="content">
-                                    <img src="assets/images/step2Icon.svg" alt="step-Icon" title="step-Icon"/>
-                                    <p>We offer flexible communication via email, phone, or video chat to accommodate your preferences.</p>
-                                </div>
-                            </li>
-                            <li className="col-xl-12 col-lg-12 col-md-12 col-sm-24 col-24">
-                                <div className="content">
-                                    <img src="assets/images/step3Icon.svg" alt="step-Icon" title="step-Icon"/>
-                                    <p>We dive deep into your Google Ads account and We offer tailored advice and recommendations to enhance your campaign's performance and achieve better results!</p>
-                                </div>
-                            </li>
-                            <li className="col-xl-12 col-lg-12 col-md-12 col-sm-24 col-24">
-                                <div className="content">
-                                    <img src="assets/images/step4Icon.svg" alt="step-Icon" title="step-Icon"/>
-                                    <p>Our engaging video presentation or comprehensive PDF report will provide valuable insights and recommendations tailored to your campaign.</p>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </section>
+            <Collaborating name={props.page}/>
+
             <section id="WhyChooseOurService">
                 <div className="container">
                     <h2>Why Choose Our Audit Service?</h2>

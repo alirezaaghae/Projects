@@ -6,6 +6,7 @@ import $ from 'jquery';
 import { Helmet, HelmetProvider } from 'react-helmet-async';
 import SFM_Form from '../components/SFM_Form';
 import Intro from '../components/Intro';
+import Steps from '../components/Steps';
 
 const Ads = (props) => {
     
@@ -62,35 +63,9 @@ const Ads = (props) => {
                 <h2>Our Expert Team Delivers Winning Results!</h2>
                 <p>Our agency offers a team of experienced professionals with extensive digital advertising experience to help you dominate the competition and achieve exceptional results. We analyze your competition, develop tailored strategies, and provide tools, insights, and expertise to stand out in the crowd. With our expert team by your side, you can unleash your full potential and position your business for success.</p>
             </Intro>
-            <section id="Steps">
-                <div className="container">
-                    <h2>What happens in our management service!</h2>
-                    <div className="content">
-                        <ul>
-                            <li>
-                                <div className="title"><strong className="desktop">Pre-Run Research</strong></div>    
-                                <div className="number"><b>1</b></div>
-                                <div className="text"><div className="paragraph"><strong className="mobile">Pre-Run Research</strong><p>We analyze your Google Ads account structure, settings, and targeting to optimize campaign reach and alignment with business goals.</p></div></div>
-                            </li>
-                            <li>
-                                <div className="title"><strong className="desktop">Campaign Setup</strong></div>    
-                                <div className="number"><b>2</b></div>
-                                <div className="text"><div className="paragraph"><strong className="mobile">Campaign Setup</strong><p>Metrics like CTR, conversion rates, CPA, and ROAS are assessed to identify strengths and weaknesses, guiding improvements.</p></div></div>
-                            </li>
-                            <li>
-                                <div className="title"><strong className="desktop">Ongoing Management and Optimization</strong></div>    
-                                <div className="number"><b>3</b></div>
-                                <div className="text"><div className="paragraph"><strong className="mobile">Ongoing Management and Optimization</strong><p>We conduct keyword analysis to refine targeting and reduce ad spend, while improving ad copy and extensions for better click-through and conversion rates.</p></div></div>
-                            </li>
-                            <li>
-                                <div className="title"><strong className="desktop">Your Strategic Partner for Boosted Success</strong></div>    
-                                <div className="number"><b>4</b></div>
-                                <div className="text"><div className="paragraph"><strong className="mobile">Your Strategic Partner for Boosted Success</strong><p>Maximize ROI with reviewed bidding strategies, bid adjustments, and automated options, based on campaign objectives and data analysis.</p></div></div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </section>
+            <Steps name={props.page}>
+                What happens in our management service!
+            </Steps>
             <section id="PricingForm">
                 <div className="container">
                     <h2>Pricing</h2>

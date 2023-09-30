@@ -130,45 +130,45 @@ export default function SFM_Form (props){
     }
     return(
         <div className="container">
-                    <div className="box">
-                        <div className="priceInfo">
-                            <div className="text">
-                                {props.spanText}
-                            </div>
-                            <div className="button">
-                                <button className="formDiscover" onClick={()=> $('.box').addClass('open') }>{props.buttonText}</button>
-                            </div>
-                        </div>
-                        <div className="form-input center" state="email" page="Audit">
-                            <div className="top-label">
-                                <label className="active" value="0" onClick={topLabel}>Email<input type="radio" className="radio-input Email_menu2" name="top_label_menu" value="0"/></label>
-                                <label value="1" onClick={topLabel}>Full Name<input type="radio" className="radio-input Name_menu2" name="top_label_menu" value="1" checked/></label>
-                                <label value="2" onClick={topLabel}>Phone Number<input type="radio" className="radio-input Phone_menu2" name="top_label_menu" value="2"/></label>
-                                <label value="3" onClick={topLabel}>Website URL<input type="radio" className="radio-input Budget_menu2" name="top_label_menu" value="3"/></label>
-                            </div>
-                            <form>
-                                <div className="inputs">
-                                    <div className="Email-input">
-                                        <input type="email" name="email" placeholder="Email" value={inputs.email || ""} onChange={handleChange}/>
-                                    </div>
-                                    <div className="Name-input">
-                                        <input type="text" name="name" placeholder="Full Name" inputMode="decimal" min="2" max="20" value={inputs.name || ""} onChange={handleChange} required/>
-                                    </div>
-                                    <div className="phone-input alireza_validator">
-                                        <input type="tel" className="phone123" name="phone" placeholder="Phone Number" value={inputs.phone || ""} onChange={handleChange} maxlength="15" required/>
-                                    </div>
-                                    <div className="website-input">
-                                        <input type="url" name="website" placeholder="Website address" max="30" value={inputs.website || ""} onChange={handleChange}/>
-                                    </div>
-
-                                    <div className="successDiv">
-                                        <p>Thank you for ordering us! We will call you back</p>
-                                    </div>
-                                </div>
-                                <button className="next_button" state="0" onClick={handleSubmit}>Next</button>
-                            </form>
-                        </div>
+            <div className="box">
+                <div className="priceInfo">
+                    <div className="text">
+                        {props.spanText}
+                    </div>
+                    <div className="button">
+                        <button className="formDiscover" onClick={()=> $('.box').addClass('open') }>{props.buttonText}</button>
                     </div>
                 </div>
+                <div className="form-input center" state="email" page="Audit">
+                    <div className="top-label">
+                        <label className="active" value="0" onClick={topLabel}>Email<input type="radio" className="radio-input Email_menu2" name="top_label_menu" value="0"/></label>
+                        <label value="1" onClick={topLabel}>Full Name<input type="radio" className="radio-input Name_menu2" name="top_label_menu" value="1" checked/></label>
+                        <label value="2" onClick={topLabel}>Phone Number<input type="radio" className="radio-input Phone_menu2" name="top_label_menu" value="2"/></label>
+                        <label value="3" onClick={topLabel}>Website URL<input type="radio" className="radio-input Budget_menu2" name="top_label_menu" value="3"/></label>
+                    </div>
+                    <form>
+                        <div className="inputs">
+                            <div className="Email-input">
+                                <input type="email" name="email" placeholder="Email" value={inputs.email || ""} onChange={handleChange}/>
+                            </div>
+                            <div className="Name-input">
+                                <input type="text" name="name" placeholder="Full Name" inputMode="decimal" min="2" max="20" value={inputs.name || ""} onChange={handleChange} required/>
+                            </div>
+                            <div className="phone-input alireza_validator">
+                                <input type="tel" className="phone123" name="phone" placeholder="Phone Number" value={inputs.phone || ""} onChange={handleChange} maxlength="15" required/>
+                            </div>
+                            <div className="website-input">
+                                <input type="url" name="website" placeholder="Website address" max="30" value={inputs.website || ""} onChange={handleChange}/>
+                            </div>
+
+                            <div className="successDiv">
+                                <p>Thank you for ordering us! We will call you back</p>
+                            </div>
+                        </div>
+                        <button className="next_button" state="0" onClick={handleSubmit}>Next</button>
+                    </form>
+                </div>
+            </div>
+        </div>
     )
 }

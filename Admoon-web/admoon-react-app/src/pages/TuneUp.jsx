@@ -7,6 +7,7 @@ import { Helmet, HelmetProvider } from 'react-helmet-async';
 import SFM_Form from '../components/SFM_Form';
 import Intro from '../components/Intro';
 import Steps from '../components/Steps';
+import Collaborating from '../components/Collaborating';
 
 const TuneUp = (props) => {
 
@@ -59,43 +60,9 @@ const TuneUp = (props) => {
                 <h2>Tune Up Goes Beyond Audits!</h2>
                 <p>Experience the ultimate boost with Tune Up – taking audits to new heights. While audits uncover insights, Tune Up brings them to life. We implement recommendations, optimize your campaign, and solve existing issues. It's like having a personal pit crew for your Google Ads success. Say goodbye to guesswork and hello to a turbocharged campaign. Let's conquer the digital advertising landscape together!</p>
             </Intro>
-            <Steps name='tuneup'>
+            <Steps name={props.page}>
                 Step into Success with Tune Up
             </Steps>
-            {/* <section id="Steps">
-                <div className="container">
-                    <h2>Step into Success with Tune Up</h2>
-                    <div className="content">
-                        <ul>
-                            <li>
-                                <div className="title"><strong className="desktop">Comprehensive Evaluation</strong></div>    
-                                <div className="number"><b>1</b></div>    
-                                <div className="text"><div className="paragraph"><strong className="mobile">Comprehensive Evaluation</strong><p>Our Tune Up process begins with a thorough evaluation that spans at least three days. We conduct in-depth market research, analyze your competitors' strategies, review your landing pages, perform meticulous target audience analysis, and dive into pro keyword research.</p></div></div>    
-                            </li>
-                            <li>
-                                <div className="title"><strong className="desktop">Strategic Recommendations</strong></div>    
-                                <div className="number"><b>2</b></div>    
-                                <div className="text"><div className="paragraph"><strong className="mobile">Strategic Recommendations</strong><p>Armed with valuable insights, we develop strategic recommendations tailored to your campaign's needs. We optimize bidding strategies, refine ad copies, and implement data-driven recommendations to enhance your campaign's performance.</p></div></div>
-                            </li>
-                            <li>
-                                <div className="title"><strong className="desktop">Fine-Tuning and Optimization</strong></div>    
-                                <div className="number"><b>3</b></div>    
-                                <div className="text"><div className="paragraph"><strong className="mobile">Fine-Tuning and Optimization</strong><p>Our expert team works diligently to fine-tune your campaign, ensuring that every aspect is optimized to its fullest potential. We adjust targeting, bidding, and ad placements to maximize your reach and drive better results.</p></div></div>    
-                            </li>
-                            <li>
-                                <div className="title"><strong className="desktop">Rapid Implementation</strong></div>    
-                                <div className="number"><b>4</b></div>    
-                                <div className="text"><div className="paragraph"><strong className="mobile">Rapid Implementation</strong><p>Unlike traditional services, Tune Up includes one-time rapid implementation of the recommended changes. We swiftly put the optimization strategies into action, minimizing downtime and ensuring a seamless transition.</p></div></div>    
-                            </li>
-                            <li>
-                                <div className="title"><strong className="desktop">Result Evaluation</strong></div>    
-                                <div className="number"><b>5</b></div>    
-                                <div className="text"><div className="paragraph"><strong className="mobile">Result Evaluation</strong><p>After implementing the optimizations, we closely monitor your campaign's performance, tracking key metrics and evaluating the impact of the changes made. This enables us to fine-tune and adjust further, ensuring continued success.</p></div></div>    
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </section> */}
             <section id="Form" className="sfm">
                 <SFM_Form 
                     spanText={[<span>Let us make your account more valuable</span>,<b>Price: <strong><del></del>$1,500</strong></b>]}
@@ -103,42 +70,8 @@ const TuneUp = (props) => {
                     formData={(data) => props.mainFormData(data)}
                 />
             </section>
-            <section id="collaborating">
-                <div className="container">
-                    <div className="title">
-                        <h2>Start collaborating in 4 easy steps</h2>
-                        <p>When it comes to receiving your data and connecting with you, we've made it hassle-free. Here are the steps:</p>
-                    </div>
-                    <div className="items">
-                        <ul className="row">
-                            <li className="col-xl-12 col-lg-12 col-md-12 col-sm-24 col-24">
-                                <div className="content">
-                                    <img src="assets/images/step1Icon.svg" alt="step-Icon" title="step-Icon"/>
-                                    <p>You can securely share access to your Google Ads account or export relevant data for us to analyze.</p>
-                                </div>
-                            </li>
-                            <li className="col-xl-12 col-lg-12 col-md-12 col-sm-24 col-24">
-                                <div className="content">
-                                    <img src="assets/images/step2Icon.svg" alt="step-Icon" title="step-Icon"/>
-                                    <p>We offer flexible communication via email, phone, or video chat to accommodate your preferences.</p>
-                                </div>
-                            </li>
-                            <li className="col-xl-12 col-lg-12 col-md-12 col-sm-24 col-24">
-                                <div className="content">
-                                    <img src="assets/images/step3Icon.svg" alt="step-Icon" title="step-Icon"/>
-                                    <p>We dive deep into your Google Ads account and We offer tailored advice and recommendations to enhance your campaign's performance and achieve better results!</p>
-                                </div>
-                            </li>
-                            <li className="col-xl-12 col-lg-12 col-md-12 col-sm-24 col-24">
-                                <div className="content">
-                                    <img src="assets/images/step4Icon.svg" alt="step-Icon" title="step-Icon"/>
-                                    <p>Our engaging video presentation or comprehensive PDF report will provide valuable insights and recommendations tailored to your campaign.</p>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </section>
+            <Collaborating name={props.page}/>
+            
             <section id="WhyChooseOurService">
                 <div className="container">
                     <h2>Why Choose Our Tune Up Service?</h2>
