@@ -454,6 +454,7 @@ body{font-family: 'Poppins';font-style: normal;font-weight: 300;font-size: 15px;
     font-weight: 400;
     line-height: 150%;
     letter-spacing: -0.154px;
+    text-wrap: nowrap;
 }
 #MainNavBar>#navbar>nav>ul>li:hover span{transform: translatey(-100%);}
 #MainNavBar>#navbar>nav>ul>li:hover a{transform: translatey(-100%);}
@@ -466,18 +467,19 @@ body{font-family: 'Poppins';font-style: normal;font-weight: 300;font-size: 15px;
     font-weight: 400;
     line-height: 150%;
     letter-spacing: -0.154px;
+    text-wrap: nowrap;
 }
 #MainNavBar>#navbar>nav>ul>li>a:hover{}
 
 #MainNavBar>.selectBox.ServicesNav{
     background: white;
     border-radius: 14px;
-    left: 23%;
+    right: 736px;
 }
 #MainNavBar>.selectBox.LearnAbout{
     background: white;
     border-radius: 14px;
-    right: 22%;
+    right: 270px;
 }
 #MainNavBar>.selectBox{
     position: absolute;
@@ -524,6 +526,8 @@ footer.site-footer>.footerContact{
     background: #EAEDFF;
     padding: 40px;
     padding-bottom: 110px;
+    position: relative;
+    overflow: hidden;
 }
 #ContactUs footer.site-footer>.footerContact{display:none;}
 footer.site-footer>.footerContact>.container{
@@ -643,23 +647,26 @@ footer.site-footer>.footerNav.desktop>.logo{
     align-items: center;
     justify-content: center;
     margin-left: 40px;
+    width: 20%;
 }
 footer.site-footer>.footerNav.desktop>.logo>img{}
 footer.site-footer>.footerNav.desktop>.footerNavBar{
     position: relative;
     height: 100%;
+    width: 60%;
 }
 footer.site-footer>.footerNav.desktop>.footerNavBar>ul{
     display: flex;
     position: relative;
     height: 100%;
+    justify-content: center;
 }
 footer.site-footer>.footerNav.desktop>.footerNavBar>ul>li{min-width: 160px;}
 footer.site-footer>.footerNav.desktop>.footerNavBar>ul .vl{
     position: relative;
     width: 1px;
     background-color: #515FB0;
-    margin: 0 50px;
+    margin: 0 10px;
 }
 footer.site-footer>.footerNav.desktop>.footerNavBar>ul>li>strong{
     color: #E6E6E6;
@@ -684,6 +691,7 @@ footer.site-footer>.footerNav.desktop>.footerNavBar>ul>li>ul>li a{
 footer.site-footer>.footerNav.desktop>.footerNavBar>ul>li>ul>li a:hover{font-weight: 800;}
 footer.site-footer>.footerNav.desktop>.trustUs{
     position: relative;
+    width: 20%;
 }
 footer.site-footer>.footerNav.desktop>.trustUs>.GPartner{}
 footer.site-footer>.footerNav.desktop>.trustUs>.GPartner a{}
@@ -764,22 +772,23 @@ footer.site-footer>.footerNav.mobile>.logo img{
 #homePage{
 }
 #homePage>#root>.wrapper{}
-#homePage>#root>.wrapper>header{background-image: url('../images/homeHeaderBG.jpg');background-repeat: no-repeat;background-size: cover;background-position: center;height: 96vh;position: relative;display: flex;flex-direction: column;justify-content: space-between;align-items: center;border-radius: 45px;margin: 20px;}
-#homePage>#root>.wrapper>header>.container{
-}
+#homePage>#root>.wrapper>header{background-image: url('../images/homeHeaderBG.jpg');background-repeat: no-repeat;background-size: cover;background-position: center;height: 96vh;position: relative;display: flex;flex-direction: column;justify-content: space-between;align-items: center;border-radius: 45px;margin: 20px;padding: 0 30px;}
+#homePage>#root>.wrapper>header>.container{height: 60%;/* width:100%; */}
 #homePage>#root>.wrapper>header>.container #MainNavBar{}
 #homePage>#root>.wrapper>header>.container #MainNavBar.mobile{
     
 }
 #homePage>#root>.wrapper>header>.container>.content{
     position: relative;
-    margin-top: 200px;
+    display: flex;
+    align-items: center;
+    height: 100%;
 }
 #homePage>#root>.wrapper>header>.container>.content>.text{}
 #homePage>#root>.wrapper>header>.container>.content>.text h1{
     color: #FFF;
     font-family: Poppins;
-    font-size: 30px;
+    font-size: 26px;
     font-style: normal;
     font-weight: 300;
     line-height: 150%; /* 45px */
@@ -787,7 +796,7 @@ footer.site-footer>.footerNav.mobile>.logo img{
 }
 #homePage>#root>.wrapper>header>.container>.content>.text h1 span{
     font-family: Poppins;
-    font-size: 60px;
+    font-size: 46px;
     font-style: normal;
     font-weight: 600;
     line-height: 150%;
@@ -796,10 +805,10 @@ footer.site-footer>.footerNav.mobile>.logo img{
 #homePage>#root>.wrapper>header>.container>.content>.text a{
     border-radius: 12px;
     border: 1px solid #FFF;
-    padding: 20px 50px;
+    padding: 15px 30px;
     display: inline-block;
     color: #FFF;
-    font-size: 20px;
+    font-size: 17px;
     font-style: normal;
     font-weight: 500;
     line-height: 150%; /* 30px */
@@ -865,7 +874,7 @@ footer.site-footer>.footerNav.mobile>.logo img{
 #homePage>#root>.wrapper>main>section h2{
     color: #252E60;
     font-family: Poppins;
-    font-size: 37px;
+    font-size: 33px;
     text-align: center;
     font-style: normal;
     font-weight: 500;
@@ -1458,7 +1467,9 @@ footer.site-footer>.footerNav.mobile>.logo img{
     border-radius: 45px;
     margin: 35px auto;
     width: 85%;
+    padding: 0 30px;
 }
+#ServicesHeader .container{}
 #ServicesHeader .container #MainNavBar{}
 #ServicesHeader .container>.content{
     margin-top: 64px;
@@ -3492,3 +3503,11 @@ html.Ads.Management{scroll-snap-type: mandatory;scroll-snap-points-y: repeat(3re
 #ContactUs #mainForm .form.contactUs.success .successQS{display: flex;}
 .send_button.pending{opacity:0.1;}
 /* ------------------ /ContactUs.php --------------- */
+
+@media only screen and (max-width: 1310px){
+    #homePage>#root>.wrapper>header>.container{width:100%;}
+}
+@media only screen and (max-width: 1500px){
+    #ServicesHeader .container { width: 100%; }
+    footer.site-footer>.footerContact>.container{ width: 100%;}
+}

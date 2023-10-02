@@ -2,6 +2,7 @@ const WageFee = $('.WageFee');
 const SetupFee = $('.SetupFee');
 const BudgetFee = $('.BudgetFee');
 const TotalFee = $('.TotalFee');
+
 var TotalFeeSum = 0;
 var WageFeeSum = 0;
 var SetupFeeSum = 100;

@@ -133,11 +133,13 @@
  #MainNavBar>#navbar>nav>ul>li>span{}
  #MainNavBar>#navbar>nav>ul>li>a{}
  #MainNavBar>#navbar>nav>ul>li>a:hover{}
- #MainNavBar>#navbar>nav>ul>li span{transform: translatey(-100%);}
- #MainNavBar>#navbar>nav>ul>li a{transform: translatey(-100%);}
- 
+ #MainNavBar>#navbar>nav>ul>li span{/* transform: translatey(-100%); */height: 0;display: none;}
+ #MainNavBar>#navbar>nav>ul>li a{/* transform: translatey(-100%); */font-size: 12px;}
+ #MainNavBar>#navbar>nav>ul>li:hover a{transform: translatey(0);}
+
  #MainNavBar>.selectBox.ServicesNav{
     left: 0px;
+    right: auto;
 }
  #MainNavBar>.selectBox.LearnAbout{
     right: 26%;
@@ -1461,6 +1463,7 @@
   border-radius: 20px 20px 0px 0px;
   background: #252E60;
   overflow: hidden;
+  padding-top: 40px;
 }
  footer.site-footer>.footerNav.mobile .footerNavBar{}
  footer.site-footer>.footerNav.mobile .footerNavBar>ul{}
@@ -1512,13 +1515,17 @@
   width: 100%;
   border-radius: 0;
   height: 100vh;
+  padding: 0;
 }
- #homePage>#root>.wrapper>header>.container{}
+ #homePage>#root>.wrapper>header>.container{
+    height: 100%;
+}
  #homePage>#root>.wrapper>header>.container #MainNavBar{}
  #homePage>#root>.wrapper>header>.container>.content{
   /* margin-top: 100%; */
-  position: relative;
-  top: 56%;
+  /* position: relative; */
+  /* top: 56%; */
+  justify-content: center;
 }
  #homePage>#root>.wrapper>header>.container>.content>.text{
   text-align: center;
@@ -2955,6 +2962,7 @@
   border-radius: 20px 20px 0px 0px;
   background: #252E60;
   overflow: hidden;
+  padding-top: 40px;
 }
  footer.site-footer>.footerNav.mobile .footerNavBar{}
  footer.site-footer>.footerNav.mobile .footerNavBar>ul{}
@@ -3006,13 +3014,16 @@
   width: 100%;
   border-radius: 0;
   height: 100vh;
+  padding: 0;
 }
- #homePage>#root>.wrapper>header>.container{}
+ #homePage>#root>.wrapper>header>.container{
+    height: 100%;
+}
  #homePage>#root>.wrapper>header>.container #MainNavBar{}
  #homePage>#root>.wrapper>header>.container>.content{
   /* margin-top: 100%; */
-  position: relative;
-  top: 18vh;
+  /* position: relative; */
+  /* top: 18vh; */
 }
  #homePage>#root>.wrapper>header>.container>.content>.text{
   text-align: center;
