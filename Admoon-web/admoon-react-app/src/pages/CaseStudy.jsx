@@ -44,7 +44,7 @@ const CaseStudy = (props) => {
                     <div className="box customers">
                         <ul className="row">
                             <li className="col-xl-8 col-lg-8 col-md-8 col-sm-24 col-24">
-                                <Link to='/single'>
+                                <Link to='single'>
                                     <div className="img">
                                         <img src="assets/images/C1Home.png" alt="Zarifbar-img" title="Zarifbar-img"/>
                                         <img src="assets/images/C1Logo.svg" alt="Zarifbar-logo" title="Zarifbar-logo"/>
@@ -75,7 +75,7 @@ const CaseStudy = (props) => {
                                 </Link>
                             </li>
                             <li className="col-xl-8 col-lg-8 col-md-8 col-sm-24 col-24">
-                                <Link to='/single'>
+                                <Link to='single'>
                                     <div className="img">
                                         <img src="assets/images/C2Home.png" alt="spa-img" title="spa-img"/>
                                         <img src="assets/images/C2Logo.svg" alt="spa-logo" title="spa-logo"/>

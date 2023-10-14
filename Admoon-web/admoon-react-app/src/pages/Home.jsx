@@ -93,7 +93,7 @@ const Home = (props) => {
                         <div className="box customers">
                             <ul className="row">
                                 <li className="col-xl-8 col-lg-8 col-md-8 col-sm-24 col-24">
-                                    <Link to="/single">
+                                    <Link to="caseStudy/single">
                                         <div className="img">
                                             <img src="assets/images/C1Home.png" alt="Zarifbar-img" title="Zarifbar-img"/>
                                             <img src="assets/images/C1Logo.svg" alt="Zarifbar-logo" title="Zarifbar-logo"/>
@@ -124,7 +124,7 @@ const Home = (props) => {
                                     </Link>
                                 </li>
                                 <li className="col-xl-8 col-lg-8 col-md-8 col-sm-24 col-24">
-                                    <Link to="/single">
+                                    <Link to="caseStudy/single">
                                         <div className="img">
                                             <img src="assets/images/C2Home.png" alt="spa-img" title="spa-img"/>
                                             <img src="assets/images/C2Logo.svg" alt="spa-logo" title="spa-logo"/>
@@ -155,7 +155,7 @@ const Home = (props) => {
                                     </Link>
                                 </li>
                                 <li className="col-xl-8 col-lg-8 col-md-8 col-sm-24 col-24">
-                                    <Link to="/single">
+                                    <Link to="caseStudy/single">
                                         <div className="img">
                                             <img src="assets/images/C3Home.png" alt="TourGasht-img" title="TourGasht-img"/>
                                             <img src="assets/images/C3Logo.svg" alt="TourGasht-logo" title="TourGasht-logo"/>
