@@ -1503,6 +1503,11 @@
   letter-spacing: -0.198px;
 }
  footer.site-footer>.footerNav.mobile .footerNavBar>ul>.panel-group>.panel>.panel-collapse ul li a:hover{}
+ .whatsapp-call{
+  transform: scale(0.7);
+  bottom: 0;
+  right: 0;
+}
  /* ------------------ /footer.php ------------------ */
  
  /* ------------------- index.php ------------------- */

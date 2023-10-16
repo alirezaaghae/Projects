@@ -35,6 +35,7 @@ const Ads = (props) => {
         <meta name="twitter:description" content={props.description} />
         <meta name="twitter:title" content={props.title} />
         <meta itemprop="name" content={props.title} />
+        <script src="assets/js/circle.js" type="text/javascript" />
     </Helmet>
 
     <div className="wrapper AdsManage-page">
@@ -65,7 +66,9 @@ const Ads = (props) => {
 
             <Steps name={props.page} title=" What happens in our management service!"/>
 
-            <PricingForm/>
+            <PricingForm
+                formData={(data) => props.mainFormData(data)}
+            />
 
             <Services name={props.page} title="Why Choose Our Audit Service?" text="Choose our agency to unlock the power of expertise, experience, and a proven history of success. We're here to help you achieve remarkable results, drive your business forward, and leave a lasting impact in the digital advertising realm. Let's embark on a journey together that will transform your campaigns into unparalleled successes!" />
 

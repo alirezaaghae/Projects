@@ -648,6 +648,7 @@ footer.site-footer>.footerNav.desktop>.logo{
     justify-content: center;
     margin-left: 40px;
     width: 20%;
+    max-width: 140px;
 }
 footer.site-footer>.footerNav.desktop>.logo>img{}
 footer.site-footer>.footerNav.desktop>.footerNavBar{
@@ -666,7 +667,7 @@ footer.site-footer>.footerNav.desktop>.footerNavBar>ul .vl{
     position: relative;
     width: 1px;
     background-color: #515FB0;
-    margin: 0 10px;
+    margin: 0 30px;
 }
 footer.site-footer>.footerNav.desktop>.footerNavBar>ul>li>strong{
     color: #E6E6E6;
@@ -692,6 +693,7 @@ footer.site-footer>.footerNav.desktop>.footerNavBar>ul>li>ul>li a:hover{font-wei
 footer.site-footer>.footerNav.desktop>.trustUs{
     position: relative;
     width: 20%;
+    max-width: 140px;
 }
 footer.site-footer>.footerNav.desktop>.trustUs>.GPartner{}
 footer.site-footer>.footerNav.desktop>.trustUs>.GPartner a{}
@@ -765,6 +767,100 @@ footer.site-footer>.footerNav.mobile>.logo{
 }
 footer.site-footer>.footerNav.mobile>.logo img{
     height: 43px;
+}
+
+.whatsapp-call {
+  position: relative;
+  line-height: 30vw;
+  text-align: center;
+  color: #252B37;
+  /* background-color: #151823; */
+  animation: textColor 5s ease infinite;
+}
+.whatsapp-call:after {
+  transition:all .3s;
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+  border-radius: 30px;
+  margin: 0 auto;
+  transform: scale(1.1);
+  opacity: 0.8;
+  -webkit-filter: blur(20px);
+  -moz-filter: blur(20px);
+  -ms-filter: blur(20px);
+  filter: blur(20px);
+  background: linear-gradient(270deg, #019ad8, #50ce5e);
+  background-size: 200% 200%;
+  animation: animateGlow 10s ease infinite;
+}
+.whatsapp-call:hover:after{
+  transform: scale(1.25);
+  opacity: 1;
+  -webkit-filter: blur(0px);
+  -moz-filter: blur(0px);
+  -ms-filter: blur(0px);
+  filter: blur(0px);
+}
+
+.whatsapp-call{
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 20;
+    transform: scale(0.9);
+}
+.whatsapp-call a{
+    transition:all .3s;
+    position: relative;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 30px;
+    /* background-color: #50ce5e; */
+    background: linear-gradient(270deg, #019ad8, #50ce5e);
+    background-size: 200% 200%;
+    animation: animateGlow 5s ease infinite;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    margin-top: 0;
+    /*box-shadow: 0px 0px 2px #1c1c1c;*/
+}
+.whatsapp-call a:hover{
+    box-shadow: 0px 0px 3px #1c1c1cb0;
+    transform:scale(1.1);
+}
+.whatsapp-call img{
+    width: 45px;
+}
+@keyframes animateGlow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+@keyframes textColor {
+  0% {
+    color: #7e0fff;
+  }
+  50% {
+    color: #0fffc1;
+  }
+  100% {
+    color: #7e0fff;
+  }
 }
 /* ------------------ /footer.php ------------------ */
 

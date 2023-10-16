@@ -10,9 +10,9 @@ window.onload = function() {
   var phoneInput = '';
 
   var page = '';
-  var TotalFeeSum ;
-  var WageFeeSum ;
-  let pricePerDot ;
+  // var TotalFeeSum ;
+  // var WageFeeSum ;
+  // let pricePerDot ;
 
   // windows load
   $(window).on("load", function() {

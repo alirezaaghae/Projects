@@ -22,7 +22,7 @@ const slider = document.querySelector('.slider');
   let isTruePrice = false;
 let angle ;
 let degree ;
-// let pricePerDot ;
+let pricePerDot = 0;
 let priceShow ;
 let topSections;
 let centerX ;
@@ -83,6 +83,7 @@ $('body').bind( "mouseup touchend", function() { isDragging = false; slider.styl
       
   });
  function addListAfterKeypress() {
+  console.log('click');
   pricePerDot = $( "#priceInfo" ).val();
   pricePerDot = pricePerDot.replace(/[^\d\.]*/g, ''); // Replace all leading non-digits with nothing
   pricePerDot = Number(pricePerDot);
@@ -161,7 +162,6 @@ $('.SelectPrices>.selectItems>ul>li>.button').click(function () {
       break;
     default: console.log('default');
   }
-  
 });
   
 
@@ -169,15 +169,27 @@ $('#payCheckbox').change(function() {
   // this will contain a reference to the checkbox   
   if (this.checked) {
       $('.BudgetFeeLi').addClass('showww');
+      pricePerDot = $('#priceInfo').val();
+      pricePerDot = pricePerDot.replace(/[^\d\.]*/g, ''); // Replace all leading non-digits with nothing
+      pricePerDot = Number(pricePerDot);
+      WageFeeSum = $('.WageFee').text();
+      WageFeeSum = WageFeeSum.replace(/[^\d\.]*/g, ''); // Replace all leading non-digits with nothing
+      WageFeeSum = Number(WageFeeSum);
+      SetupFeeSum = $('.SetupFee').text();
+      SetupFeeSum = SetupFeeSum.replace(/[^\d\.]*/g, ''); // Replace all leading non-digits with nothing
+      SetupFeeSum = Number(SetupFeeSum);
+
       TotalFeeSum = WageFeeSum + pricePerDot + SetupFeeSum;
       console.log(WageFeeSum +'+'+ pricePerDot +'+'+ SetupFeeSum)
       isChecked = true;
       TotalFee.text('$'+ TotalFeeSum.toLocaleString('en'));
   } else {
       $('.BudgetFeeLi').removeClass('showww');
+      
       TotalFeeSum = WageFeeSum + SetupFeeSum;
       isChecked = false;
       TotalFee.text('$'+ TotalFeeSum.toLocaleString('en'));
+      console.log(WageFeeSum +' '+ SetupFeeSum)
   }
 });
 
