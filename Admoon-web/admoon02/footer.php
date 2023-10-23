@@ -1,7 +1,7 @@
 <?php 
     global $formPage;
 ?>
-<footer class="site-footer footer-index" role="contentinfo">
+<footer id="Footer" class="site-footer footer-index" role="contentinfo">
     <div class="footerContact">
     <div class="container">
         <div class="location">
@@ -17,6 +17,11 @@
                     <li>
                         <img src="assets/images/phoneIcon.svg" alt="phone-icon" title="phone-icon">
                         <a href="tel:+971501104970">+971 50 1104970</a>
+                        <!--<a href="tel:+9684692578">+968 - 469 2578</a>-->
+                    </li>
+                    <li>
+                        <img src="assets/images/mailIcon.svg" alt="mail-icon" title="mail-icon">
+                        <a href="mailto:admoon@gmail.com">admoon@gmail.com</a>
                         <!--<a href="tel:+9684692578">+968 - 469 2578</a>-->
                     </li>
                 </ul>

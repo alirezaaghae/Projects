@@ -33,12 +33,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
     <div class="wrapper index-page" id="main-page">
         <header>
-            <lottie-player src="assets/json/home-lottie/data.json"  class="header-vector" background="transparent"  speed="1" loop autoplay></lottie-player> 
+            <lottie-player src="assets/json/home-lottie/data.json" class="header-vector desktop" background="transparent"  speed="1" loop autoplay></lottie-player> 
+            <lottie-player src="assets/json/home-lottie-mobile/data.json" class="header-vector mobile" background="transparent"  speed="1" loop autoplay></lottie-player> 
             <div class="container">
                 <?php include('nav.php'); ?>
                 <div class="content" id="navbar_padding">
                     <div class="text">
-                        <h1>Admoon help you with<br><span>Google Ads Services</span></h1>
+                        <h1>Grow your Income<br><span>Meet the most specialist in Google ads</span></h1>
                         <a href="#ProvideForYou">What we do for you</a>
                     </div>
                     <div class="img">
@@ -70,6 +71,34 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </div> -->
         </header>
         <main class="site-main main-index">
+            <section id="botomItems">
+                <ul class="row">
+                    <li class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 item1">
+                        <div class="box">
+                            <div class="img "><img src="assets/images/item1.svg" alt="Ads Budget Saving" title="Ads Budget Saving"></div>
+                            <div class="info"><strong>$500k</strong><span>Ads Budget Saving</span></div>
+                        </div>
+                    </li>
+                    <li class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 item2">
+                        <div class="box">
+                            <div class="img "><img src="assets/images/item2.svg" alt="Ads Budget Saving" title="Ads Budget Saving"></div>
+                            <div class="info"><strong>$5M</strong><span>budget managed last year</span></div>
+                        </div>
+                    </li>
+                    <li class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 item3">
+                        <div class="box">
+                            <div class="img "><img src="assets/images/item3.svg" alt="Ads Budget Saving" title="Ads Budget Saving"></div>
+                            <div class="info"><strong>50</strong><span>Accounts Tuned Up weekly</span></div>
+                        </div>
+                    </li>
+                    <li class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 item4">
+                        <div class="box">
+                            <div class="img "><img src="assets/images/item4.svg" alt="Ads Budget Saving" title="Ads Budget Saving"></div>
+                            <div class="info"><strong>%95</strong><span>Customer Retention</span></div>
+                        </div>
+                    </li>
+                </ul>
+            </section>
             <section id="WhoAreWe">
                 <div class="container">
                     <h2>Who are we?</h2>

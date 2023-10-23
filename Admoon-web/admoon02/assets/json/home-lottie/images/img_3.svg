@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 83 28.98">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: url(#linear-gradient);
+      }
+
+      .cls-2 {
+        fill: #208b3c;
+      }
+
+      .cls-3 {
+        fill: #fff;
+        font-family: Poppins-Light, Poppins;
+        font-size: 10px;
+        font-weight: 300;
+      }
+
+      .cls-4 {
+        fill: none;
+        stroke: #208b3c;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: .5px;
+      }
+    </style>
+    <linearGradient id="linear-gradient" x1="41.75" y1="5.25" x2="41.18" y2="26.28" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#218e3d" stop-opacity=".5"/>
+      <stop offset="1" stop-color="#063a11" stop-opacity=".5"/>
+    </linearGradient>
+  </defs>
+  <g id="Layer_5" data-name="Layer 5">
+    <g>
+      <rect class="cls-1" width="83" height="28.98" rx="10.21" ry="10.21"/>
+      <text class="cls-3" transform="translate(22.18 18.01)"><tspan x="0" y="0">Tune Up</tspan></text>
+      <g>
+        <line class="cls-4" x1="14.31" y1="20.57" x2="14.31" y2="10.17"/>
+        <polygon class="cls-2" points="16.16 11.58 14.31 10.79 12.46 11.58 14.31 7.19 16.16 11.58"/>
+      </g>
+      <g>
+        <line class="cls-4" x1="70.67" y1="20.57" x2="70.67" y2="10.17"/>
+        <polygon class="cls-2" points="72.52 11.58 70.67 10.79 68.82 11.58 70.67 7.19 72.52 11.58"/>
+      </g>
+    </g>
+  </g>
+</svg>

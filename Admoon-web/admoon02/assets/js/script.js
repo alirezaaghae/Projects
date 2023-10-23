@@ -356,6 +356,23 @@ $('.send_button').click(function () {
     if (emailValid && nameValid && phoneValid && websiteValid){
         sendAjaxForm();
     }else {
+      $('.send_button').addClass('error');
+      if(!emailValid){
+        $('.MailAddress').addClass('errorInputs');
+      }
+      if(!nameValid){
+        $('.FullName').addClass('errorInputs');
+      }
+      if(!phoneValid){
+        $('.PhoneNumber').addClass('errorInputs');
+      }
+      if(!websiteValid){
+        $('.WebsiteAddress').addClass('errorInputs');
+      }
+      setTimeout(function(){ 
+        $('.send_button').removeClass('error');
+        $('.MailAddress,.FullName,.PhoneNumber,.WebsiteAddress').removeClass('errorInputs');
+      },3000);
         return false;
     }
 });

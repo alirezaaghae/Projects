@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 130.77 28.98">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: url(#linear-gradient);
+      }
+
+      .cls-2 {
+        fill: #d93025;
+      }
+
+      .cls-3 {
+        fill: #fff;
+        font-family: Poppins-Light, Poppins;
+        font-size: 10px;
+        font-weight: 300;
+      }
+
+      .cls-4 {
+        fill: none;
+        stroke: #d93025;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: .5px;
+      }
+    </style>
+    <linearGradient id="linear-gradient" x1="65.65" y1="4.85" x2="65.05" y2="26.77" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#d93025" stop-opacity=".5"/>
+      <stop offset="1" stop-color="#440606" stop-opacity=".5"/>
+    </linearGradient>
+  </defs>
+  <g id="Layer_9" data-name="Layer 9">
+    <g>
+      <rect class="cls-1" width="130.77" height="28.98" rx="10.21" ry="10.21"/>
+      <text class="cls-3" transform="translate(17.41 18.01)"><tspan x="0" y="0">Account Suspension</tspan></text>
+      <g>
+        <line class="cls-4" x1="14.31" y1="20.57" x2="14.31" y2="10.17"/>
+        <polygon class="cls-2" points="16.16 11.58 14.31 10.79 12.46 11.58 14.31 7.19 16.16 11.58"/>
+      </g>
+      <g>
+        <line class="cls-4" x1="120.16" y1="20.57" x2="120.16" y2="10.17"/>
+        <polygon class="cls-2" points="122.01 11.58 120.16 10.79 118.3 11.58 120.16 7.19 122.01 11.58"/>
+      </g>
+    </g>
+  </g>
+</svg>

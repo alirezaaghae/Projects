@@ -40,7 +40,7 @@
                         <span>Elevate Your Ads Management</span>
                         <p>Are You Struggling to Manage Your Campaign? Leave it to us! With our Ads Management service, expect optimized campaigns, targeted traffic, and exceptional results. Relax as we handle setup, monitoring, and clear reports. Trust our dedicated team to drive success while you focus on what you do best!</p>
                         <div class="price">
-                            <a href="#Steps">Request now</a>
+                            <a href="#Footer">Request now</a>
                         </div>
                     </div>
                     <div class="img">
@@ -264,7 +264,7 @@
                                         <input type="tel" class="phone123" name="phone" placeholder="Phone Number" maxlength="15" required>
                                     </div>
                                     <div class="website-input">
-                                        <input type="url" name="website" placeholder="Website address" max="30">
+                                        <input type="text" name="website" placeholder="Website address" max="30">
                                     </div>
 
                                     <div class="successDiv">

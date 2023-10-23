@@ -37,7 +37,7 @@
                         <div class="price">
                             <span>Pricing</span>
                             <strong><del>$200</del> - $50</strong>
-                            <a href="#Steps">Request now</a>
+                            <a href="#Footer">Request now</a>
                         </div>
                     </div>
                     <div class="img">
@@ -118,7 +118,7 @@
                                         <input type="tel" class="phone123" name="phone" placeholder="Phone Number" maxlength="15" required>
                                     </div>
                                     <div class="website-input">
-                                        <input type="url" name="website" placeholder="Website address" max="30">
+                                        <input type="text" name="website" placeholder="Website address" max="30">
                                     </div>
 
                                     <div class="successDiv">
@@ -244,7 +244,7 @@
                                         <input type="tel" class="phone123" name="phone" placeholder="Phone Number" maxlength="15" required>
                                     </div>
                                     <div class="website-input">
-                                        <input type="url" name="website" placeholder="Website address" max="30">
+                                        <input type="text" name="website" placeholder="Website address" max="30">
                                     </div>
 
                                     <div class="successDiv">
