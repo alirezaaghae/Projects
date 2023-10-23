@@ -33,6 +33,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
     <div class="wrapper index-page" id="main-page">
         <header>
+            <lottie-player src="assets/json/home-lottie/data.json"  class="header-vector" background="transparent"  speed="1" loop autoplay></lottie-player> 
             <div class="container">
                 <?php include('nav.php'); ?>
                 <div class="content" id="navbar_padding">
@@ -45,7 +46,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     </div>
                 </div>
             </div>
-            <div class="bottomItems">
+            <!-- <div class="bottomItems">
                 <ul class="desktop">
                     <li><strong>$500k</strong><span>Ads Budget Saving</span></li>
                     <li><strong>$5M</strong><span>budget managed last year</span></li>
@@ -66,7 +67,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         </div>
                     </li>
                 </ul>
-            </div>
+            </div> -->
         </header>
         <main class="site-main main-index">
             <section id="WhoAreWe">

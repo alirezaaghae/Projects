@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 100.59 28.98">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: url(#linear-gradient);
+      }
+
+      .cls-2 {
+        fill: #faab02;
+      }
+
+      .cls-3 {
+        fill: #fff;
+        font-family: Poppins-Light, Poppins;
+        font-size: 10px;
+        font-weight: 300;
+      }
+
+      .cls-4 {
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+
+      .cls-4, .cls-5 {
+        fill: none;
+        stroke: #faab02;
+        stroke-width: .5px;
+      }
+
+      .cls-5 {
+        stroke-miterlimit: 10;
+      }
+    </style>
+    <linearGradient id="linear-gradient" x1="50.55" y1="5.1" x2="49.97" y2="26.46" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#faab02" stop-opacity=".5"/>
+      <stop offset="1" stop-color="#6d4807" stop-opacity=".5"/>
+    </linearGradient>
+  </defs>
+  <g id="Layer_11" data-name="Layer 11">
+    <g>
+      <rect class="cls-1" width="100.59" height="28.98" rx="10.21" ry="10.21"/>
+      <text class="cls-3" transform="translate(20.06 18.01)"><tspan x="0" y="0">Increase CTR</tspan></text>
+      <g>
+        <line class="cls-5" x1="14.31" y1="20.57" x2="14.31" y2="10.17"/>
+        <polygon class="cls-2" points="16.16 11.58 14.31 10.79 12.46 11.58 14.31 7.19 16.16 11.58"/>
+      </g>
+      <g>
+        <line class="cls-4" x1="90.34" y1="20.57" x2="90.34" y2="10.17"/>
+        <polygon class="cls-2" points="92.19 11.58 90.34 10.79 88.48 11.58 90.34 7.19 92.19 11.58"/>
+      </g>
+    </g>
+  </g>
+</svg>
