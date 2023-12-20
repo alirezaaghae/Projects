@@ -21,7 +21,7 @@
                     </li>
                     <li>
                         <img src="assets/images/mailIcon.svg" alt="mail-icon" title="mail-icon">
-                        <a href="mailto:admoon@gmail.com">admoon@gmail.com</a>
+                        <a href="mailto:sale@admoon.agency">sale@admoon.agency</a>
                         <!--<a href="tel:+9684692578">+968 - 469 2578</a>-->
                     </li>
                 </ul>

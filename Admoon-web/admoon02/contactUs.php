@@ -59,16 +59,16 @@
                     <div class="socialsNetwork">
                         <ul class="items">
                             <li class="item">
-                                <a href="tel:+971501104970" target="_blank">
+                                <a href="tel:+971501104970">
                                     <img src="assets/images/callIcon3.svg" alt="call-icon">
                                     <span>+971 50 1104970</span>
                                     <!--<span>+968 - 469 2578</span>-->
                                 </a>
                             </li>
                             <li class="item">
-                                <a href="#" target="_blank">
+                                <a href="mailto:sale@admoon.agency">
                                     <img src="assets/images/mailIcon3.svg" alt="mail-icon">
-                                    <span>Admoon@gmail.com</span>
+                                    <span>sale@admoon.agency</span>
                                 </a>
                             </li>
                             <li class="item">
