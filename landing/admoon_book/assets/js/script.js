@@ -14,8 +14,8 @@ tailwind.config = {
     }
 }
 
-var nameValid = false;
-var nameInput = '';
+var emailValid = false;
+var emailInput = '';
 
 function sendAjaxForm() {
     // $('form').submit(function () {
@@ -23,7 +23,7 @@ function sendAjaxForm() {
     // });
     var name, location, phone, service;
     var a = 'ld';
-    name = nameInput;
+    email = emailInput;
 
     $('#send_button').addClass('pending');
     $('#send_button').prop('disabled', true);
@@ -33,12 +33,11 @@ function sendAjaxForm() {
         data: {
             'ajax': 'true',
             'in': '5' + a,
-            'name': name,
+            'name': email,
         },
         success: function (result) {
             $('#send_button').removeClass('pending');
-            elm.addClass('success');
-            $('#sec_6 form').hide();
+            $('#download_section').removeClass('showForm')
         }
     });
 }
@@ -46,9 +45,33 @@ function sendAjaxForm() {
 $('form').submit(function () {
     return false;
 });
-// insert data cover form 
+// insert data cover form
+
+$("#email_input").on( "keyup", function() {
+    if ($(this).is(":invalid") || this.value.length < 3) {
+        emailValid = false;
+        $('#send_button').addClass('disabled')
+    } else {
+        $('#send_button').removeClass('disabled');
+        emailInput = $(this).val();
+        emailValid = true;
+    };
+});
 
 $('#send_button').click(function () {
     sendAjaxForm();
 });
 
+
+$('#hamburger_menu').click(function () {
+    $('#navbar').addClass('open')
+});
+
+$('#navbar').click(function () {
+    $('#navbar').removeClass('open')
+});
+
+
+$('#header_button').click(function (){
+    $('#download_section').addClass('showForm')
+});

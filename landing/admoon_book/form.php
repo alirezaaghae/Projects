@@ -26,13 +26,9 @@ if(!empty($_SERVER['HTTP_CLIENT_IP'])){$ip = $_SERVER['HTTP_CLIENT_IP'];}elseif(
     date_default_timezone_set('Asia/Tehran');
     $datetime=date('Y-m-d H:i:s');
 
-    $name = $_POST['name'];
-    $phone = $_POST['phone'];
-    $service = $_POST['service'];
-    $location = $_POST['location'];
+    $email = $_POST['email'];
 
-    mysqli_query($db_connection,"INSERT INTO Newpackage (name, phone , location, service, date) VALUES ('$name', '$phone', '$service','$location' ,'$datetime')");
-
+    mysqli_query($db_connection,"INSERT INTO Newpackage (email, date) VALUES ('$email','$datetime')");
 
 //sms config
 $smsconfigsql=mysqli_query($db_connection,"SELECT * FROM `variable` WHERE `type`='sms'");
@@ -53,16 +49,12 @@ $parameters['isflash'] =false;
 echo $sms_client->SendSimpleSMS2($parameters)->SendSimpleSMS2Result;
 }
 function smscompiler($string){
-global $service,$phone,$location,$name,$datetime;
-$string=str_replace('{service}',$service,$string);
-$string=str_replace('{phone}',$phone,$string);
-$string=str_replace('{location}',$location,$string);
-$string=str_replace('{name}',$name,$string);
+global $email,$datetime;
+$string=str_replace('{email}',$email,$string);
 $string=str_replace('{datetime}',$datetime,$string);
 return $string;
 }
-    
-sendMessage($smsconfig['smsuser'],$smsconfig['smspass'],$smsconfig['smsfrom'],$smsconfig['smsadminphone'],smscompiler($smsconfig['smsadmintext']));
-// sendMessage($smsconfig['smsuser'],$smsconfig['smspass'],$smsconfig['smsfrom'],$phone,smscompiler($smsconfig['smstext']));    
+
+// sendMessage($smsconfig['smsuser'],$smsconfig['smspass'],$smsconfig['smsfrom'],$smsconfig['smsadminphone'],smscompiler($smsconfig['smsadmintext']));
 }
 ?>

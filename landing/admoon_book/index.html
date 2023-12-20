@@ -48,9 +48,15 @@
     <header class="w-full bg-white py-5">
         <div class="container">
             <div class="flex lg:flex-row justify-between lg:justify-between items-center flex-wrap">
-                <div id="navbar" class="navigation w-full lg:w-max h-full fixed lg:relative top-[-100vh] lg:top-0 left-0 transition-all">
+                <div id="navbar" class="bg-white navigation w-full lg:w-max h-full fixed lg:relative top-[-100vh] lg:top-0 left-0 transition-all z-10">
+                    <div id="closeMenu" class="lg:hidden w-full h-[75px] flex items-center container">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0.99939 18.9998L19 0.999108" stroke="#222222" stroke-linecap="round"/>
+                            <path d="M0.99939 0.999756L19 19.0004" stroke="#222222" stroke-linecap="round"/>
+                        </svg>
+                    </div>
                     <ul class="flex flex-wrap justify-center items-center">
-                        <li class="p-5 w-full md:w-max text-center"><a href="#" class="flex flex-row justify-center items-center p-5 border border-[#4B46BE] bg-[#E4E2FF] text-[#4B46BE] h-16 rounded-lg">
+                        <li class="p-5 w-full md:w-max text-center complete-flex"><a href="#" class="flex w-max flex-row justify-center items-center p-5 border border-[#4B46BE] bg-[#E4E2FF] text-[#4B46BE] h-16 rounded-lg">
                             <span class="ml-2.5">ورود / ثبت نام</span>
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
                                 <path d="M9.08109e-08 1.77803V14.222C-7.45505e-05 14.4555 0.0458646 14.6867 0.135193 14.9025C0.22452 15.1182 0.355486 15.3143 0.520607 15.4794C0.685727 15.6445 0.881765 15.7755 1.09752 15.8648C1.31327 15.9541 1.54452 16.0001 1.77803 16H14.222C14.6931 15.9987 15.1446 15.8109 15.4777 15.4777C15.8109 15.1446 15.9987 14.6931 16 14.222V1.77803C15.9987 1.30688 15.8109 0.855417 15.4777 0.522263C15.1446 0.18911 14.6931 0.00134902 14.222 9.08109e-08H1.77803C1.54452 -7.45505e-05 1.31327 0.0458646 1.09752 0.135193C0.881765 0.22452 0.685727 0.355486 0.520607 0.520607C0.355486 0.685727 0.22452 0.881765 0.135193 1.09752C0.0458646 1.31327 -7.45505e-05 1.54452 9.08109e-08 1.77803ZM10.6665 5.33352C10.6665 5.8609 10.5101 6.37644 10.2171 6.81494C9.9241 7.25344 9.50765 7.59521 9.02042 7.79703C8.53318 7.99885 7.99704 8.05165 7.4798 7.94876C6.96255 7.84588 6.48743 7.59192 6.11452 7.21901C5.7416 6.84609 5.48764 6.37097 5.38476 5.85373C5.28187 5.33648 5.33468 4.80034 5.5365 4.31311C5.73832 3.82587 6.08008 3.40942 6.51858 3.11643C6.95708 2.82343 7.47262 2.66705 8 2.66705C8.35029 2.6666 8.69723 2.73526 9.02095 2.86911C9.34466 3.00295 9.63879 3.19934 9.88648 3.44704C10.1342 3.69473 10.3306 3.98886 10.4644 4.31258C10.5983 4.63629 10.6669 4.98323 10.6665 5.33352ZM2.66648 12.4445C2.66648 10.6665 6.22197 9.68884 8 9.68884C9.77803 9.68884 13.3335 10.6665 13.3335 12.4445V13.3335H2.66648V12.4445Z" fill="#4B46BE"/>
@@ -91,12 +97,12 @@
                 <div class="h-full flex flex-col items-center md:items-start justify-end md:justify-center pb-20 md:pb-0">
                     <h1 class="font-medium text-[45px] text-center md:text-right text-white leading-[1.5]">هند بوک معجون <br> کپی رایتنیگ منتشر شد</h1>
                     <span class="text-[#E8DB29] text-[16px] mt-5 mb-12">مقدمه ای بر هنر و دانش کپی رایتنگ</span>
-                    <div class="form relative h-[50px]">
-                        <div class="bg-white text-admoonBlue cursor-pointer w-[230px] h-full complete-flex rounded-2xl hover:bg-[#525FCA] hover:text-white">
+                    <div id="download_section" class="form relative h-[50px]">
+                        <div id="header_button" class="bg-white text-admoonBlue cursor-pointer w-[230px] h-full complete-flex rounded-2xl hover:bg-[#525FCA] hover:text-white">
                             <span class="text-[15px]">دانلود رایگان هندبوک</span>
                         </div>
                         <form class="h-full w-[333px] p-2 bg-white text-admoonBlue complete-flex rounded-2xl overflow-hidden justify-between hidden">
-                            <input type="text" class="h-full w-[70%] border-0" placeholder="ایمیل خود را وارد کنید">
+                            <input type="email" id="email_input" name="email_input" class="h-full w-[70%] border-0 indent-4"  placeholder="ایمیل خود را وارد کنید">
                             <button id="send_button" class="h-full w-[100px] bg-gradient-to-l from-[#3C48A6] to-[#7282FF] text-white complete-flex rounded-2xl">
                                 <span>دانلود</span>
                             </button>
@@ -134,32 +140,32 @@
                         <a href="#" class="mt-5 w-full h-[65px] complete-flex bg-admoonBlue transition-all text-white text-[18px] border-2 border-admoonBlue rounded-2xl hover:text-admoonBlue hover:bg-white">به زودی</a>
                     </div>
                     <div class="border bg-gray-50 p-5 rounded-3xl overflow-hidden text-center">
-                        <img class="mb-10 w-full rounded-3xl overflow-hidden" src="assets/images/sec3_img_item1.png" alt="">
-                        <p class="mb-[25px] w-full font-medium text-[18px]">تکنیک‌های تبلیغ نویسی برای گوگل ادز</p>
+                        <img class="mb-10 w-full rounded-3xl overflow-hidden" src="assets/images/sec3_img_item2.png" alt="">
+                        <p class="mb-[25px] w-full font-medium text-[18px]">بازاریابی یکپارچه با گوگل ادز</p>
                         <hr>
                         <a href="#" class="mt-5 w-full h-[65px] complete-flex bg-admoonBlue transition-all text-white text-[18px] border-2 border-admoonBlue rounded-2xl hover:text-admoonBlue hover:bg-white">به زودی</a>
                     </div>
                     <div class="border bg-gray-50 p-5 rounded-3xl overflow-hidden text-center">
-                        <img class="mb-10 w-full rounded-3xl overflow-hidden" src="assets/images/sec3_img_item1.png" alt="">
-                        <p class="mb-[25px] w-full font-medium text-[18px]">تکنیک‌های تبلیغ نویسی برای گوگل ادز</p>
+                        <img class="mb-10 w-full rounded-3xl overflow-hidden" src="assets/images/sec3_img_item3.png" alt="">
+                        <p class="mb-[25px] w-full font-medium text-[18px]">رازهای بهینه سازی تبلیغات گوگل</p>
                         <hr>
                         <a href="#" class="mt-5 w-full h-[65px] complete-flex bg-admoonBlue transition-all text-white text-[18px] border-2 border-admoonBlue rounded-2xl hover:text-admoonBlue hover:bg-white">به زودی</a>
                     </div>
                     <div class="border bg-gray-50 p-5 rounded-3xl overflow-hidden text-center">
-                        <img class="mb-10 w-full rounded-3xl overflow-hidden" src="assets/images/sec3_img_item1.png" alt="">
-                        <p class="mb-[25px] w-full font-medium text-[18px]">تکنیک‌های تبلیغ نویسی برای گوگل ادز</p>
+                        <img class="mb-10 w-full rounded-3xl overflow-hidden" src="assets/images/sec3_img_item4.png" alt="">
+                        <p class="mb-[25px] w-full font-medium text-[18px]">اصول طراحی لندینگپیج برای تبلیغات گوگل ادز</p>
                         <hr>
                         <a href="#" class="mt-5 w-full h-[65px] complete-flex bg-admoonBlue transition-all text-white text-[18px] border-2 border-admoonBlue rounded-2xl hover:text-admoonBlue hover:bg-white">به زودی</a>
                     </div>
                     <div class="border bg-gray-50 p-5 rounded-3xl overflow-hidden text-center">
-                        <img class="mb-10 w-full rounded-3xl overflow-hidden" src="assets/images/sec3_img_item1.png" alt="">
-                        <p class="mb-[25px] w-full font-medium text-[18px]">تکنیک‌های تبلیغ نویسی برای گوگل ادز</p>
+                        <img class="mb-10 w-full rounded-3xl overflow-hidden" src="assets/images/sec3_img_item5.png" alt="">
+                        <p class="mb-[25px] w-full font-medium text-[18px]">چالش های تبلیغات گوگل در ایران</p>
                         <hr>
                         <a href="#" class="mt-5 w-full h-[65px] complete-flex bg-admoonBlue transition-all text-white text-[18px] border-2 border-admoonBlue rounded-2xl hover:text-admoonBlue hover:bg-white">به زودی</a>
                     </div>
                     <div class="border bg-gray-50 p-5 rounded-3xl overflow-hidden text-center">
-                        <img class="mb-10 w-full rounded-3xl overflow-hidden" src="assets/images/sec3_img_item1.png" alt="">
-                        <p class="mb-[25px] w-full font-medium text-[18px]">تکنیک‌های تبلیغ نویسی برای گوگل ادز</p>
+                        <img class="mb-10 w-full rounded-3xl overflow-hidden" src="assets/images/sec3_img_item6.png" alt="">
+                        <p class="mb-[25px] w-full font-medium text-[18px]">برندسازی و تبلیغات گوگل</p>
                         <hr>
                         <a href="#" class="mt-5 w-full h-[65px] complete-flex bg-admoonBlue transition-all text-white text-[18px] border-2 border-admoonBlue rounded-2xl hover:text-admoonBlue hover:bg-white">به زودی</a>
                     </div>

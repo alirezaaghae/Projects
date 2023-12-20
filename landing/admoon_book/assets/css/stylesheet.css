@@ -68,3 +68,20 @@ a,button,span,input{transition:all .3s;text-decoration: none;}
     #footer .footerbottom{height:auto;padding:20px;}
     #footer .footerbox{padding:20px;}
 }
+
+#navbar.open{
+    top:0;
+}
+
+#download_section.showForm #header_button{
+    display: none;
+}
+
+#download_section.showForm form{
+    display: flex !important;
+}
+
+#send_button.disabled{
+    opacity: 0.3;
+    filter: grayscale(1);
+}
